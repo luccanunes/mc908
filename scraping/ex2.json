@@ -1,0 +1,373 @@
+{
+    "actors": [
+        {
+            "did": "did:plc:sp5paqzfmzlsxazgv7hrukda",
+            "handle": "roxanegay.bsky.social",
+            "displayName": "Roxane Gay",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:sp5paqzfmzlsxazgv7hrukda/bafkreigmtyf7p5qpe24jb2otpis7tfhza4c74madfeta3pjhnreg5bopua@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-28T04:43:12.423Z",
+            "description": "Writer, editor, publisher, professor. Some people call me a bad feminist and by some people I mean me. ",
+            "indexedAt": "2024-01-20T05:12:44.387Z"
+        },
+        {
+            "did": "did:plc:hr2s3m2zolvrmhjvcqxzhsen",
+            "handle": "ousafadenha.bsky.social",
+            "displayName": "safadenha ✪",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:hr2s3m2zolvrmhjvcqxzhsen/bafkreig2ptm2raxs3xrkfyrsa6lhe4es7hc5nzy7wsrlwzv3cr46o2jsku@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-08-30T23:42:52.106Z",
+            "description": "conta oficial \nA + safadenha do site | segue ae safadenhas | contato: ousafadenhabusiness@gmail.com 📧 \n\nhttps://x.com/ousafadenha?s=21&t=bAXvzoXD03GCoZUGFL83ug",
+            "indexedAt": "2024-09-02T11:31:34.800Z"
+        },
+        {
+            "did": "did:plc:ul5n745uxwymqppvpiwtpoa5",
+            "handle": "mikedrucker.bsky.social",
+            "displayName": "Mike Drucker",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ul5n745uxwymqppvpiwtpoa5/bafkreia5g3uvhgvrvulhx644kvfw7oy2g6vzmhyqcswy4es7byd72zmf2u@jpeg",
+            "labels": [],
+            "createdAt": "2023-04-27T17:46:11.941Z",
+            "description": "Emmy-nominated TV writer and comedian. wrote a book about Silent Hill 2. Newsletter: https://tinyurl.com/ytjvhjsb Email: mikedruckerisdead @ gmail .com",
+            "indexedAt": "2024-01-20T05:14:51.544Z"
+        },
+        {
+            "did": "did:plc:tbqqvyv6pjjww44glrmycaxl",
+            "handle": "carlbergstrom.com",
+            "displayName": "Carl T. Bergstrom",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tbqqvyv6pjjww44glrmycaxl/bafkreicftrqk64avistpjiplizguifkgpsou35irorm4yyy5cu44b4hpcq@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [
+                {
+                    "src": "did:plc:tbqqvyv6pjjww44glrmycaxl",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.actor.profile/self",
+                    "cid": "bafyreidtqiy6zvieyyavraesfnco25hrzzawqmhxx732edmdqu27nsniuu",
+                    "val": "!no-unauthenticated",
+                    "cts": "1970-01-01T00:00:00.000Z"
+                }
+            ],
+            "createdAt": "2023-04-27T05:59:56.441Z",
+            "description": "Biology professor at the University of Washington. \n\nI study how information flows in biology, science, and society.\n\nI wrote a book: *Calling Bullshit*: http://tinyurl.com/fdcuvd7b\n\nI love ravens and crows: https://tinyurl.com/mr2n5ymk\n\nhe/him",
+            "indexedAt": "2024-03-04T00:42:30.783Z"
+        },
+        {
+            "did": "did:plc:6hbjddo5mfwxel7ddbmdzk2k",
+            "handle": "memtwitter.bsky.social",
+            "displayName": "Videos em memoria ao twitter",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6hbjddo5mfwxel7ddbmdzk2k/bafkreicyqr4gifpxvcbsjqwbxftdsnye4tfnz52capzutw2s2bbixxtpca@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-09-08T16:50:12.926Z",
+            "description": "Videos de memes em memoria ao tt",
+            "indexedAt": "2024-09-12T14:06:51.608Z"
+        },
+        {
+            "did": "did:plc:kkf4naxqmweop7dv4l2iqqf5",
+            "handle": "aendra.com",
+            "displayName": "ændra.",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kkf4naxqmweop7dv4l2iqqf5/bafkreigosfbtnpslezippn5rhfhut3s26nhfwotw324ibqjji3fn6gswfu@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-05-04T16:59:41.121Z",
+            "description": "Just some bitch-ass web developer.\n\nze/hir/she/her 🏳️‍⚧️\n\n🌐 aendra.com\n📸 aendra.photos\n\nHeader: Art by goldloxe; Brick Lane.",
+            "indexedAt": "2024-10-02T17:06:57.011Z"
+        },
+        {
+            "did": "did:plc:xbifsywyv5pka5jlknhv5yv3",
+            "handle": "ap.brid.gy",
+            "displayName": "Bridgy Fed for the fediverse",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xbifsywyv5pka5jlknhv5yv3/bafkreic6mqhamdevmscfzrryulu3ylxhvcszo5kk2wxtjc6tlgfd6ene5u@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [
+                {
+                    "src": "did:plc:xbifsywyv5pka5jlknhv5yv3",
+                    "uri": "at://did:plc:xbifsywyv5pka5jlknhv5yv3/app.bsky.actor.profile/self",
+                    "cid": "bafyreigwquybug23bfycgoetg2i63i5kc3yamlivuhyb5nmjkmuhgnbi5i",
+                    "val": "bridged-from-bridgy-fed-web",
+                    "cts": "1970-01-01T00:00:00.000Z"
+                }
+            ],
+            "createdAt": "2024-04-23T22:07:36.181Z",
+            "description": "Bridgy Fed (https://fed.brid.gy/) bot user for the fediverse. To bridge your Bluesky account to the fediverse, follow this account. More info: https://fed.brid.gy/docs",
+            "indexedAt": "2024-07-15T23:33:40.275Z"
+        },
+        {
+            "did": "did:plc:24lz3lshhmjsieafxih4exlw",
+            "handle": "handle.invalid",
+            "displayName": "Chinchillazilla",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:24lz3lshhmjsieafxih4exlw/bafkreihp43knvbpbivg2i7honqybgos5atgn5rdedctrfiszs7cdnm43bq@jpeg",
+            "labels": [],
+            "createdAt": "2023-04-28T00:49:03.312Z",
+            "description": "Leader of the Ankh-Morpork Posters' Guild. autistic. sorry for whatever I skeeted. she/her but you can also call me dude, bro, guy, idc.\n\nDON'T ASK US ABOUT:\nrocks\ntroll's with sticks\nMrs. Cake\nrains of spaniel's.\nchili.\nfog.\nMrs. Cake",
+            "indexedAt": "2024-01-20T05:09:23.252Z"
+        },
+        {
+            "did": "did:plc:vwzwgnygau7ed7b7wt5ux7y2",
+            "handle": "retr0.id",
+            "displayName": "David Buchanan",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:vwzwgnygau7ed7b7wt5ux7y2/bafkreifrtz3ngpzz5qmhjliv5toj4nvyjovijxs5e2la67wddhmdhro5he@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-27T09:23:54.423Z",
+            "description": "Reverse Engineering, cryptography, exploits, hardware, file formats, and generally giving computers a hard time. Occasional CTF player.\n\nFediverse: @retr0id@retr0.id\nTwitter: @David3141593\nWeb: https://www.da.vidbuchanan.co.uk/",
+            "indexedAt": "2024-01-29T17:34:08.076Z"
+        },
+        {
+            "did": "did:plc:7ikl5b575otp6uxqsddmvuzh",
+            "handle": "theferocity.bsky.social",
+            "displayName": "Saeed Jones",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7ikl5b575otp6uxqsddmvuzh/bafkreidg42axzkcgkmh3yai6qhsy4e2eetq2cfu234n4wi2pq5kswtvk2m@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-05-05T13:08:42.779Z",
+            "description": "I’m a poet and cultural critic. I co-host the podcast VIBE CHECK. I live in Cambridge, MA.\n\nArtist-in-residence at Harvard rn. \n\nBOOKS: Prelude to Bruise, How We Fight for Our Lives, Alive at the End of the World. \n\nFORTHCOMING: HOME OUT THERE. ",
+            "indexedAt": "2024-09-24T08:31:48.410Z"
+        },
+        {
+            "did": "did:plc:aasvekdls4bdl7g6yrw74fjh",
+            "handle": "updateswiftbr.com",
+            "displayName": "Update Swift Brasil ",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:aasvekdls4bdl7g6yrw74fjh/bafkreiaa74qwwxbcqxtcrvplbwzjooj4hm32ef6upftpj3ebeepcddkdka@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-22T00:39:45.977Z",
+            "description": "Sua principal fonte de informações sobre a cantora e compositora Taylor Swift no Brasil. ",
+            "indexedAt": "2024-08-29T15:14:45.120Z"
+        },
+        {
+            "did": "did:plc:udll72r7jjgkevepvptto43r",
+            "handle": "akiman7.bsky.social",
+            "displayName": "あきまん",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:udll72r7jjgkevepvptto43r/bafkreidfcrjvr3cxubvprkzztm45mpuya4jjzy2vqoilh7aedyksekx2rm@jpeg",
+            "labels": [],
+            "createdAt": "2024-02-06T18:32:29.855Z",
+            "description": "こんにちはイラストレーターのあきまんです、よろしくおねがいします",
+            "indexedAt": "2024-02-07T14:10:42.141Z"
+        },
+        {
+            "did": "did:plc:b5ly66nko7iijwy2lktt3ctq",
+            "handle": "whysharksmatter.bsky.social",
+            "displayName": "David Shiffman, Ph.D. 🦈",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:b5ly66nko7iijwy2lktt3ctq/bafkreiakpc6hz2kumdjx5imgvevqsquajjfkxicnmasgef6ky52djzgawm@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-30T22:13:19.949Z",
+            "description": "I am a marine conservation biologist studying sharks and a science writer. He/him",
+            "indexedAt": "2024-01-20T05:09:01.701Z"
+        },
+        {
+            "did": "did:plc:txlf7mvlg4hdpnyoqckbzjax",
+            "handle": "detailsinart.bsky.social",
+            "displayName": "art.",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:txlf7mvlg4hdpnyoqckbzjax/bafkreibpshrmrojmtg6mdejs4m6i5kjjps7nletu2ujluqc7o6relrwmge@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-04-08T02:57:37.821Z",
+            "description": "Galeria virtual | sugestões de arte na dm 🎨\n",
+            "indexedAt": "2024-08-31T05:41:04.099Z"
+        },
+        {
+            "did": "did:plc:w3tnzlqdztocu7pcadxbcxrt",
+            "handle": "arakencloud.bsky.social",
+            "displayName": "荒木健太郎",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:w3tnzlqdztocu7pcadxbcxrt/bafkreiagp6yn23u57pmciwfvdduwg2m7dbughbjfcyswhcoq6b7senn4ru@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-05-01T07:18:34.028Z",
+            "description": "雲研究者・気象庁気象研究所主任研究官・学術博士。防災・減災のために、雲の仕組みを研究しています。気象監修：映画 天気の子／ドラマ ブルーモーメント。出演：情熱大陸／ドラえもんなど。著書：すごすぎる天気の図鑑シリーズ／天気の写真えほんシリーズ／てんきのしくみ図鑑／気象のはなし／雲の教室／雲を愛する技術など。発信は個人見解です",
+            "indexedAt": "2024-09-28T13:38:20.206Z"
+        },
+        {
+            "did": "did:plc:tm3djotsgwdkml5jn5rpubhd",
+            "handle": "goldengateblond.bsky.social",
+            "displayName": "shauna",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tm3djotsgwdkml5jn5rpubhd/bafkreiewmpre24ppwchqupdwaivu4ztr4ddoaslaig6ykx74t5aaolgnry@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-26T12:49:18.282Z",
+            "description": "I plan on popping a pill, crying a bit, and falling asleep early",
+            "indexedAt": "2024-07-16T20:01:32.474Z"
+        },
+        {
+            "did": "did:plc:5ijjovyj26kehnti4c4vzusz",
+            "handle": "maya-no-a.bsky.social",
+            "displayName": "吉岡麻耶",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:5ijjovyj26kehnti4c4vzusz/bafkreie7oasf7sxo23hnkb4lm6elwc7zf5wj5lquyzs3jvkq232jktdn2e@jpeg",
+            "labels": [],
+            "createdAt": "2024-02-11T07:40:41.462Z",
+            "description": "声優です❣️",
+            "indexedAt": "2024-02-12T01:24:14.367Z"
+        },
+        {
+            "did": "did:plc:kypbxp7rhw7q2dfa4fr7f6i6",
+            "handle": "kfile.bsky.social",
+            "displayName": "Andrew Kaczynski ",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kypbxp7rhw7q2dfa4fr7f6i6/bafkreidk4ocn4soyomylgrwurvx777oope3ek54ozkuqclqihpmuicxnoa@jpeg",
+            "labels": [],
+            "createdAt": "2023-05-01T14:49:48.439Z",
+            "description": "Reporter at CNN, Francesca, Maya, and Talia’s dad, founder of the Team Beans Infant Brain Tumor Fund. Donate at TeamBeansPMC.com to help end infant brain cancer. I used to be big on Twitter.",
+            "indexedAt": "2024-08-05T02:52:51.374Z"
+        },
+        {
+            "did": "did:plc:bhi6lmbwqyxzodxqplb2cfwp",
+            "handle": "eisinceraa.bsky.social",
+            "displayName": "sincera",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:bhi6lmbwqyxzodxqplb2cfwp/bafkreiaywdwyxobc4b2nnuc47l5ocrod4qzsfx423ilblubzasgaiaaz6m@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-08-30T22:57:56.478Z",
+            "description": "conta oficial \na mais sincera do site | seguiu: humilde 😍 eisinceracontato@gmail.com ✉️\n\nhttps://x.com/eisincera\nhttps://instagram.com/eisincera_",
+            "indexedAt": "2024-09-18T17:49:29.914Z"
+        },
+        {
+            "did": "did:plc:deln46kapb3q2iz5lvzurvel",
+            "handle": "gracasadeussexta.bsky.social",
+            "displayName": "Graças a deus é sexta",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:deln46kapb3q2iz5lvzurvel/bafkreied5ptcuzbal5m7zvysnrc2b6gcni6nva72wjndidmgphrvumamdy@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-09-06T16:41:08.417Z",
+            "indexedAt": "2024-09-27T16:30:17.607Z"
+        },
+        {
+            "did": "did:plc:n34r6jpruoyqdy5sc6mps7od",
+            "handle": "acervoviral.bsky.social",
+            "displayName": "acervo viral ",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:n34r6jpruoyqdy5sc6mps7od/bafkreieqlkzo6ha7qc466evihesiwaabsyrmizjfpkdqoqfkvjgvmtealy@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-09-10T18:56:53.424Z",
+            "description": "Explorando a cultura da internet: nossa página reúne os vídeos e memes virais mais memoráveis. Risadas garantidas e momentos que marcaram época.\n\nInstagram: instagram.com/acervoviralof",
+            "indexedAt": "2024-09-13T16:04:07.710Z"
+        },
+        {
+            "did": "did:plc:kqcmjyv4zxfcxzbitkw7z2d6",
+            "handle": "evacide.bsky.social",
+            "displayName": "evacide",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:kqcmjyv4zxfcxzbitkw7z2d6/bafkreidkn55jlrs7srqhhv2oclclnl7hoglugpf34mxiavm5bzwayujoeq@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [
+                {
+                    "src": "did:plc:kqcmjyv4zxfcxzbitkw7z2d6",
+                    "uri": "at://did:plc:kqcmjyv4zxfcxzbitkw7z2d6/app.bsky.actor.profile/self",
+                    "cid": "bafyreicmcajl7dh7axjlggeomka5pedkq67qacekbhdhixstlfj3he35le",
+                    "val": "!no-unauthenticated",
+                    "cts": "1970-01-01T00:00:00.000Z"
+                }
+            ],
+            "createdAt": "2023-04-30T00:54:25.956Z",
+            "description": "Director of Cybersecurity @EFF / Co-founder of @stopstalkerware/ These posts are my own, not my employers’ / I did a TED talk once",
+            "indexedAt": "2024-08-09T03:44:29.475Z"
+        },
+        {
+            "did": "did:plc:mrggcyi2rrpocjfy34hfgsa5",
+            "handle": "brasil.gov.br",
+            "displayName": "Governo do Brasil",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mrggcyi2rrpocjfy34hfgsa5/bafkreigj26a66ea3cidewcgibkxglevanta65x6tnxideouzllotrv5c7i@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-08-29T21:38:16.423Z",
+            "description": "Perfil oficial Governo do Brasil. Aqui você participa e fica sabendo sobre ações e serviços para o seu dia a dia.",
+            "indexedAt": "2024-09-05T12:24:34.033Z"
+        },
+        {
+            "did": "did:plc:zbrhmanjs62oyqywjwdazxz3",
+            "handle": "kenjennings.bsky.social",
+            "displayName": "Ken Jennings",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zbrhmanjs62oyqywjwdazxz3/bafkreicpymtnc6ooeoz4jyb5oaxbf6smrmsd634texeshjmfpths6qusta@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-27T21:46:36.549Z",
+            "description": "Your Jeopardy! pal. Author of 100 PLACES TO SEE AFTER YOU DIE (bit.ly/3kLgJKO) and a bunch of other stuff. OMNIBUS co-founder (patreon.com/omnibusproject).",
+            "indexedAt": "2024-01-20T05:34:15.628Z"
+        },
+        {
+            "did": "did:plc:fnryegucg57z5c3gapucejlr",
+            "handle": "schwarzenegger.bsky.social",
+            "displayName": "Arnold Schwarzenegger",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:fnryegucg57z5c3gapucejlr/bafkreicp3vbq2zsynmpyduzvlq2v2thf4jjnthblbdplc27zuxx6idxgyi@jpeg",
+            "labels": [],
+            "createdAt": "2023-05-15T11:30:32.157Z",
+            "description": "Bodybuilder. Conan. Terminator. Former Governor. I killed the Predator. I told you I’d be back. Join my positive corner of the internet - Arnold’s Pump Club.",
+            "indexedAt": "2024-01-20T05:29:09.877Z"
+        }
+    ],
+    "cursor": "75"
+}

@@ -1,0 +1,1507 @@
+{
+    "feed": [
+        {
+            "post": {
+                "uri": "at://did:plc:m5a7bji2ndsbgbyg5ssz2rmz/app.bsky.feed.post/3l5krqplb7a2m",
+                "cid": "bafyreifzozgy75f2hw6wjpmvvjjccl63lgwxm66jg4oqfcovoqyw22kv6m",
+                "author": {
+                    "did": "did:plc:m5a7bji2ndsbgbyg5ssz2rmz",
+                    "handle": "quacknifico.bsky.social",
+                    "displayName": "QUACK (COMMS OPEN)",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreie5iopvdoy3aocabjq4opeefigxh723vkjot4azzz6wsi6cqetyba@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-04-07T03:13:11.679Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-10-02T22:26:18.626Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1000,
+                                    "width": 1000
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreicna7uukc6vnul7mvikqt6y6pemvds5ve6p4bucyymk4aq3iqzk7m"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 726475
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "--PORFAVOR--\n\n❤️+🔄= Bruxa feliz"
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreicna7uukc6vnul7mvikqt6y6pemvds5ve6p4bucyymk4aq3iqzk7m@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreicna7uukc6vnul7mvikqt6y6pemvds5ve6p4bucyymk4aq3iqzk7m@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1000,
+                                "width": 1000
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 21,
+                "repostCount": 341,
+                "likeCount": 1220,
+                "quoteCount": 21,
+                "indexedAt": "2024-10-02T22:26:18.626Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-10-03T11:14:11.573Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:jq6k2lgkszbikztdj7mzshud/app.bsky.feed.post/3l53um4glbu2n",
+                "cid": "bafyreigchcvapxkkpwyfqvueqgtvaes6tcyt7pjhasesdmfomvo6mbzssq",
+                "author": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-27T00:07:30.849Z",
+                    "langs": [
+                        "pt"
+                    ],
+                    "reply": {
+                        "parent": {
+                            "cid": "bafyreihnex2edybgo5dqxrsditzzclaw6lo4mtm56xifzk3u3cwh67qxbq",
+                            "uri": "at://did:plc:zwae2pvkfwul7ooj2kmqbwpx/app.bsky.feed.post/3l535ny2oud2v"
+                        },
+                        "root": {
+                            "cid": "bafyreihnex2edybgo5dqxrsditzzclaw6lo4mtm56xifzk3u3cwh67qxbq",
+                            "uri": "at://did:plc:zwae2pvkfwul7ooj2kmqbwpx/app.bsky.feed.post/3l535ny2oud2v"
+                        }
+                    },
+                    "text": "E vai vender?"
+                },
+                "replyCount": 1,
+                "repostCount": 0,
+                "likeCount": 1,
+                "quoteCount": 0,
+                "indexedAt": "2024-09-27T00:07:30.822Z",
+                "labels": []
+            },
+            "reply": {
+                "root": {
+                    "$type": "app.bsky.feed.defs#postView",
+                    "uri": "at://did:plc:zwae2pvkfwul7ooj2kmqbwpx/app.bsky.feed.post/3l535ny2oud2v",
+                    "cid": "bafyreihnex2edybgo5dqxrsditzzclaw6lo4mtm56xifzk3u3cwh67qxbq",
+                    "author": {
+                        "did": "did:plc:zwae2pvkfwul7ooj2kmqbwpx",
+                        "handle": "dcdnero.bsky.social",
+                        "displayName": "nero.c",
+                        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zwae2pvkfwul7ooj2kmqbwpx/bafkreiab7ct4ae7aslntdlk6rncxutf63avdyiclogierypcqtuh6taaaa@jpeg",
+                        "associated": {
+                            "chat": {
+                                "allowIncoming": "following"
+                            }
+                        },
+                        "labels": [],
+                        "createdAt": "2023-09-04T15:18:13.020Z"
+                    },
+                    "record": {
+                        "$type": "app.bsky.feed.post",
+                        "createdAt": "2024-09-26T17:16:56.540Z",
+                        "embed": {
+                            "$type": "app.bsky.embed.images",
+                            "images": [
+                                {
+                                    "alt": "",
+                                    "aspectRatio": {
+                                        "height": 3429,
+                                        "width": 2991
+                                    },
+                                    "image": {
+                                        "$type": "blob",
+                                        "ref": {
+                                            "$link": "bafkreib2qv7dhdidptutcsm3ta2yo2mkgyltxtexl7qlc2wxx4mjhadbv4"
+                                        },
+                                        "mimeType": "image/jpeg",
+                                        "size": 806669
+                                    }
+                                }
+                            ]
+                        },
+                        "langs": [
+                            "pt"
+                        ],
+                        "text": "Comprei carta pokemon na nostalgia e ganhei uma que pode ser vendida por 200 :D"
+                    },
+                    "embed": {
+                        "$type": "app.bsky.embed.images#view",
+                        "images": [
+                            {
+                                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zwae2pvkfwul7ooj2kmqbwpx/bafkreib2qv7dhdidptutcsm3ta2yo2mkgyltxtexl7qlc2wxx4mjhadbv4@jpeg",
+                                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zwae2pvkfwul7ooj2kmqbwpx/bafkreib2qv7dhdidptutcsm3ta2yo2mkgyltxtexl7qlc2wxx4mjhadbv4@jpeg",
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 3429,
+                                    "width": 2991
+                                }
+                            }
+                        ]
+                    },
+                    "replyCount": 1,
+                    "repostCount": 0,
+                    "likeCount": 2,
+                    "quoteCount": 0,
+                    "indexedAt": "2024-09-26T17:16:56.540Z",
+                    "labels": []
+                },
+                "parent": {
+                    "$type": "app.bsky.feed.defs#postView",
+                    "uri": "at://did:plc:zwae2pvkfwul7ooj2kmqbwpx/app.bsky.feed.post/3l535ny2oud2v",
+                    "cid": "bafyreihnex2edybgo5dqxrsditzzclaw6lo4mtm56xifzk3u3cwh67qxbq",
+                    "author": {
+                        "did": "did:plc:zwae2pvkfwul7ooj2kmqbwpx",
+                        "handle": "dcdnero.bsky.social",
+                        "displayName": "nero.c",
+                        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:zwae2pvkfwul7ooj2kmqbwpx/bafkreiab7ct4ae7aslntdlk6rncxutf63avdyiclogierypcqtuh6taaaa@jpeg",
+                        "associated": {
+                            "chat": {
+                                "allowIncoming": "following"
+                            }
+                        },
+                        "labels": [],
+                        "createdAt": "2023-09-04T15:18:13.020Z"
+                    },
+                    "record": {
+                        "$type": "app.bsky.feed.post",
+                        "createdAt": "2024-09-26T17:16:56.540Z",
+                        "embed": {
+                            "$type": "app.bsky.embed.images",
+                            "images": [
+                                {
+                                    "alt": "",
+                                    "aspectRatio": {
+                                        "height": 3429,
+                                        "width": 2991
+                                    },
+                                    "image": {
+                                        "$type": "blob",
+                                        "ref": {
+                                            "$link": "bafkreib2qv7dhdidptutcsm3ta2yo2mkgyltxtexl7qlc2wxx4mjhadbv4"
+                                        },
+                                        "mimeType": "image/jpeg",
+                                        "size": 806669
+                                    }
+                                }
+                            ]
+                        },
+                        "langs": [
+                            "pt"
+                        ],
+                        "text": "Comprei carta pokemon na nostalgia e ganhei uma que pode ser vendida por 200 :D"
+                    },
+                    "embed": {
+                        "$type": "app.bsky.embed.images#view",
+                        "images": [
+                            {
+                                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:zwae2pvkfwul7ooj2kmqbwpx/bafkreib2qv7dhdidptutcsm3ta2yo2mkgyltxtexl7qlc2wxx4mjhadbv4@jpeg",
+                                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:zwae2pvkfwul7ooj2kmqbwpx/bafkreib2qv7dhdidptutcsm3ta2yo2mkgyltxtexl7qlc2wxx4mjhadbv4@jpeg",
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 3429,
+                                    "width": 2991
+                                }
+                            }
+                        ]
+                    },
+                    "replyCount": 1,
+                    "repostCount": 0,
+                    "likeCount": 2,
+                    "quoteCount": 0,
+                    "indexedAt": "2024-09-26T17:16:56.540Z",
+                    "labels": []
+                }
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:m5a7bji2ndsbgbyg5ssz2rmz/app.bsky.feed.post/3l4z4mhxi342y",
+                "cid": "bafyreieoug35sellsyfskvvdgftjsgtgbrugf6sfset37ujpurtakqstga",
+                "author": {
+                    "did": "did:plc:m5a7bji2ndsbgbyg5ssz2rmz",
+                    "handle": "quacknifico.bsky.social",
+                    "displayName": "QUACK (COMMS OPEN)",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreie5iopvdoy3aocabjq4opeefigxh723vkjot4azzz6wsi6cqetyba@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-04-07T03:13:11.679Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-25T21:52:46.151Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1000,
+                                    "width": 1000
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreibsz3kklczms62345betoznkqheww5fx4kntrmxezodgbjw6ejab4"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 752419
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "--SANDUICHE--\n\n❤️+🔄="
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreibsz3kklczms62345betoznkqheww5fx4kntrmxezodgbjw6ejab4@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreibsz3kklczms62345betoznkqheww5fx4kntrmxezodgbjw6ejab4@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1000,
+                                "width": 1000
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 21,
+                "repostCount": 415,
+                "likeCount": 1853,
+                "quoteCount": 26,
+                "indexedAt": "2024-09-25T21:52:46.151Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-26T01:30:08.545Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:227vbwa4l4m3nbyjjsgylvop/app.bsky.feed.post/3l4w3ykqzbi2d",
+                "cid": "bafyreic4go6nzssf6qjkgnxa72k3kodkx7uv4fk5st5cwtut7tzfanpffe",
+                "author": {
+                    "did": "did:plc:227vbwa4l4m3nbyjjsgylvop",
+                    "handle": "pemt.bsky.social",
+                    "displayName": "Posts em memoria ao Twitter",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:227vbwa4l4m3nbyjjsgylvop/bafkreibtbaq7bjtm6uxy43fttnbnvdkubh6w26e4j2gszrmvl6oz6iynbq@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-01T01:55:23.507Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-24T17:03:45.241Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1177,
+                                    "width": 1199
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreibtja7qykqueqhh4dywx7nwtpcdkyogxmugj6mgl5ideyxh5swxbi"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 348188
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": ""
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:227vbwa4l4m3nbyjjsgylvop/bafkreibtja7qykqueqhh4dywx7nwtpcdkyogxmugj6mgl5ideyxh5swxbi@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:227vbwa4l4m3nbyjjsgylvop/bafkreibtja7qykqueqhh4dywx7nwtpcdkyogxmugj6mgl5ideyxh5swxbi@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1177,
+                                "width": 1199
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 57,
+                "repostCount": 452,
+                "likeCount": 6703,
+                "quoteCount": 65,
+                "indexedAt": "2024-09-24T17:03:45.241Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-24T23:59:40.414Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:ekqqn5gaau4x5vbv3wp5mznw/app.bsky.feed.post/3l4vh5vrpsk2b",
+                "cid": "bafyreidlleyaqcosig4gdftq6tbzvvpglysr5corxnsvmovwreokmfnq5i",
+                "author": {
+                    "did": "did:plc:ekqqn5gaau4x5vbv3wp5mznw",
+                    "handle": "memesinuteis.com",
+                    "displayName": "memes inuteis",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ekqqn5gaau4x5vbv3wp5mznw/bafkreie7362zmggc3ncva2vqsxnl45izfu4id5mktf4efmyd376di4xq4i@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2023-07-03T23:09:01.228Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-24T10:50:56.691Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1156,
+                                    "width": 1170
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreife5ukfuq7ibtjztmzi6u56ornk2gjs6bd6ggdgxbcheehlbsxgh4"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 357262
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": ""
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ekqqn5gaau4x5vbv3wp5mznw/bafkreife5ukfuq7ibtjztmzi6u56ornk2gjs6bd6ggdgxbcheehlbsxgh4@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ekqqn5gaau4x5vbv3wp5mznw/bafkreife5ukfuq7ibtjztmzi6u56ornk2gjs6bd6ggdgxbcheehlbsxgh4@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1156,
+                                "width": 1170
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 8,
+                "repostCount": 1135,
+                "likeCount": 3513,
+                "quoteCount": 34,
+                "indexedAt": "2024-09-24T10:50:56.691Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-24T12:51:26.310Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:rugfznmdhcczrhwdtrod4dnt/app.bsky.feed.post/3l4srah4orh2u",
+                "cid": "bafyreibf3isljht2fwlehzl3q2qa6eo7w4ftgvws44lgrvnzfsuc7g2twe",
+                "author": {
+                    "did": "did:plc:rugfznmdhcczrhwdtrod4dnt",
+                    "handle": "shitpostverdade2.bsky.social",
+                    "displayName": "Shitpost só que de verdade",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:rugfznmdhcczrhwdtrod4dnt/bafkreidudwhqsofusfglbp4yqwgxksfingub5hbum3wr3llnemggx7dxz4@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-08-30T21:22:38.449Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-23T09:13:20.320Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1288,
+                                    "width": 1200
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreibwihhlwpsf2jrrl4tfhnv4yjwbaayqe2w7wx37ls6atnv22fb6bu"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 787064
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": ""
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:rugfznmdhcczrhwdtrod4dnt/bafkreibwihhlwpsf2jrrl4tfhnv4yjwbaayqe2w7wx37ls6atnv22fb6bu@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:rugfznmdhcczrhwdtrod4dnt/bafkreibwihhlwpsf2jrrl4tfhnv4yjwbaayqe2w7wx37ls6atnv22fb6bu@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1288,
+                                "width": 1200
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 34,
+                "repostCount": 1286,
+                "likeCount": 13908,
+                "quoteCount": 36,
+                "indexedAt": "2024-09-23T09:13:20.320Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-23T10:35:02.717Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:jq6k2lgkszbikztdj7mzshud/app.bsky.feed.post/3l4jmhbgif22z",
+                "cid": "bafyreih27lprbnwz3w7ofab6knfcyynzito6onic7yhlgtoxgjrp4q6pii",
+                "author": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-19T17:53:43.055Z",
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "Oi"
+                },
+                "replyCount": 1,
+                "repostCount": 0,
+                "likeCount": 3,
+                "quoteCount": 0,
+                "indexedAt": "2024-09-19T17:53:43.055Z",
+                "labels": []
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:m5a7bji2ndsbgbyg5ssz2rmz/app.bsky.feed.post/3l4f3c23hu72o",
+                "cid": "bafyreidzkprqfrlmp7vxy4da33zzqi3yx4wbohwlp655eaxwwmsddkxxdu",
+                "author": {
+                    "did": "did:plc:m5a7bji2ndsbgbyg5ssz2rmz",
+                    "handle": "quacknifico.bsky.social",
+                    "displayName": "QUACK (COMMS OPEN)",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreie5iopvdoy3aocabjq4opeefigxh723vkjot4azzz6wsi6cqetyba@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-04-07T03:13:11.679Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-17T22:35:51.060Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1000,
+                                    "width": 1000
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreihiw37s3bo3r26m4xxf7hdxugciqgbkaz6jhrdjvnsaiqv4b2z5wi"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 777639
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "--AJUDA--\n\n❤️+🔄=Bruxa Feliz"
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreihiw37s3bo3r26m4xxf7hdxugciqgbkaz6jhrdjvnsaiqv4b2z5wi@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreihiw37s3bo3r26m4xxf7hdxugciqgbkaz6jhrdjvnsaiqv4b2z5wi@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1000,
+                                "width": 1000
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 37,
+                "repostCount": 592,
+                "likeCount": 2428,
+                "quoteCount": 44,
+                "indexedAt": "2024-09-17T22:35:51.060Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-18T16:52:00.315Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:canczzek5qmkjxsgcc6mm32b/app.bsky.feed.post/3l45v27mh3c2u",
+                "cid": "bafyreigalmfis3db5rmhi7yamo6eezqly6peuwddwwjtmap4gkiouylji4",
+                "author": {
+                    "did": "did:plc:canczzek5qmkjxsgcc6mm32b",
+                    "handle": "onepiecenews.bsky.social",
+                    "displayName": "One Piece News",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:canczzek5qmkjxsgcc6mm32b/bafkreie3ounjc3auinv7tk6pjkv3v7ewwhckiobygzsuqteyhizhvzkt3y@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2023-09-03T15:15:29.153Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-15T01:55:31.724Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "Yonkou de One Piece.",
+                                "aspectRatio": {
+                                    "height": 923,
+                                    "width": 2000
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreice3as6l6hw7hwvqc4jgqaq3q5e3q34vsh32yaqb7jpjk7t4ej5zm"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 372667
+                                }
+                            }
+                        ]
+                    },
+                    "facets": [
+                        {
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#tag",
+                                    "tag": "ONEPIECE"
+                                }
+                            ],
+                            "index": {
+                                "byteEnd": 110,
+                                "byteStart": 101
+                            }
+                        }
+                    ],
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "📌 Nova imagem dos Yonkou vinda diretamente do episódio de hoje!\n\nToei caprichou aqui, hein? 🔥\n#ONEPIECE"
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:canczzek5qmkjxsgcc6mm32b/bafkreice3as6l6hw7hwvqc4jgqaq3q5e3q34vsh32yaqb7jpjk7t4ej5zm@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:canczzek5qmkjxsgcc6mm32b/bafkreice3as6l6hw7hwvqc4jgqaq3q5e3q34vsh32yaqb7jpjk7t4ej5zm@jpeg",
+                            "alt": "Yonkou de One Piece.",
+                            "aspectRatio": {
+                                "height": 923,
+                                "width": 2000
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 18,
+                "repostCount": 50,
+                "likeCount": 814,
+                "quoteCount": 19,
+                "indexedAt": "2024-09-15T01:55:31.724Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-15T12:46:07.193Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:ziclqd5duzytkpuonrsfe3su/app.bsky.feed.post/3l44yfbcoer23",
+                "cid": "bafyreiepwymnbqrsw53r6g5mfhfzmxco4m6buoy4xlrcgtbeftmjgngfye",
+                "author": {
+                    "did": "did:plc:ziclqd5duzytkpuonrsfe3su",
+                    "handle": "olympicesporte.bsky.social",
+                    "displayName": "Olympic Esporte ",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ziclqd5duzytkpuonrsfe3su/bafkreifnxrhv4yw556e3daeszbjacod7qpzkutunrwp6entta6u4izacvq@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2023-06-23T13:58:17.385Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-14T17:22:42.513Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 607,
+                                    "width": 504
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreihrcmb5sgmza6ctq42jqfh3wwc2b4rcai2encb6kb7lza4cquktae"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 108964
+                                }
+                            }
+                        ]
+                    },
+                    "facets": [
+                        {
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#tag",
+                                    "tag": "SkateNoSportv"
+                                }
+                            ],
+                            "index": {
+                                "byteEnd": 144,
+                                "byteStart": 130
+                            }
+                        }
+                    ],
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "🥇🥇🥇🥇🥇🥇🥇🥇🥇🥇\nOUROOOOOOOOOOOOOO\n\nRAYSSA LEAL \n\nCAMPEÃ MUNDIAL DE SKATE STREET \n\nRAYSSA LEAL É GOAT \n\n#SkateNoSportv"
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ziclqd5duzytkpuonrsfe3su/bafkreihrcmb5sgmza6ctq42jqfh3wwc2b4rcai2encb6kb7lza4cquktae@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ziclqd5duzytkpuonrsfe3su/bafkreihrcmb5sgmza6ctq42jqfh3wwc2b4rcai2encb6kb7lza4cquktae@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 607,
+                                "width": 504
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 157,
+                "repostCount": 5694,
+                "likeCount": 34281,
+                "quoteCount": 922,
+                "indexedAt": "2024-09-14T17:22:42.513Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-14T19:08:41.555Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:m5a7bji2ndsbgbyg5ssz2rmz/app.bsky.feed.post/3l3vtp3frd22u",
+                "cid": "bafyreifq47ybxdl4ndb7rh3xoogsv4q6cqcqu5mc3t4ygncfbvk2zxhvnu",
+                "author": {
+                    "did": "did:plc:m5a7bji2ndsbgbyg5ssz2rmz",
+                    "handle": "quacknifico.bsky.social",
+                    "displayName": "QUACK (COMMS OPEN)",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreie5iopvdoy3aocabjq4opeefigxh723vkjot4azzz6wsi6cqetyba@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-04-07T03:13:11.679Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-11T21:10:06.461Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1000,
+                                    "width": 1000
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreifst6gcvnlme7sxoczpradysgnl7jjhxt4trr34buzmxhgvvoqlsy"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 569684
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "--ESPAÇO PESSOAL--\n\n❤️+🔄=Bruxa Feliz"
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreifst6gcvnlme7sxoczpradysgnl7jjhxt4trr34buzmxhgvvoqlsy@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreifst6gcvnlme7sxoczpradysgnl7jjhxt4trr34buzmxhgvvoqlsy@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1000,
+                                "width": 1000
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 16,
+                "repostCount": 255,
+                "likeCount": 1090,
+                "quoteCount": 10,
+                "indexedAt": "2024-09-11T21:10:06.461Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-12T00:44:13.415Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:ubji6txf3gdzwztlt2zegzdi/app.bsky.feed.post/3l3t6hskpaq2d",
+                "cid": "bafyreigxfudcllxkyhgglb5pd3cfrk4izia7vyy3je7blevfmqibsoknpe",
+                "author": {
+                    "did": "did:plc:ubji6txf3gdzwztlt2zegzdi",
+                    "handle": "crisvector.com",
+                    "displayName": "Cris",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ubji6txf3gdzwztlt2zegzdi/bafkreicmd7lzr7ecf3b3dz5w5h27ufwjixzelb6ptxsrvtqk4rtlvk3qhm@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [
+                        {
+                            "src": "did:plc:ubji6txf3gdzwztlt2zegzdi",
+                            "uri": "at://did:plc:ubji6txf3gdzwztlt2zegzdi/app.bsky.actor.profile/self",
+                            "cid": "bafyreifbzygue5tvtkprih4poenxckrouh6rd6lyl6qygoxdw3eoid3zuq",
+                            "val": "!no-unauthenticated",
+                            "cts": "1970-01-01T00:00:00.000Z"
+                        }
+                    ],
+                    "createdAt": "2023-04-06T22:16:17.638Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-10T19:44:54.206Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1500,
+                                    "width": 1200
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreif6emvjyqwzr7tpv7xffvgjsnnvhgmc7smdqcx4mv6wjgxws5nwau"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 727159
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "É fogo."
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ubji6txf3gdzwztlt2zegzdi/bafkreif6emvjyqwzr7tpv7xffvgjsnnvhgmc7smdqcx4mv6wjgxws5nwau@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ubji6txf3gdzwztlt2zegzdi/bafkreif6emvjyqwzr7tpv7xffvgjsnnvhgmc7smdqcx4mv6wjgxws5nwau@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1500,
+                                "width": 1200
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 316,
+                "repostCount": 15745,
+                "likeCount": 63349,
+                "quoteCount": 308,
+                "indexedAt": "2024-09-10T19:44:54.206Z",
+                "labels": [],
+                "threadgate": {
+                    "uri": "at://did:plc:ubji6txf3gdzwztlt2zegzdi/app.bsky.feed.threadgate/3l3t6hskpaq2d",
+                    "cid": "bafyreidzwmzmfhby7clltjtxe3u3qvbsfadvnr2pkyhxzlenhbbrk5ev2u",
+                    "record": {
+                        "$type": "app.bsky.feed.threadgate",
+                        "createdAt": "2024-09-11T20:32:41.463Z",
+                        "hiddenReplies": [
+                            "at://did:plc:l54wsjniswgkbvuzyhi2slga/app.bsky.feed.post/3l3tg5hhqca2w",
+                            "at://did:plc:5hupwpifrvwfcvqpu24nnxnm/app.bsky.feed.post/3l3tg4uog4j2n",
+                            "at://did:plc:bszc6p57i2ctn32dffbxdc3p/app.bsky.feed.post/3l3thl4qrxn2u",
+                            "at://did:plc:knqjfezhdnqre5ffjo6szxl7/app.bsky.feed.post/3l3vr34fhcw27"
+                        ],
+                        "post": "at://did:plc:ubji6txf3gdzwztlt2zegzdi/app.bsky.feed.post/3l3t6hskpaq2d"
+                    },
+                    "lists": []
+                }
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-10T23:30:44.524Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:t2xgjn25va5r5m3prh6ssuhi/app.bsky.feed.post/3l3qct4dufc2j",
+                "cid": "bafyreib54ydrh24dk2zoetypjmwbfoelp3ejkndai7wdeyygbt6qw4gn6y",
+                "author": {
+                    "did": "did:plc:t2xgjn25va5r5m3prh6ssuhi",
+                    "handle": "wwwmlna.bsky.social",
+                    "displayName": "milena ",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:t2xgjn25va5r5m3prh6ssuhi/bafkreia23h7o24772m27tvrrmdnmtvteob7fd3jhktox26fg5p7luecpu4@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2023-03-01T20:31:25.277Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-09T16:24:49.342Z",
+                    "langs": [
+                        "pt"
+                    ],
+                    "reply": {
+                        "parent": {
+                            "cid": "bafyreidlmaxzeskriazanoylgzzp3uq7wadje7a4ev2rdvookj6yaxxf34",
+                            "uri": "at://did:plc:lvbokgb37ff33we4hdx4hlly/app.bsky.feed.post/3l3qckfqvci2x"
+                        },
+                        "root": {
+                            "cid": "bafyreihijug2yd7fcwvq66axwqgmatd7qgfuimqolynwj5j4ajmdtszwfy",
+                            "uri": "at://did:plc:t2xgjn25va5r5m3prh6ssuhi/app.bsky.feed.post/3l3qcglbt3p2r"
+                        }
+                    },
+                    "text": "eu esperando pra fazer tweets de “agora que é no sudeste a fumaça importa né” mas pelo visto não importa também não"
+                },
+                "replyCount": 5,
+                "repostCount": 60,
+                "likeCount": 329,
+                "quoteCount": 1,
+                "indexedAt": "2024-09-09T16:24:49.342Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-09T16:36:53.826Z"
+            },
+            "reply": {
+                "root": {
+                    "$type": "app.bsky.feed.defs#postView",
+                    "uri": "at://did:plc:t2xgjn25va5r5m3prh6ssuhi/app.bsky.feed.post/3l3qcglbt3p2r",
+                    "cid": "bafyreihijug2yd7fcwvq66axwqgmatd7qgfuimqolynwj5j4ajmdtszwfy",
+                    "author": {
+                        "did": "did:plc:t2xgjn25va5r5m3prh6ssuhi",
+                        "handle": "wwwmlna.bsky.social",
+                        "displayName": "milena ",
+                        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:t2xgjn25va5r5m3prh6ssuhi/bafkreia23h7o24772m27tvrrmdnmtvteob7fd3jhktox26fg5p7luecpu4@jpeg",
+                        "associated": {
+                            "chat": {
+                                "allowIncoming": "all"
+                            }
+                        },
+                        "labels": [],
+                        "createdAt": "2023-03-01T20:31:25.277Z"
+                    },
+                    "record": {
+                        "$type": "app.bsky.feed.post",
+                        "createdAt": "2024-09-09T16:17:48.792Z",
+                        "embed": {
+                            "$type": "app.bsky.embed.images",
+                            "images": [
+                                {
+                                    "alt": "Adaptação do meme “bad ending: the whole WORLD is now Brazil” nessa versão adaptada o meme diz “bad ending: the whole brazil is now Cuiabá”",
+                                    "aspectRatio": {
+                                        "height": 940,
+                                        "width": 896
+                                    },
+                                    "image": {
+                                        "$type": "blob",
+                                        "ref": {
+                                            "$link": "bafkreihxliu6vwmf4x3zohsn76wqhwcuat5gdxo3mhdd4c6luljn3oqmkm"
+                                        },
+                                        "mimeType": "image/jpeg",
+                                        "size": 515200
+                                    }
+                                }
+                            ]
+                        },
+                        "langs": [
+                            "pt"
+                        ],
+                        "text": "o foda é que por ser do centro oeste eu sempre tive a esperança de que quando a fumaça tóxica que a gente inala todo ano começasse a chegar no sul/sudeste o governo faria alguma coisa mas estão sendo todos igualmente ignorados e é isso então"
+                    },
+                    "embed": {
+                        "$type": "app.bsky.embed.images#view",
+                        "images": [
+                            {
+                                "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:t2xgjn25va5r5m3prh6ssuhi/bafkreihxliu6vwmf4x3zohsn76wqhwcuat5gdxo3mhdd4c6luljn3oqmkm@jpeg",
+                                "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:t2xgjn25va5r5m3prh6ssuhi/bafkreihxliu6vwmf4x3zohsn76wqhwcuat5gdxo3mhdd4c6luljn3oqmkm@jpeg",
+                                "alt": "Adaptação do meme “bad ending: the whole WORLD is now Brazil” nessa versão adaptada o meme diz “bad ending: the whole brazil is now Cuiabá”",
+                                "aspectRatio": {
+                                    "height": 940,
+                                    "width": 896
+                                }
+                            }
+                        ]
+                    },
+                    "replyCount": 42,
+                    "repostCount": 428,
+                    "likeCount": 2844,
+                    "quoteCount": 76,
+                    "indexedAt": "2024-09-09T16:17:48.792Z",
+                    "labels": []
+                },
+                "parent": {
+                    "$type": "app.bsky.feed.defs#postView",
+                    "uri": "at://did:plc:lvbokgb37ff33we4hdx4hlly/app.bsky.feed.post/3l3qckfqvci2x",
+                    "cid": "bafyreidlmaxzeskriazanoylgzzp3uq7wadje7a4ev2rdvookj6yaxxf34",
+                    "author": {
+                        "did": "did:plc:lvbokgb37ff33we4hdx4hlly",
+                        "handle": "maizherla.bsky.social",
+                        "displayName": "Marcela",
+                        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:lvbokgb37ff33we4hdx4hlly/bafkreifydh57en4ywrfu4tebddspd34gdorxdsybkfrjdw33757nzfdvwy@jpeg",
+                        "associated": {
+                            "chat": {
+                                "allowIncoming": "following"
+                            }
+                        },
+                        "labels": [],
+                        "createdAt": "2024-08-29T23:49:54.528Z"
+                    },
+                    "record": {
+                        "$type": "app.bsky.feed.post",
+                        "createdAt": "2024-09-09T16:19:57.191Z",
+                        "langs": [
+                            "pt"
+                        ],
+                        "reply": {
+                            "parent": {
+                                "cid": "bafyreihijug2yd7fcwvq66axwqgmatd7qgfuimqolynwj5j4ajmdtszwfy",
+                                "uri": "at://did:plc:t2xgjn25va5r5m3prh6ssuhi/app.bsky.feed.post/3l3qcglbt3p2r"
+                            },
+                            "root": {
+                                "cid": "bafyreihijug2yd7fcwvq66axwqgmatd7qgfuimqolynwj5j4ajmdtszwfy",
+                                "uri": "at://did:plc:t2xgjn25va5r5m3prh6ssuhi/app.bsky.feed.post/3l3qcglbt3p2r"
+                            }
+                        },
+                        "text": "Eu no norte kkkkkkkkkk rindo de nervoso"
+                    },
+                    "replyCount": 1,
+                    "repostCount": 0,
+                    "likeCount": 16,
+                    "quoteCount": 0,
+                    "indexedAt": "2024-09-09T16:19:57.191Z",
+                    "labels": []
+                },
+                "grandparentAuthor": {
+                    "did": "did:plc:t2xgjn25va5r5m3prh6ssuhi",
+                    "handle": "wwwmlna.bsky.social",
+                    "displayName": "milena ",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:t2xgjn25va5r5m3prh6ssuhi/bafkreia23h7o24772m27tvrrmdnmtvteob7fd3jhktox26fg5p7luecpu4@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2023-03-01T20:31:25.277Z"
+                }
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:m5a7bji2ndsbgbyg5ssz2rmz/app.bsky.feed.post/3l3e7r6tsl52k",
+                "cid": "bafyreihwtqjxzni6hcatfvueggaflazcg6hhudm3ep5ojbbiffq2yy7aba",
+                "author": {
+                    "did": "did:plc:m5a7bji2ndsbgbyg5ssz2rmz",
+                    "handle": "quacknifico.bsky.social",
+                    "displayName": "QUACK (COMMS OPEN)",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreie5iopvdoy3aocabjq4opeefigxh723vkjot4azzz6wsi6cqetyba@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-04-07T03:13:11.679Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-04T20:58:05.797Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1000,
+                                    "width": 1000
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreiaz4pq3xfk6iadufz7z3yr4rjbnj5oks5lew4nfd5npd6tk5lnovu"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 491951
+                                }
+                            }
+                        ]
+                    },
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "--PRIMEIRO LIVRO--\n\n❤️+🔄=Bruxa feliz"
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreiaz4pq3xfk6iadufz7z3yr4rjbnj5oks5lew4nfd5npd6tk5lnovu@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:m5a7bji2ndsbgbyg5ssz2rmz/bafkreiaz4pq3xfk6iadufz7z3yr4rjbnj5oks5lew4nfd5npd6tk5lnovu@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1000,
+                                "width": 1000
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 17,
+                "repostCount": 176,
+                "likeCount": 665,
+                "quoteCount": 3,
+                "indexedAt": "2024-09-04T20:58:05.797Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-05T10:46:47.428Z"
+            }
+        },
+        {
+            "post": {
+                "uri": "at://did:plc:blofabxuhtzeqbu6t52jvfoy/app.bsky.feed.post/3l3ekhsoiwh2t",
+                "cid": "bafyreiejd5v5v2ixxqq2mmqi72vx2376osql73e7p2mw2w4ondnrlqek44",
+                "author": {
+                    "did": "did:plc:blofabxuhtzeqbu6t52jvfoy",
+                    "handle": "cazetvfc.bsky.social",
+                    "displayName": "CazéTV",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:blofabxuhtzeqbu6t52jvfoy/bafkreifo24xjpuw7xh2uvi6efagamjozik52ggkznx32jwkct4z2j36ism@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "all"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-08-31T14:16:19.199Z"
+                },
+                "record": {
+                    "$type": "app.bsky.feed.post",
+                    "createdAt": "2024-09-05T00:09:41.997Z",
+                    "embed": {
+                        "$type": "app.bsky.embed.images",
+                        "images": [
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1350,
+                                    "width": 1080
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreihhllrhqxirbdrufpr73cuybocsbrqloabnebh3udurkkl2aadage"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 828714
+                                }
+                            },
+                            {
+                                "alt": "",
+                                "aspectRatio": {
+                                    "height": 1350,
+                                    "width": 1080
+                                },
+                                "image": {
+                                    "$type": "blob",
+                                    "ref": {
+                                        "$link": "bafkreifvtpolj4xgowvkp3mqziaiixfhb32bfv4qelzuuxky7iwc6h7ppq"
+                                    },
+                                    "mimeType": "image/jpeg",
+                                    "size": 855993
+                                }
+                            }
+                        ]
+                    },
+                    "facets": [
+                        {
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#tag",
+                                    "tag": "BoladeOuro"
+                                }
+                            ],
+                            "index": {
+                                "byteEnd": 158,
+                                "byteStart": 147
+                            }
+                        },
+                        {
+                            "features": [
+                                {
+                                    "$type": "app.bsky.richtext.facet#tag",
+                                    "tag": "Futebolinternacional"
+                                }
+                            ],
+                            "index": {
+                                "byteEnd": 236,
+                                "byteStart": 215
+                            }
+                        }
+                    ],
+                    "langs": [
+                        "pt"
+                    ],
+                    "text": "AVISA QUE SÃO ELAS, TÁ? 🇧🇷\n\nVai brincando com a gente no Futebol Feminino, mané! A Tarciane e a Gabi Portilho SÃO O BRASIL na disputa da #BoladeOuro Feminina. 🔥\n\nREPRESENTARAM DEMAIS EM 2024! 👏🥈\n\n#Futebolinternacional"
+                },
+                "embed": {
+                    "$type": "app.bsky.embed.images#view",
+                    "images": [
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:blofabxuhtzeqbu6t52jvfoy/bafkreihhllrhqxirbdrufpr73cuybocsbrqloabnebh3udurkkl2aadage@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:blofabxuhtzeqbu6t52jvfoy/bafkreihhllrhqxirbdrufpr73cuybocsbrqloabnebh3udurkkl2aadage@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1350,
+                                "width": 1080
+                            }
+                        },
+                        {
+                            "thumb": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:blofabxuhtzeqbu6t52jvfoy/bafkreifvtpolj4xgowvkp3mqziaiixfhb32bfv4qelzuuxky7iwc6h7ppq@jpeg",
+                            "fullsize": "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:blofabxuhtzeqbu6t52jvfoy/bafkreifvtpolj4xgowvkp3mqziaiixfhb32bfv4qelzuuxky7iwc6h7ppq@jpeg",
+                            "alt": "",
+                            "aspectRatio": {
+                                "height": 1350,
+                                "width": 1080
+                            }
+                        }
+                    ]
+                },
+                "replyCount": 3,
+                "repostCount": 15,
+                "likeCount": 181,
+                "quoteCount": 0,
+                "indexedAt": "2024-09-05T00:09:41.997Z",
+                "labels": []
+            },
+            "reason": {
+                "$type": "app.bsky.feed.defs#reasonRepost",
+                "by": {
+                    "did": "did:plc:jq6k2lgkszbikztdj7mzshud",
+                    "handle": "yvenslg.bsky.social",
+                    "displayName": "Yvens",
+                    "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jq6k2lgkszbikztdj7mzshud/bafkreiggaxtuzj5cran4axvr5yapebacpitalc2ksmoxei6qtlbanzm7ke@jpeg",
+                    "associated": {
+                        "chat": {
+                            "allowIncoming": "following"
+                        }
+                    },
+                    "labels": [],
+                    "createdAt": "2024-09-03T19:11:31.300Z"
+                },
+                "indexedAt": "2024-09-05T10:04:04.744Z"
+            }
+        }
+    ]
+}

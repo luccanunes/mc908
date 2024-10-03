@@ -1,0 +1,355 @@
+{
+    "actors": [
+        {
+            "did": "did:plc:ewvi7nxzyoun6zhxrhs64oiz",
+            "handle": "atproto.com",
+            "displayName": "AT Protocol Developers",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ewvi7nxzyoun6zhxrhs64oiz/bafkreibjfgx2gprinfvicegelk5kosd6y2frmqpqzwqkg7usac74l3t2v4@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "none"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-26T06:19:25.508Z",
+            "description": "Social networking technology created by Bluesky. \n\nDeveloper-focused account. Follow @bsky.app for general announcements!\n\nBluesky API docs: docs.bsky.app\nAT Protocol specs: atproto.com",
+            "indexedAt": "2024-02-06T15:26:43.170Z"
+        },
+        {
+            "did": "did:plc:eon2iu7v3x2ukgxkqaf7e5np",
+            "handle": "safety.bsky.app",
+            "displayName": "Bluesky Safety",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:eon2iu7v3x2ukgxkqaf7e5np/bafkreih7mgyv6dugcguewqnuev64i7jsljhtrr6olfadmxq2dasfb7woam@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "none"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-07-17T21:54:28.741Z",
+            "description": "Sharing updates about trust and safety on Bluesky.\n\nThis account’s mentions are not actively monitored. To report a post or account, use the in-app reporting feature.\n\nCommunity Guidelines: https://bsky.social/about/support/community-guidelines",
+            "indexedAt": "2024-02-08T00:51:47.063Z"
+        },
+        {
+            "did": "did:plc:oky5czdrnfjpqslsw2a5iclo",
+            "handle": "jay.bsky.team",
+            "displayName": "Jay 🦋",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oky5czdrnfjpqslsw2a5iclo/bafkreihidru2xruxdxlvvcixc7lbgoudzicjbrdgacdhdhxyfw4yut4nfq@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2022-11-17T06:31:40.296Z",
+            "description": "CEO of Bluesky, steward of AT Protocol. \n\nLet’s build a federated republic, starting with this server. 🌱 🪴 🌳 ",
+            "indexedAt": "2024-02-06T22:21:45.370Z"
+        },
+        {
+            "did": "did:plc:tpg43qhh4lw4ksiffs4nbda3",
+            "handle": "jacob.gold",
+            "displayName": "Jake Gold",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tpg43qhh4lw4ksiffs4nbda3/bafkreiems5id4gwiko7s3gffilosjowemvtse2p3uq6wrh62gogskp5vci@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-01-04T18:08:01.779Z",
+            "description": "Former engineer @ Tech giant Bluesky\n\nMountain View, CA\n\nI like people and other animals, technology, programming, history, gaming, and a lot of other stuff. I probably like you.\n\nViews expressed here are my own.\n\nDMs open. Email: bluesky@jacob.gold",
+            "indexedAt": "2024-07-24T14:09:33.474Z"
+        },
+        {
+            "did": "did:plc:p2cp5gopk7mgjegy6wadk3ep",
+            "handle": "samuel.bsky.team",
+            "displayName": "Samuel (tiny glade stan account)",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:p2cp5gopk7mgjegy6wadk3ep/bafkreicvd5sktrqqtgbpuhufygwy5obgqydc5upwtitei7exgvej2dhnvq@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-14T18:12:06.575Z",
+            "description": "developer at bluesky\nFAQ: pins=🔜, bookmarks=🤷, ipad=🫥\n📍London",
+            "indexedAt": "2024-09-28T06:40:45.207Z"
+        },
+        {
+            "did": "did:plc:fgsn4gf2dlgnybo4nbej5b2s",
+            "handle": "anshnanda.com",
+            "displayName": "Ansh",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:fgsn4gf2dlgnybo4nbej5b2s/bafkreiem2uhkh2sqgqlwq3hw2yatiirdhrp2et5lsbtgoztsujx4qchwiy@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-02-28T22:48:54.842Z",
+            "description": "Helped build this app a lil bit!\n",
+            "indexedAt": "2024-05-22T19:31:25.453Z"
+        },
+        {
+            "did": "did:plc:227vbwa4l4m3nbyjjsgylvop",
+            "handle": "pemt.bsky.social",
+            "displayName": "Posts em memoria ao Twitter",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:227vbwa4l4m3nbyjjsgylvop/bafkreibtbaq7bjtm6uxy43fttnbnvdkubh6w26e4j2gszrmvl6oz6iynbq@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-09-01T01:55:23.507Z",
+            "description": "🕊️| Abrigo dos tuiteiros\n🤖| tweets duvidosos/shitpost\n✨| Parceria / divulgação > DM\n💌| ADM:\neduardopemt.bsky.social @vxdavi.bsky.social\n",
+            "indexedAt": "2024-09-28T02:02:34.306Z"
+        },
+        {
+            "did": "did:plc:an3c564a5osndg5xlvpqxpwd",
+            "handle": "findmobydick.bsky.social",
+            "displayName": "Find Moby Dick",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:an3c564a5osndg5xlvpqxpwd/bafkreib2jj6akxt3iesvzvsrzbfml3wfyojwjqhg3lrqumoaurxd6uu2da@jpeg",
+            "labels": [],
+            "createdAt": "2024-02-09T22:19:48.647Z",
+            "description": "It is not down in any map; true places never are. A companion bot to @mobydickatsea.bsky.social, both bots coded and maintained by @samplereality.bsky.social.",
+            "indexedAt": "2024-02-10T04:48:39.866Z"
+        },
+        {
+            "did": "did:plc:6wpkkitfdkgthatfvspcfmjo",
+            "handle": "dril.bsky.social",
+            "displayName": "wint",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6wpkkitfdkgthatfvspcfmjo/bafkreiggofiqpdnz6tfajmu7i5gdqyl7j27h22bqivpmkymuzwd5kcudfm@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-27T16:46:45.754Z",
+            "description": "https://linktr.ee/drilreal\n\nJust a few of my posts here to look at . Make sure to look at my links and my posts and to click on all my links and like my posts .",
+            "indexedAt": "2024-02-25T09:44:54.945Z"
+        },
+        {
+            "did": "did:plc:p7gxyfr5vii5ntpwo7f6dhe2",
+            "handle": "aoc.bsky.social",
+            "displayName": "Alexandria Ocasio-Cortez",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:p7gxyfr5vii5ntpwo7f6dhe2/bafkreia7pjciqmezep36yotfgas23eie47sy5ymcorzd7exejlxtiox6by@jpeg",
+            "labels": [],
+            "createdAt": "2023-04-27T19:39:34.920Z",
+            "description": "Congresswoman for NY14, repping the Bronx and Queens. Grassroots progressive. Funded by everyday people, not lobbyists. A better world is possible. \n\nocasiocortez.com/about",
+            "indexedAt": "2024-01-20T05:09:36.410Z"
+        },
+        {
+            "did": "did:plc:2upfjxintrstvlmmbtbt5tkl",
+            "handle": "luscas.com.br",
+            "displayName": "luscas ",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2upfjxintrstvlmmbtbt5tkl/bafkreihlip7oft2kbfir2wqrw2tjuvjy7tdk752ars3azttnd5r7kirbqa@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-03-01T20:26:43.181Z",
+            "description": "a dinossaura e ancestral de todas nós \n\ninstagram.com/luscas \ncontato: luscasconsoli@outlook.com",
+            "indexedAt": "2024-09-09T21:27:11.126Z"
+        },
+        {
+            "did": "did:plc:gntwx32hbw2c7zxbtuivi66r",
+            "handle": "lalalalack.bsky.social",
+            "displayName": "lack/珈琲紳士@日曜日東ス29ab",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:gntwx32hbw2c7zxbtuivi66r/bafkreidkxiuw5ec2b7rlpy4576oyywsyld6jos777gf6lihslgzyv56wwm@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-02-07T01:55:06.738Z",
+            "description": "イラストレーター 諸々情報まとめ➡ http://potofu.me/lalalalack \nX https://twitter.com/lalalalack\ninstagram https://www.instagram.com/lack_illustrator/\nFANBOX　https://lack.fanbox.cc/\nyoutube http://youtube.com/@lackism \nBOOTH http://lack.booth.pm \n仕事依頼は　lackxlack@gmail.com",
+            "indexedAt": "2024-08-01T11:11:24.374Z"
+        },
+        {
+            "did": "did:plc:73dpznbu4wqwtcyurwbiulov",
+            "handle": "archive.org",
+            "displayName": "Internet Archive",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:73dpznbu4wqwtcyurwbiulov/bafkreiemdvhpo5rnsxktik5dkvmmc6horutcnlyoxwwrhsuaojz6qbzdyy@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-05-03T12:22:48.853Z",
+            "description": "Internet Archive is a non-profit digital library offering millions of free books, movies, & audio files, plus billions of saved web pages in the Wayback Machine.",
+            "indexedAt": "2024-01-20T05:04:54.256Z"
+        },
+        {
+            "did": "did:plc:ewwtkesxyjdbn7ynhy3jpyyc",
+            "handle": "neoquimicaarena.com.br",
+            "displayName": "Neo Química Arena",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ewwtkesxyjdbn7ynhy3jpyyc/bafkreifgvyjifk3phb54l55xfeiw7u7l7yynxucgbvt2wqx6fj7l2hou5m@jpeg",
+            "labels": [],
+            "createdAt": "2024-09-10T14:12:10.123Z",
+            "description": "Perfil oficial da Neo Química Arena, estádio do Sport Club Corinthians Paulista. ⚽🏴🏆\n\nwww.neoquimicaarena.com.br\n",
+            "indexedAt": "2024-09-10T14:25:24.919Z"
+        },
+        {
+            "did": "did:plc:w3wnj5nfcqxt26pmx3ajzsrb",
+            "handle": "erikahilton.bsky.social",
+            "displayName": "ERIKA HILTON",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:w3wnj5nfcqxt26pmx3ajzsrb/bafkreigbkcppbirrycljcbn7oomf5irticdmbbffuufve2vtptaubnraca@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-19T22:25:17.914Z",
+            "description": "Deputada Federal e Líder do PSOL ☀️\n✨️ Conheçam Amanda Paschoal 50700, minha candidata a vereadora em SP 🏳️‍⚧️ 💥",
+            "indexedAt": "2024-08-31T17:26:29.998Z"
+        },
+        {
+            "did": "did:plc:62gdkmpwa7xme36getyqnem3",
+            "handle": "astrokatie.com",
+            "displayName": "Katie Mack",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:62gdkmpwa7xme36getyqnem3/bafkreia7wdfi6wwp5dfe3tn2urjnkkujdds6x2bjebf2bbjnxx2h36cnnu@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-21T05:03:00.394Z",
+            "description": "Cosmologist, pilot, author, connoisseur of cosmic catastrophes. @TEDFellow, CIFAR Azrieli Global Scholar. She/her. Dr.",
+            "indexedAt": "2024-01-20T05:09:40.118Z"
+        },
+        {
+            "did": "did:plc:mjh257xyug2mpodoyy3he5ih",
+            "handle": "pixelatedboat.bsky.social",
+            "displayName": "pixelatedboat aka “mr bluesky”",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:mjh257xyug2mpodoyy3he5ih/bafkreihcujumd3oermmuyc2domfddpkn46t2sprqyvhv5swbauogsryn4a@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-28T03:29:23.837Z",
+            "description": "The 76th most followed account on bluesky. I will NOT be updating this ranking when it’s no longer true",
+            "indexedAt": "2024-01-20T05:08:35.286Z"
+        },
+        {
+            "did": "did:plc:jutmjylg2h4tpev7wrvy2ay3",
+            "handle": "alyankovic.bsky.social",
+            "displayName": "Al Yankovic",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:jutmjylg2h4tpev7wrvy2ay3/bafkreibrr7aidte4qfvmgvozn54c44eb4gfxj7ywy3wjmrpjsxzdyjnwpe@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-05-24T22:03:10.185Z",
+            "description": "You know... the weird one.",
+            "indexedAt": "2024-01-20T05:08:34.606Z"
+        },
+        {
+            "did": "did:plc:wa7b35aakoll7hugkrjtf3xf",
+            "handle": "samengo.eclipseroad.com",
+            "displayName": "SAMENGO",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:wa7b35aakoll7hugkrjtf3xf/bafkreig355dvkbgdkiecm3wopnjv43z6oemqkucqrstvl2bshteifivdeq@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2024-08-29T17:33:42.119Z",
+            "description": "O site mudou mas as configurações seguem de fábrica: \nLevar esse perfil a sério = procure ajuda | contato: samengo_2017@outlook.com",
+            "indexedAt": "2024-08-29T17:40:17.719Z"
+        },
+        {
+            "did": "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+            "handle": "mmasnick.bsky.social",
+            "displayName": "Mike Masnick",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:cak4klqoj3bqgk5rj6b4f5do/bafkreifrr5n5p2ixfbupo3eocykh5jzd67dy2tohi7pzllacainjgkkq5e@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-03-27T23:27:35.019Z",
+            "description": "Techdirt guy. Writes about social media, copyright, free speech, content moderation, civil liberties and stuff like that. Once wrote a paper that may have helped inspire this service & now I'm on its board: https://bit.ly/protocolnotplatform",
+            "indexedAt": "2024-08-07T21:32:39.575Z"
+        },
+        {
+            "did": "did:plc:xrr5j2okn7ew2zvcwsxus3gb",
+            "handle": "catsofyore.bsky.social",
+            "displayName": "Cats of Yore",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:xrr5j2okn7ew2zvcwsxus3gb/bafkreig6pljjdx7aekpetnwdxmjzhcbiwsoph72wjhjzjqsey2bzrj4pz4@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-04-28T06:40:27.997Z",
+            "description": "Hi! I’m Molly Hodgdon. I live in Vermont with my beautiful FIV+ cats Fergus and Francie. Banner photo by W. Eugene Smith. Profile pic is a postcard from my collection mailed 1908.\n\nNot a bot. Not selling anything. Just a keeper of forgotten cats.",
+            "indexedAt": "2024-01-20T05:05:19.864Z"
+        },
+        {
+            "did": "did:plc:fqiatejd2mv34wztyh2euto7",
+            "handle": "jairme.bsky.social",
+            "displayName": "Jairme, The Blue ✨🧙‍♀️",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:fqiatejd2mv34wztyh2euto7/bafkreibr3vdkewmitsrukfejnypftrsd5aohk2dp4ups3mhras7fbmn5qm@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "following"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-03-01T03:20:13.922Z",
+            "description": "Jairme is ABSOLUTELY brat - A drunk. A poser. Bad taste in music. Party girl. Uncultured as hell. Cliche in every aspect. Needs a face lift. | 📧 oijairme@proton.me\n",
+            "indexedAt": "2024-09-02T16:35:30.102Z"
+        },
+        {
+            "did": "did:plc:tav2zvndjor6jgwacm3lc3te",
+            "handle": "intarchboard.bsky.social",
+            "displayName": "Internet Architecture Board",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tav2zvndjor6jgwacm3lc3te/bafkreiea32trkosqy26w7qmsr3kijvuaovoskp4thvyrlm63zgsjtiq3de@jpeg",
+            "labels": [],
+            "createdAt": "2023-10-11T17:27:08.831Z",
+            "description": "The Internet Architecture Board provides long-range technical direction for Internet development, ensuring the Internet continues to grow and evolve as a platform for global communication and innovation.",
+            "indexedAt": "2024-01-20T07:36:21.936Z"
+        },
+        {
+            "did": "did:plc:gzrecn3lwymykpn5qg47n2is",
+            "handle": "ilhanmn.bsky.social",
+            "displayName": "Ilhan Omar",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:gzrecn3lwymykpn5qg47n2is/bafkreigkk66cfjf2hxrbkkrbmtc3zt53p7ncz7mjrifnabymuk5wegkpvm@jpeg",
+            "labels": [],
+            "createdAt": "2023-04-29T21:34:24.607Z",
+            "description": "Mom, Refugee and Congresswoman for #MN05. Progressive Caucus Deputy Chair. Fighting for a more just world.✨ http://HC.com/IlhanOmar ",
+            "indexedAt": "2024-01-20T05:25:15.323Z"
+        },
+        {
+            "did": "did:plc:ewcrquoe3i4a2cwgsfdghwsi",
+            "handle": "keitatakahacy.bsky.social",
+            "displayName": "keiTa Takahashi",
+            "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:ewcrquoe3i4a2cwgsfdghwsi/bafkreigpqkxbcbwm44pcgudjq24udx2lj2defahmy7bhngjhwv6yfv3pwe@jpeg",
+            "associated": {
+                "chat": {
+                    "allowIncoming": "all"
+                }
+            },
+            "labels": [],
+            "createdAt": "2023-07-24T22:48:58.504Z",
+            "description": "Working on “to a T” : https://store.steampowered.com/app/1875320/to_a_T/",
+            "indexedAt": "2024-09-13T22:25:01.113Z"
+        }
+    ],
+    "cursor": "25"
+}
