@@ -17,66 +17,48 @@ const ll linf = 1e18;
 int n, m;
 vector<int> ans;
 graph G;
-vi check;
-vi pai;
+vector<vector<pair<int, int>>> dist; 
 
-bool bfs(int a, int b){
+void bfs(int a, graph G){
     queue<int> fila;
     fila.push(a);
+    vi check(G.size());
     check[a] = 1;
-    pai[a] = 0;
 
     while(!fila.empty()){
         int x = fila.front();
         fila.pop();
 
-        if(x == b) {
-            break;
-        }
-
         for(auto y : G[x]){
             if(check[y] != 1){
                 fila.push(y);
                 check[y] = 1;
-                pai[y] = x;
+                dist[a][y].first = dist[a][x].first + 1; 
+                dist[a][y].second = 1;
             }
+            else if(dist[a][y].first == dist[a][x].first + 1) dist[a][y].second += dist[a][x].second;
         }
     }
-
-    if(check[b] != 1) return false;
-    return true;
 }
  
 void solve(){
-    cin >> n >> m;
-    G.resize(n + 1);
-    check.resize(n + 1);
-    pai.resize(n + 1);
-
-    for(int i = 1; i <= m; i++){
+    int n, m; cin >> n >> m;
+    graph G(n);
+    for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
-        G[a].pb(b); G[b].pb(a);
+        G[a].push_back(b);
+        G[b].push_back(a);
     }
 
-    if(!bfs(1, n)){
-        cout << "IMPOSSIBLE\n";
-        return;
+    dist.resize(n);
+    for(int i = 0; i < n; i++) dist[i].resize(n);
+
+    for(int i = 0; i < G.size(); i++){
+        bfs(i, G);
     }
 
-    int x = n;
-    ans.pb(n);
+    for()
 
-    while(pai[x] != 0){
-        ans.pb(pai[x]);
-        x = pai[x];
-    }
-    reverse(all(ans));
-
-    cout << ans.size() << '\n';
-    for(int i = 0; i < ans.size(); i++){
-        cout << ans[i] << ' ';  
-    }
-    cout << '\n';
 }
  
 int main() {
