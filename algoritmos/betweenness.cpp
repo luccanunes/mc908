@@ -59,7 +59,7 @@ void bfs(int a, graph G){
         int x = ordem.top();
         ordem.pop();
         for(int y : pai[x]){
-            delta[y] += (qtdd[y] / qtdd[x]) * (1 + delta[x]);
+            delta[y] += ((ld)qtdd[y] / qtdd[x]) * (1 + delta[x]);
         }
         if(x != a){
             betweenness[x].first += delta[x];
@@ -79,7 +79,6 @@ void solve(){
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
         G[a].push_back(b);
-        G[b].push_back(a);
     }
 
     for(int i = 0; i < G.size(); i++){
@@ -88,6 +87,8 @@ void solve(){
 
     sort(betweenness.begin(), betweenness.end());
     reverse(betweenness.begin(), betweenness.end());
+
+    for(auto x : betweenness) cout << x.first << ' ' << x.second << '\n';
 
     ofstream file("betweenness_list");
     if (file.is_open()) {

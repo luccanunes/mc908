@@ -8,7 +8,7 @@ typedef pair<int, int> pii;
 typedef long double ld;
 
 vi bfs(graph G, int a){
-    vi  dist(G.size(), -1);
+    vi  dist(G.size(), G.size() * 2);
     queue<int> fila;
 
     fila.push(a);
@@ -19,7 +19,7 @@ vi bfs(graph G, int a){
         fila.pop();
 
         for(auto y : G[x]){
-            if(dist[y] < 0){
+            if(dist[y] >= G.size() * 2){
                 fila.push(y);
                 dist[y] = dist[x] + 1;
             }
@@ -54,7 +54,6 @@ void solve(){
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
         G[a].push_back(b);
-        G[b].push_back(a);
     }
     
     vector<pair<ld, int>> close = closeness(G);

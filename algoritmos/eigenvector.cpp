@@ -54,13 +54,10 @@ void solve(){
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
         G[a].push_back(b);
-        G[b].push_back(a);
     }
 
     int times = 100;
     for(int i = 0; i < times; i++){
-        for(auto x : eigenvector) cout << x << ' ';
-        cout << '\n'; 
         vonmises(G);
     }
 
@@ -73,8 +70,6 @@ void solve(){
 
     sort(aux.begin(), aux.end());
     reverse(aux.begin(), aux.end());
-
-    for(auto x : aux) cout << x.first << ' ' << x.second << '\n';
 
     ofstream file("eigenvector_list");
     if (file.is_open()) {

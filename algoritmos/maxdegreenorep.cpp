@@ -30,7 +30,6 @@ void solve(){
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
         G[a].push_back(b);
-        G[b].push_back(a);
     }
     
     vector<pii> deg = max_degree(G);

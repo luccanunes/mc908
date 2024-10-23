@@ -42,8 +42,8 @@ void solve(){
     graph G(n);
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
-        G[b].push_back(a);
-        degout[a]++;
+        G[a].push_back(b);
+        degout[b]++;
     }
 
     int times = 100;
@@ -63,7 +63,7 @@ void solve(){
 
     for(auto x : aux) cout << x.first << ' ' << x.second << '\n';
 
-    ofstream file("page_list");
+    ofstream file("page_rev_list");
     if (file.is_open()) {
         for(auto x : aux){
             file << x.second << ' ';
