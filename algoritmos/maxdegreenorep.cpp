@@ -5,8 +5,7 @@ typedef vector<int> vi;
 typedef vector<vi> graph;
 typedef pair<int, int> pii;
 
-vi max_degree(graph G, int k, set<int> S){
-    assert(k + S.size() <= G.size());
+vector<pii> max_degree(graph G){
     vector<set<int>> H;
     H.resize(G.size());
 
@@ -21,21 +20,34 @@ vi max_degree(graph G, int k, set<int> S){
     sort(v.begin(), v.end());
     reverse(v.begin(), v.end());
 
-    vi resp;
-    int i = 0;
-    while(resp.size() != k){
-        if(S.find(v[i].second) == S.end()){
-            resp.pb(v[i].second);
-        }
-        i++;
-    }
-
-    return resp;
+    return v;
 }
 
-// salvar essa lista de graus seria bom
+void solve(){
+    int n, m; cin >> n >> m;
+    
+    graph G(n);
+    for(int i = 0; i < m; i++){
+        int a, b; cin >> a >> b;
+        G[a].push_back(b);
+        G[b].push_back(a);
+    }
+    
+    vector<pii> deg = max_degree(G);
+
+    ofstream file("degree_no_rep_list");
+    if (file.is_open()) {
+        for(auto x : deg){
+            file << x.second << ' ';
+        }
+        file.close();
+    } else {
+        cout << "Failed to create the file.\n";
+    }
+}
 
 int main() {
     ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);	
+    solve();
     return 0;
 }
