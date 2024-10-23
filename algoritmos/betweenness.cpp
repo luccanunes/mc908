@@ -18,6 +18,7 @@ const ll linf = 1e18;
 graph G;
 vector<pair<ld, int>> betweenness;
 
+// Brandes
 void bfs(int a, graph G){
     stack<int> ordem;
 
