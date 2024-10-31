@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-10-31">
+    <creator>NetworkX 3.3</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="brasil247.bsky.social" label="brasil247.bsky.social" />
+      <node id="marciav2015.bsky.social" label="marciav2015.bsky.social" />
+      <node id="frostizinha.bsky.social" label="frostizinha.bsky.social" />
+      <node id="noahzinhoblue.bsky.social" label="noahzinhoblue.bsky.social" />
+      <node id="nakarama.bsky.social" label="nakarama.bsky.social" />
+      <node id="FlipboardBR.flipboard.com.ap.brid.gy" label="FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="not-cias-FlipboardBR.flipboard.com.ap.brid.gy" label="not-cias-FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="mizazag.bsky.social" label="mizazag.bsky.social" />
+      <node id="omarxista.bsky.social" label="omarxista.bsky.social" />
+      <node id="metropoles.com" label="metropoles.com" />
+      <node id="anebb0104.bsky.social" label="anebb0104.bsky.social" />
+      <node id="gzhdigital.bsky.social" label="gzhdigital.bsky.social" />
+      <node id="vivianebarbosa.bsky.social" label="vivianebarbosa.bsky.social" />
+      <node id="trendings.digital" label="trendings.digital" />
+      <node id="gaylulista.bsky.social" label="gaylulista.bsky.social" />
+      <node id="stvbrasil13.bsky.social" label="stvbrasil13.bsky.social" />
+      <node id="anapaulaalmeida.bsky.social" label="anapaulaalmeida.bsky.social" />
+      <node id="thomas1949.bsky.social" label="thomas1949.bsky.social" />
+      <node id="ginahcubas.bsky.social" label="ginahcubas.bsky.social" />
+      <node id="fabioms.bsky.social" label="fabioms.bsky.social" />
+      <node id="mtmiranda.bsky.social" label="mtmiranda.bsky.social" />
+      <node id="folha.com" label="folha.com" />
+      <node id="mv8.bsky.social" label="mv8.bsky.social" />
+      <node id="madrugatina.bsky.social" label="madrugatina.bsky.social" />
+      <node id="dannyhat.bsky.social" label="dannyhat.bsky.social" />
+      <node id="camarotedacpi.bsky.social" label="camarotedacpi.bsky.social" />
+      <node id="leyarte.bsky.social" label="leyarte.bsky.social" />
+      <node id="natransversal.bsky.social" label="natransversal.bsky.social" />
+      <node id="revistaforum.com.br" label="revistaforum.com.br" />
+      <node id="snavarro.bsky.social" label="snavarro.bsky.social" />
+      <node id="luisnassif.bsky.social" label="luisnassif.bsky.social" />
+      <node id="onkoto.bsky.social" label="onkoto.bsky.social" />
+      <node id="jornalggn.bsky.social" label="jornalggn.bsky.social" />
+      <node id="monica-resende.bsky.social" label="monica-resende.bsky.social" />
+      <node id="guina32.bsky.social" label="guina32.bsky.social" />
+      <node id="pablocampos79.bsky.social" label="pablocampos79.bsky.social" />
+      <node id="waltherjr.bsky.social" label="waltherjr.bsky.social" />
+      <node id="mylauram.bsky.social" label="mylauram.bsky.social" />
+      <node id="juliomotta66.bsky.social" label="juliomotta66.bsky.social" />
+      <node id="climainfo.bsky.social" label="climainfo.bsky.social" />
+      <node id="emelyn-andressa.bsky.social" label="emelyn-andressa.bsky.social" />
+      <node id="claudiabinader.bsky.social" label="claudiabinader.bsky.social" />
+      <node id="valteraczel.bsky.social" label="valteraczel.bsky.social" />
+      <node id="abrah221b.bsky.social" label="abrah221b.bsky.social" />
+      <node id="economia-neg-cios-FlipboardBR.flipboard.com.ap.brid.gy" label="economia-neg-cios-FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="centraldapolitica.bsky.social" label="centraldapolitica.bsky.social" />
+      <node id="adalice.bsky.social" label="adalice.bsky.social" />
+      <node id="diariocarioca.com" label="diariocarioca.com" />
+      <node id="pubbh-ifcvx.bsky.social" label="pubbh-ifcvx.bsky.social" />
+      <node id="kaiko84.bsky.social" label="kaiko84.bsky.social" />
+      <node id="lcac4213.bsky.social" label="lcac4213.bsky.social" />
+      <node id="kku2002.bsky.social" label="kku2002.bsky.social" />
+      <node id="erikakokayoficial.bsky.social" label="erikakokayoficial.bsky.social" />
+      <node id="democracia13.bsky.social" label="democracia13.bsky.social" />
+      <node id="uol.com.br" label="uol.com.br" />
+      <node id="robertoepay.bsky.social" label="robertoepay.bsky.social" />
+      <node id="pcbabc.bsky.social" label="pcbabc.bsky.social" />
+      <node id="anamzt.bsky.social" label="anamzt.bsky.social" />
+      <node id="corvodatempestadx.cronicamente.online" label="corvodatempestadx.cronicamente.online" />
+      <node id="onivaotaner.bsky.social" label="onivaotaner.bsky.social" />
+      <node id="vinicius.jor.br" label="vinicius.jor.br" />
+      <node id="mariaaliceee.bsky.social" label="mariaaliceee.bsky.social" />
+      <node id="valeria-de-cassia.bsky.social" label="valeria-de-cassia.bsky.social" />
+      <node id="somosjacare.bsky.social" label="somosjacare.bsky.social" />
+      <node id="entretenimento-FlipboardBR.flipboard.com.ap.brid.gy" label="entretenimento-FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="congressoemfoco.com.br" label="congressoemfoco.com.br" />
+      <node id="drica2salam.bsky.social" label="drica2salam.bsky.social" />
+      <node id="matheusccq.bsky.social" label="matheusccq.bsky.social" />
+      <node id="ogamendonca.bsky.social" label="ogamendonca.bsky.social" />
+      <node id="heropizza.bsky.social" label="heropizza.bsky.social" />
+      <node id="tigreasiatico.bsky.social" label="tigreasiatico.bsky.social" />
+      <node id="paulovas.bsky.social" label="paulovas.bsky.social" />
+      <node id="lula.com.br" label="lula.com.br" />
+      <node id="betogrossi.bsky.social" label="betogrossi.bsky.social" />
+      <node id="franciscololiveira.bsky.social" label="franciscololiveira.bsky.social" />
+      <node id="luthithome.bsky.social" label="luthithome.bsky.social" />
+      <node id="n63x.bsky.social" label="n63x.bsky.social" />
+      <node id="rosely-barboza.bsky.social" label="rosely-barboza.bsky.social" />
+      <node id="creufat.bsky.social" label="creufat.bsky.social" />
+      <node id="jo0210.bsky.social" label="jo0210.bsky.social" />
+      <node id="amletgeorgina.bsky.social" label="amletgeorgina.bsky.social" />
+      <node id="tetecant16.bsky.social" label="tetecant16.bsky.social" />
+      <node id="brasillula13pt.bsky.social" label="brasillula13pt.bsky.social" />
+      <node id="petistaindignada.bsky.social" label="petistaindignada.bsky.social" />
+      <node id="marianakalil.bsky.social" label="marianakalil.bsky.social" />
+      <node id="sandroka13.bsky.social" label="sandroka13.bsky.social" />
+      <node id="nelwonnoronha.bsky.social" label="nelwonnoronha.bsky.social" />
+      <node id="ceissamed.bsky.social" label="ceissamed.bsky.social" />
+      <node id="carolcbvm.bsky.social" label="carolcbvm.bsky.social" />
+      <node id="mariacidada.bsky.social" label="mariacidada.bsky.social" />
+      <node id="peterperson10.bsky.social" label="peterperson10.bsky.social" />
+      <node id="varnion.bsky.social" label="varnion.bsky.social" />
+      <node id="transgressao.bsky.social" label="transgressao.bsky.social" />
+      <node id="mrvieira.bsky.social" label="mrvieira.bsky.social" />
+      <node id="ribeirotrilhas.bsky.social" label="ribeirotrilhas.bsky.social" />
+      <node id="theres19.bsky.social" label="theres19.bsky.social" />
+      <node id="elle-luli.bsky.social" label="elle-luli.bsky.social" />
+      <node id="valentelisy.bsky.social" label="valentelisy.bsky.social" />
+      <node id="soramiresal.bsky.social" label="soramiresal.bsky.social" />
+      <node id="tadeualves.bsky.social" label="tadeualves.bsky.social" />
+      <node id="juiiab.bsky.social" label="juiiab.bsky.social" />
+      <node id="luislz13.bsky.social" label="luislz13.bsky.social" />
+      <node id="sandruska.bsky.social" label="sandruska.bsky.social" />
+      <node id="aiaiai63.bsky.social" label="aiaiai63.bsky.social" />
+      <node id="diogroo.bsky.social" label="diogroo.bsky.social" />
+      <node id="terresipdeus.bsky.social" label="terresipdeus.bsky.social" />
+      <node id="miltontt2.bsky.social" label="miltontt2.bsky.social" />
+      <node id="fgdb.bsky.social" label="fgdb.bsky.social" />
+      <node id="sebastian556.bsky.social" label="sebastian556.bsky.social" />
+      <node id="daisyhenry72.bsky.social" label="daisyhenry72.bsky.social" />
+      <node id="joaofilipefc.bsky.social" label="joaofilipefc.bsky.social" />
+      <node id="marcelo1prf.bsky.social" label="marcelo1prf.bsky.social" />
+      <node id="most-responses-pt.bsky.social" label="most-responses-pt.bsky.social" />
+      <node id="neosilcar.bsky.social" label="neosilcar.bsky.social" />
+      <node id="pazpazpazpaz.bsky.social" label="pazpazpazpaz.bsky.social" />
+      <node id="annapd.bsky.social" label="annapd.bsky.social" />
+      <node id="prmd77.bsky.social" label="prmd77.bsky.social" />
+      <node id="bethlula13.bsky.social" label="bethlula13.bsky.social" />
+      <node id="iblistad.bsky.social" label="iblistad.bsky.social" />
+      <node id="carlos69.bsky.social" label="carlos69.bsky.social" />
+      <node id="mariatirui.bsky.social" label="mariatirui.bsky.social" />
+      <node id="ribaspaulo.pro.br" label="ribaspaulo.pro.br" />
+      <node id="fernandoaprado.bsky.social" label="fernandoaprado.bsky.social" />
+      <node id="audreivp.bsky.social" label="audreivp.bsky.social" />
+      <node id="fernando13.bsky.social" label="fernando13.bsky.social" />
+      <node id="hebergomesnogu1.bsky.social" label="hebergomesnogu1.bsky.social" />
+    </nodes>
+    <edges>
+      <edge source="brasil247.bsky.social" target="marciav2015.bsky.social" id="0" />
+      <edge source="frostizinha.bsky.social" target="noahzinhoblue.bsky.social" id="1" />
+      <edge source="frostizinha.bsky.social" target="nakarama.bsky.social" id="2" />
+      <edge source="FlipboardBR.flipboard.com.ap.brid.gy" target="not-cias-FlipboardBR.flipboard.com.ap.brid.gy" id="3" />
+      <edge source="FlipboardBR.flipboard.com.ap.brid.gy" target="economia-neg-cios-FlipboardBR.flipboard.com.ap.brid.gy" id="4" />
+      <edge source="FlipboardBR.flipboard.com.ap.brid.gy" target="entretenimento-FlipboardBR.flipboard.com.ap.brid.gy" id="5" />
+      <edge source="mizazag.bsky.social" target="omarxista.bsky.social" id="6" />
+      <edge source="metropoles.com" target="anebb0104.bsky.social" id="7" />
+      <edge source="metropoles.com" target="claudiabinader.bsky.social" id="8" />
+      <edge source="gzhdigital.bsky.social" target="vivianebarbosa.bsky.social" id="9" />
+      <edge source="trendings.digital" target="gaylulista.bsky.social" id="10" />
+      <edge source="stvbrasil13.bsky.social" target="anapaulaalmeida.bsky.social" id="11" />
+      <edge source="thomas1949.bsky.social" target="ginahcubas.bsky.social" id="12" />
+      <edge source="fabioms.bsky.social" target="mtmiranda.bsky.social" id="13" />
+      <edge source="folha.com" target="mv8.bsky.social" id="14" />
+      <edge source="folha.com" target="mrvieira.bsky.social" id="15" />
+      <edge source="madrugatina.bsky.social" target="dannyhat.bsky.social" id="16" />
+      <edge source="camarotedacpi.bsky.social" target="leyarte.bsky.social" id="17" />
+      <edge source="camarotedacpi.bsky.social" target="natransversal.bsky.social" id="18" />
+      <edge source="camarotedacpi.bsky.social" target="pcbabc.bsky.social" id="19" />
+      <edge source="camarotedacpi.bsky.social" target="anamzt.bsky.social" id="20" />
+      <edge source="camarotedacpi.bsky.social" target="corvodatempestadx.cronicamente.online" id="21" />
+      <edge source="camarotedacpi.bsky.social" target="onivaotaner.bsky.social" id="22" />
+      <edge source="camarotedacpi.bsky.social" target="vinicius.jor.br" id="23" />
+      <edge source="camarotedacpi.bsky.social" target="mariaaliceee.bsky.social" id="24" />
+      <edge source="camarotedacpi.bsky.social" target="valeria-de-cassia.bsky.social" id="25" />
+      <edge source="revistaforum.com.br" target="snavarro.bsky.social" id="26" />
+      <edge source="luisnassif.bsky.social" target="onkoto.bsky.social" id="27" />
+      <edge source="jornalggn.bsky.social" target="monica-resende.bsky.social" id="28" />
+      <edge source="guina32.bsky.social" target="pablocampos79.bsky.social" id="29" />
+      <edge source="guina32.bsky.social" target="waltherjr.bsky.social" id="30" />
+      <edge source="mylauram.bsky.social" target="juliomotta66.bsky.social" id="31" />
+      <edge source="climainfo.bsky.social" target="leyarte.bsky.social" id="32" />
+      <edge source="climainfo.bsky.social" target="emelyn-andressa.bsky.social" id="33" />
+      <edge source="climainfo.bsky.social" target="claudiabinader.bsky.social" id="34" />
+      <edge source="climainfo.bsky.social" target="valteraczel.bsky.social" id="35" />
+      <edge source="climainfo.bsky.social" target="abrah221b.bsky.social" id="36" />
+      <edge source="centraldapolitica.bsky.social" target="adalice.bsky.social" id="37" />
+      <edge source="centraldapolitica.bsky.social" target="abrah221b.bsky.social" id="38" />
+      <edge source="diariocarioca.com" target="pubbh-ifcvx.bsky.social" id="39" />
+      <edge source="diariocarioca.com" target="kaiko84.bsky.social" id="40" />
+      <edge source="diariocarioca.com" target="somosjacare.bsky.social" id="41" />
+      <edge source="lcac4213.bsky.social" target="kku2002.bsky.social" id="42" />
+      <edge source="erikakokayoficial.bsky.social" target="democracia13.bsky.social" id="43" />
+      <edge source="uol.com.br" target="robertoepay.bsky.social" id="44" />
+      <edge source="congressoemfoco.com.br" target="drica2salam.bsky.social" id="45" />
+      <edge source="congressoemfoco.com.br" target="matheusccq.bsky.social" id="46" />
+      <edge source="ogamendonca.bsky.social" target="heropizza.bsky.social" id="47" />
+      <edge source="tigreasiatico.bsky.social" target="paulovas.bsky.social" id="48" />
+      <edge source="lula.com.br" target="betogrossi.bsky.social" id="49" />
+      <edge source="lula.com.br" target="marciav2015.bsky.social" id="50" />
+      <edge source="lula.com.br" target="franciscololiveira.bsky.social" id="51" />
+      <edge source="lula.com.br" target="luthithome.bsky.social" id="52" />
+      <edge source="lula.com.br" target="n63x.bsky.social" id="53" />
+      <edge source="lula.com.br" target="rosely-barboza.bsky.social" id="54" />
+      <edge source="lula.com.br" target="creufat.bsky.social" id="55" />
+      <edge source="lula.com.br" target="jo0210.bsky.social" id="56" />
+      <edge source="lula.com.br" target="adalice.bsky.social" id="57" />
+      <edge source="lula.com.br" target="amletgeorgina.bsky.social" id="58" />
+      <edge source="lula.com.br" target="claudiabinader.bsky.social" id="59" />
+      <edge source="lula.com.br" target="tetecant16.bsky.social" id="60" />
+      <edge source="lula.com.br" target="brasillula13pt.bsky.social" id="61" />
+      <edge source="lula.com.br" target="petistaindignada.bsky.social" id="62" />
+      <edge source="lula.com.br" target="marianakalil.bsky.social" id="63" />
+      <edge source="lula.com.br" target="sandroka13.bsky.social" id="64" />
+      <edge source="lula.com.br" target="nelwonnoronha.bsky.social" id="65" />
+      <edge source="lula.com.br" target="ceissamed.bsky.social" id="66" />
+      <edge source="lula.com.br" target="carolcbvm.bsky.social" id="67" />
+      <edge source="lula.com.br" target="mariacidada.bsky.social" id="68" />
+      <edge source="lula.com.br" target="peterperson10.bsky.social" id="69" />
+      <edge source="lula.com.br" target="pablocampos79.bsky.social" id="70" />
+      <edge source="lula.com.br" target="valentelisy.bsky.social" id="71" />
+      <edge source="lula.com.br" target="soramiresal.bsky.social" id="72" />
+      <edge source="lula.com.br" target="tadeualves.bsky.social" id="73" />
+      <edge source="lula.com.br" target="juiiab.bsky.social" id="74" />
+      <edge source="lula.com.br" target="luislz13.bsky.social" id="75" />
+      <edge source="lula.com.br" target="sandruska.bsky.social" id="76" />
+      <edge source="lula.com.br" target="aiaiai63.bsky.social" id="77" />
+      <edge source="lula.com.br" target="gaylulista.bsky.social" id="78" />
+      <edge source="lula.com.br" target="diogroo.bsky.social" id="79" />
+      <edge source="lula.com.br" target="terresipdeus.bsky.social" id="80" />
+      <edge source="lula.com.br" target="miltontt2.bsky.social" id="81" />
+      <edge source="lula.com.br" target="fgdb.bsky.social" id="82" />
+      <edge source="lula.com.br" target="sebastian556.bsky.social" id="83" />
+      <edge source="lula.com.br" target="daisyhenry72.bsky.social" id="84" />
+      <edge source="lula.com.br" target="joaofilipefc.bsky.social" id="85" />
+      <edge source="lula.com.br" target="marcelo1prf.bsky.social" id="86" />
+      <edge source="lula.com.br" target="most-responses-pt.bsky.social" id="87" />
+      <edge source="lula.com.br" target="neosilcar.bsky.social" id="88" />
+      <edge source="lula.com.br" target="pazpazpazpaz.bsky.social" id="89" />
+      <edge source="lula.com.br" target="annapd.bsky.social" id="90" />
+      <edge source="lula.com.br" target="prmd77.bsky.social" id="91" />
+      <edge source="lula.com.br" target="bethlula13.bsky.social" id="92" />
+      <edge source="lula.com.br" target="iblistad.bsky.social" id="93" />
+      <edge source="lula.com.br" target="carlos69.bsky.social" id="94" />
+      <edge source="lula.com.br" target="mariatirui.bsky.social" id="95" />
+      <edge source="lula.com.br" target="ribaspaulo.pro.br" id="96" />
+      <edge source="lula.com.br" target="fernandoaprado.bsky.social" id="97" />
+      <edge source="lula.com.br" target="audreivp.bsky.social" id="98" />
+      <edge source="lula.com.br" target="fernando13.bsky.social" id="99" />
+      <edge source="lula.com.br" target="hebergomesnogu1.bsky.social" id="100" />
+      <edge source="varnion.bsky.social" target="transgressao.bsky.social" id="101" />
+      <edge source="ribeirotrilhas.bsky.social" target="theres19.bsky.social" id="102" />
+      <edge source="ribeirotrilhas.bsky.social" target="elle-luli.bsky.social" id="103" />
+    </edges>
+  </graph>
+</gexf>
