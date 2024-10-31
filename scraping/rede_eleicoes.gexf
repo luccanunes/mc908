@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-10-30">
+    <creator>NetworkX 3.3</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="FlipboardBR.flipboard.com.ap.brid.gy" label="FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="not-cias-FlipboardBR.flipboard.com.ap.brid.gy" label="not-cias-FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="palestinareports.bsky.social" label="palestinareports.bsky.social" />
+      <node id="badogada.bsky.social" label="badogada.bsky.social" />
+      <node id="lucianarinaldi.bsky.social" label="lucianarinaldi.bsky.social" />
+      <node id="margareth4.bsky.social" label="margareth4.bsky.social" />
+      <node id="madib.bsky.social" label="madib.bsky.social" />
+      <node id="entretenimento-FlipboardBR.flipboard.com.ap.brid.gy" label="entretenimento-FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="revistaforum.com.br" label="revistaforum.com.br" />
+      <node id="maricotarj2024.bsky.social" label="maricotarj2024.bsky.social" />
+      <node id="cmcam.bsky.social" label="cmcam.bsky.social" />
+      <node id="zevicente.bsky.social" label="zevicente.bsky.social" />
+      <node id="solangedias.bsky.social" label="solangedias.bsky.social" />
+      <node id="fofateamlh.bsky.social" label="fofateamlh.bsky.social" />
+      <node id="cristinaschnorr.bsky.social" label="cristinaschnorr.bsky.social" />
+      <node id="cleberiam.bsky.social" label="cleberiam.bsky.social" />
+      <node id="silmarq.bsky.social" label="silmarq.bsky.social" />
+      <node id="peterperson10.bsky.social" label="peterperson10.bsky.social" />
+      <node id="sweetnemesiis.bsky.social" label="sweetnemesiis.bsky.social" />
+      <node id="publico.bsky.social" label="publico.bsky.social" />
+      <node id="vivianebarbosa.bsky.social" label="vivianebarbosa.bsky.social" />
+      <node id="paulompereira.bsky.social" label="paulompereira.bsky.social" />
+      <node id="xplodninja.bsky.social" label="xplodninja.bsky.social" />
+      <node id="marlenemutum.bsky.social" label="marlenemutum.bsky.social" />
+      <node id="ildetelopes.bsky.social" label="ildetelopes.bsky.social" />
+      <node id="edusilvafogo.bsky.social" label="edusilvafogo.bsky.social" />
+      <node id="reinaldo567.bsky.social" label="reinaldo567.bsky.social" />
+      <node id="santrfl.bsky.social" label="santrfl.bsky.social" />
+      <node id="brasil247.bsky.social" label="brasil247.bsky.social" />
+      <node id="mariademirai.bsky.social" label="mariademirai.bsky.social" />
+      <node id="anamzt.bsky.social" label="anamzt.bsky.social" />
+      <node id="amadacwt.bsky.social" label="amadacwt.bsky.social" />
+      <node id="gilmarajo.bsky.social" label="gilmarajo.bsky.social" />
+      <node id="demostenesmartins.bsky.social" label="demostenesmartins.bsky.social" />
+      <node id="andreasantos.bsky.social" label="andreasantos.bsky.social" />
+      <node id="sergiooliveira.bsky.social" label="sergiooliveira.bsky.social" />
+      <node id="opini-o-FlipboardBR.flipboard.com.ap.brid.gy" label="opini-o-FlipboardBR.flipboard.com.ap.brid.gy" />
+      <node id="camaradahidalgo.bsky.social" label="camaradahidalgo.bsky.social" />
+      <node id="dnho.bsky.social" label="dnho.bsky.social" />
+    </nodes>
+    <edges>
+      <edge source="FlipboardBR.flipboard.com.ap.brid.gy" target="not-cias-FlipboardBR.flipboard.com.ap.brid.gy" id="0" />
+      <edge source="FlipboardBR.flipboard.com.ap.brid.gy" target="entretenimento-FlipboardBR.flipboard.com.ap.brid.gy" id="1" />
+      <edge source="FlipboardBR.flipboard.com.ap.brid.gy" target="opini-o-FlipboardBR.flipboard.com.ap.brid.gy" id="2" />
+      <edge source="palestinareports.bsky.social" target="badogada.bsky.social" id="3" />
+      <edge source="palestinareports.bsky.social" target="lucianarinaldi.bsky.social" id="4" />
+      <edge source="palestinareports.bsky.social" target="margareth4.bsky.social" id="5" />
+      <edge source="palestinareports.bsky.social" target="madib.bsky.social" id="6" />
+      <edge source="revistaforum.com.br" target="maricotarj2024.bsky.social" id="7" />
+      <edge source="revistaforum.com.br" target="cmcam.bsky.social" id="8" />
+      <edge source="revistaforum.com.br" target="zevicente.bsky.social" id="9" />
+      <edge source="revistaforum.com.br" target="solangedias.bsky.social" id="10" />
+      <edge source="revistaforum.com.br" target="fofateamlh.bsky.social" id="11" />
+      <edge source="revistaforum.com.br" target="cristinaschnorr.bsky.social" id="12" />
+      <edge source="revistaforum.com.br" target="cleberiam.bsky.social" id="13" />
+      <edge source="revistaforum.com.br" target="silmarq.bsky.social" id="14" />
+      <edge source="revistaforum.com.br" target="peterperson10.bsky.social" id="15" />
+      <edge source="revistaforum.com.br" target="sweetnemesiis.bsky.social" id="16" />
+      <edge source="publico.bsky.social" target="vivianebarbosa.bsky.social" id="17" />
+      <edge source="publico.bsky.social" target="paulompereira.bsky.social" id="18" />
+      <edge source="xplodninja.bsky.social" target="marlenemutum.bsky.social" id="19" />
+      <edge source="ildetelopes.bsky.social" target="edusilvafogo.bsky.social" id="20" />
+      <edge source="reinaldo567.bsky.social" target="santrfl.bsky.social" id="21" />
+      <edge source="brasil247.bsky.social" target="mariademirai.bsky.social" id="22" />
+      <edge source="brasil247.bsky.social" target="anamzt.bsky.social" id="23" />
+      <edge source="brasil247.bsky.social" target="amadacwt.bsky.social" id="24" />
+      <edge source="brasil247.bsky.social" target="gilmarajo.bsky.social" id="25" />
+      <edge source="demostenesmartins.bsky.social" target="andreasantos.bsky.social" id="26" />
+      <edge source="demostenesmartins.bsky.social" target="sergiooliveira.bsky.social" id="27" />
+      <edge source="camaradahidalgo.bsky.social" target="dnho.bsky.social" id="28" />
+    </edges>
+  </graph>
+</gexf>
