@@ -39,15 +39,45 @@ def get_reposts(post_uri):
         return None
 
 # Lista de palavras-chave de interesse
-queries = ["Eleições", "Política", "Governo", "Corrupção", "Democracia", "Votação", "Candidato", "Partido"]
+queries = ["Eleições", "eleicoes", 
+            "Política", "politica",
+            "Governo",
+            "Corrupção", "corrupcao",
+            "Democracia",
+            "Votação", "votacao",
+            "Candidato", 
+            "Partido",
+            "congresso",
+            "senado",
+            "deputado",
+            "presidente",
+            "prefeito",
+            "governador"
+            "vereador",
+            "campanha",
+            "debate",
+            "reforma",
+            "saude", "saúde",
+            "educacao", "educação", 
+            "esquerda", "direita",
+            "comunista", "comunismo",
+            "fascista", "fascismo",
+            "justia", "justica",
+            "impeachment",
+            "protesto",
+            "movimento",
+            "greve",
+            "manifestacao", "manifestação",
+            ]
 
 # Número alvo de vértices
-target_vertices = 100
+target_vertices = 10000
 total_vertices = 0
 
 for query in queries:
     cursor = None
     while total_vertices < target_vertices:
+        print(total_vertices)
         # Buscar posts contendo a string
         data = search_posts(query, cursor)
         if data is None:
