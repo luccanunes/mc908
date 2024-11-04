@@ -8,25 +8,32 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
-pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &initialInfected2, int steps)
+pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &initialInfected2, int steps, bool save = false)
 {
     vi influenced1 = initialInfected1;
     vi influenced2 = initialInfected2;
     vector<bool> visited(g.size(), false);
 
+    ofstream outfile("results.csv");
+    if (save)
+        outfile << "step,algorithm,node\n";
+
     for (int node : initialInfected1)
     {
         visited[node] = true;
+        if (save)
+            outfile << 0 << ",alg1," << node << "\n";
     }
     for (int node : initialInfected2)
     {
         visited[node] = true;
+        outfile << 0 << ",alg2," << node << "\n";
     }
 
     random_device rd;
     mt19937 gen(rd());
 
-    while (steps > 0)
+    for (int step = 1; step <= steps; ++step)
     {
         vector<int> candidates1, candidates2;
         vector<double> probabilities1, probabilities2;
@@ -112,16 +119,18 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
         {
             influenced1.push_back(v);
             visited[v] = true;
+            if (save)
+                outfile << step << ",alg1," << v << "\n";
         }
         for (int v : selected2)
         {
             influenced2.push_back(v);
             visited[v] = true;
+            if (save)
+                outfile << step << ",alg2," << v << "\n";
         }
-
-        --steps;
     }
-
+    outfile.close();
     return {influenced1, influenced2};
 }
 
@@ -144,7 +153,7 @@ void compete(const graph &g,
             result2.erase(remove(result2.begin(), result2.end(), v), result2.end());
         }
 
-        auto [influenced1, influenced2] = simulate(g, result1, result2, X);
+        auto [influenced1, influenced2] = simulate(g, result1, result2, X, true);
 
         if (influenced1.size() > influenced2.size())
             cout << "O algoritmo 1 ganhou com " << influenced1.size() << " nós influenciados." << endl;
@@ -208,7 +217,7 @@ int main()
         }
         return result;
     };
-    compete(g, algorithm1, algorithm2, 2, 2, false);
-    compete(g, algorithm1, algorithm2, 2, 2, true);
+    compete(g, algorithm1, algorithm2, 5, 1, false);
+    // compete(g, algorithm1, algorithm2, 2, 2, true);
     return 0;
 }
