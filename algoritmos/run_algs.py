@@ -24,7 +24,7 @@ algorithms_dir = args.algorithms_dir
 for algorithm in algorithms:
     program_path = os.path.join(algorithms_dir, f"{algorithm}.cpp")
     executable = f"{algorithm}.exe"
-    output_file = f"{algorithm}_list"
+    output_file = f"{algorithm}_list.txt"
     
     # Compilar o programa (assumindo que você está usando g++)
     compile_command = ["g++", "-o", executable, program_path]
