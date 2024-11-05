@@ -20,7 +20,14 @@ H = nx.Graph()
 for u, v in G.edges():
     H.add_edge(id_mapping[u], id_mapping[v])
 
+# Obter o número de vértices e arestas
+num_vertices = H.number_of_nodes()
+num_edges = H.number_of_edges()
+
 # Salvar o novo grafo em um arquivo de texto com uma lista de arestas
 with open(args.output_file, 'w') as f:
+    # Escrever o número de vértices e arestas na primeira linha
+    f.write(f"{num_vertices} {num_edges}\n")
+    # Escrever as arestas
     for u, v in H.edges():
         f.write(f"{u} {v}\n")
