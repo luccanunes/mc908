@@ -145,14 +145,24 @@ void compete(const graph &g,
         vi result1 = algorithm1(g, K, S);
         vi result2 = algorithm2(g, K, S);
 
+        sort(result1.begin(), result1.end());
+        sort(result2.begin(), result2.end());
+
         vi intersection;
         set_intersection(result1.begin(), result1.end(), result2.begin(), result2.end(), back_inserter(intersection));
+
+        // Remover elementos da interseção de result1 e result2
         for (int v : intersection)
         {
             result1.erase(remove(result1.begin(), result1.end(), v), result1.end());
             result2.erase(remove(result2.begin(), result2.end(), v), result2.end());
         }
-
+        for (int x : result1)
+        {
+            for (int y : result2)
+                if (x == y)
+                    assert(false);
+        }
         auto [influenced1, influenced2] = simulate(g, result1, result2, X, true);
 
         if (influenced1.size() > influenced2.size())
@@ -181,14 +191,60 @@ void compete(const graph &g,
     }
 }
 
+// Função para ler o grafo de um arquivo de texto
+graph read_graph(const string &filename)
+{
+    ifstream infile(filename);
+    graph adj_list;
+    string line;
+    int max_node = 0;
+
+    while (getline(infile, line))
+    {
+        istringstream iss(line);
+        int u, v;
+        if (!(iss >> u >> v))
+        {
+            break;
+        } // erro de formatação
+        if (u > max_node)
+            max_node = u;
+        if (v > max_node)
+            max_node = v;
+        if (adj_list.size() <= max_node)
+            adj_list.resize(max_node + 1);
+        adj_list[u].push_back(v);
+    }
+
+    return adj_list;
+}
+
+void show_graph(const graph &adj_list)
+{
+    for (size_t i = 0; i < adj_list.size(); ++i)
+    {
+        cout << "Node " << i << ":";
+        for (int neighbor : adj_list[i])
+        {
+            cout << " " << neighbor;
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
-    graph g(5);
-    g[0] = {1, 2};
-    g[1] = {0, 3};
-    g[2] = {0, 4};
-    g[3] = {1};
-    g[4] = {2};
+    // graph g(5);
+    // g[0] = {1, 2};
+    // g[1] = {0, 3};
+    // g[2] = {0, 4};
+    // g[3] = {1};
+    // g[4] = {2};
+
+    graph g = read_graph("rede.txt");
+
+    // show_graph(g);
+
     // Example algorithms
     auto algorithm1 = [](const graph &g, int K, const vi &S) -> vi
     {
@@ -217,7 +273,7 @@ int main()
         }
         return result;
     };
-    compete(g, algorithm1, algorithm2, 5, 1, false);
+    compete(g, algorithm1, algorithm2, 300, 70, false);
     // compete(g, algorithm1, algorithm2, 2, 2, true);
     return 0;
 }
