@@ -29,7 +29,7 @@ def create_influence_gif(G, df, steps, output_file, node_size=300, edge_width=1,
         infected_by_alg1.update(set(df[(df['step'] == step) & (df['algorithm'] == 'alg1')]['node']))
         infected_by_alg2.update(set(df[(df['step'] == step) & (df['algorithm'] == 'alg2')]['node']))
 
-        print(f"step: {step}, inf1: {infected_by_alg1}, inf2: {infected_by_alg2}")
+        # print(f"step: {step}, inf1: {infected_by_alg1}, inf2: {infected_by_alg2}")
         color_map = []
         for node in G:
             if int(node) in infected_by_alg1:
@@ -52,7 +52,7 @@ def create_influence_gif(G, df, steps, output_file, node_size=300, edge_width=1,
     imageio.mimsave(gif_path, frames, duration=frame_duration)
 
 # Carregar o grafo do arquivo .gexf
-G = nx.read_gexf('rede.gexf')
+G = nx.read_gexf('126.gexf')
 
 # Ler os resultados da simulação
 df = read_results('results.csv')

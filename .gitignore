@@ -2,3 +2,6 @@
 simulador/results.csv
 scraping/1613.gexf
 visualizer/gif/*
+visualizer/results.csv
+visualizer/*.gexf
+*.txt
