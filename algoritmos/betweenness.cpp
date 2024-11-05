@@ -13,19 +13,20 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
-const int maxn = 1e3+5, inf = 2e9, M = 1e9 + 7;
+const int maxn = 1e3 + 5, inf = 2e9, M = 1e9 + 7;
 const ll linf = 1e18;
 graph G;
 vector<pair<ld, int>> betweenness;
 
 // Brandes
-void bfs(int a, graph G){
+void bfs(int a, graph G)
+{
     stack<int> ordem;
 
     queue<int> fila;
     fila.push(a);
 
-    vi dist(G.size(), - 1);
+    vi dist(G.size(), -1);
     dist[a] = 0;
 
     vi qtdd(G.size());
@@ -34,18 +35,22 @@ void bfs(int a, graph G){
     vector<vi> pai(G.size());
 
     // O(m)
-    while(!fila.empty()){
+    while (!fila.empty())
+    {
         int x = fila.front();
         fila.pop();
         ordem.push(x);
 
-        for(auto y : G[x]){
-            if(dist[y] < 0){
+        for (auto y : G[x])
+        {
+            if (dist[y] < 0)
+            {
                 fila.push(y);
-                dist[y] = dist[x] + 1; 
+                dist[y] = dist[x] + 1;
             }
-            
-            if(dist[y] == dist[x] + 1){
+
+            if (dist[y] == dist[x] + 1)
+            {
                 qtdd[y] += qtdd[x];
                 pai[y].push_back(x);
             }
@@ -55,53 +60,54 @@ void bfs(int a, graph G){
     vector<ld> delta(G.size());
 
     // O(m)
-    while(!ordem.empty()){
+    while (!ordem.empty())
+    {
         int x = ordem.top();
         ordem.pop();
-        for(int y : pai[x]){
+        for (int y : pai[x])
+        {
             delta[y] += ((ld)qtdd[y] / qtdd[x]) * (1 + delta[x]);
         }
-        if(x != a){
+        if (x != a)
+        {
             betweenness[x].first += delta[x];
         }
     }
 }
- 
-void solve(){
-    int n, m; cin >> n >> m;
-    
+
+void solve()
+{
+    int n, m;
+    cin >> n >> m;
+
     betweenness.resize(n);
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         betweenness[i].second = i;
     }
-    
+
     graph G(n);
-    for(int i = 0; i < m; i++){
-        int a, b; cin >> a >> b;
+    for (int i = 0; i < m; i++)
+    {
+        int a, b;
+        cin >> a >> b;
         G[a].push_back(b);
     }
 
-    for(int i = 0; i < G.size(); i++){
+    for (int i = 0; i < G.size(); i++)
+    {
         bfs(i, G);
     }
 
     sort(betweenness.begin(), betweenness.end());
     reverse(betweenness.begin(), betweenness.end());
 
-    for(auto x : betweenness) cout << x.first << ' ' << x.second << '\n';
-
-    ofstream file("betweenness_list");
-    if (file.is_open()) {
-        for(auto x : betweenness){
-            file << x.second << ' ';
-        }
-        file.close();
-    } else {
-        cout << "Failed to create the file.\n";
-    }
+    for (auto x : betweenness)
+        cout << x.second << '\n';
 }
- 
-int main() {
+
+int main()
+{
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     solve();
     return 0;
