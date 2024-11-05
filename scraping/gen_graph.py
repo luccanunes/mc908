@@ -5,8 +5,8 @@ import networkx as nx
 G = nx.DiGraph()
 
 # Função para buscar posts contendo a string de interesse
-def search_posts(query, cursor=None, limit=100):
-    url = f"https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q={query}&limit={limit}"
+def search_posts(query, sort, cursor=None, limit=100):
+    url = f"https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q={query}&limit={limit}&sort={sort}"
     if cursor:
         url += f"&cursor={cursor}"
     response = requests.get(url)
@@ -64,58 +64,67 @@ queries = ["Eleições", "eleicoes",
             "esquerda", "direita",
             "comunista", "comunismo",
             "fascista", "fascismo",
-            "justia", "justica",
+            "justiça", "justica",
             "impeachment",
             "protesto",
             "movimento",
             "greve",
             "manifestacao", "manifestação",
-            ]
+            "sao paulo",
+            "brasil",
+            "lula",
+            "bolsonaro",
+            "boulos",
+            "marçal",
+        ]
 
 # Número alvo de vértices
-target_vertices = 10000
+target_vertices = 100000
 total_vertices = 0
 
-for query in queries:
-    cursor = None
-    while total_vertices < target_vertices:
-        print("Vertices: ", total_vertices)
-        # Buscar posts contendo a string
-        data = search_posts(query, cursor)
-        if data is None:
-            break  # Se houver um erro na requisição, saia do loop e passe para a próxima palavra-chave
-        posts = data.get("posts", [])
-        cursor = data.get("cursor", None)
+srt = ["top", "latest"]
 
-        for post in posts:
-            post_uri = post['uri']
-            author_handle = post['author']['handle']
-            
-            if post_uri in processed_posts:
-                continue
-            processed_posts.add(post_uri)
+for sort in srt:
+    for query in queries:
+        cursor = None
+        while total_vertices < target_vertices:
+            print("Vertices: ", total_vertices)
+            # Buscar posts contendo a string
+            data = search_posts(query, sort, cursor)
+            if data is None:
+                break  # Se houver um erro na requisição, saia do loop e passe para a próxima palavra-chave
+            posts = data.get("posts", [])
+            cursor = data.get("cursor", None)
 
-            # Obter reposts do post
-            repost_data = get_reposts(post_uri)
-            if repost_data is None:
-                continue  # Se houver um erro na requisição, pule para o próximo post
-            reposts = repost_data.get("repostedBy", [])
-            
-            for repost in reposts:
-                repost_handle = repost['handle']
-                # Adicione a aresta ao grafo
-                G.add_edge(author_handle, repost_handle)
-            
-            # Atualize o total de vértices
-            total_vertices = len(G.nodes)
-            if total_vertices >= target_vertices:
-                break
+            for post in posts:
+                post_uri = post['uri']
+                author_handle = post['author']['handle']
+                
+                if post_uri in processed_posts:
+                    continue
+                processed_posts.add(post_uri)
 
-        if not cursor:
-            break  # Se não houver mais páginas, saia do loop
+                # Obter reposts do post
+                repost_data = get_reposts(post_uri)
+                if repost_data is None:
+                    continue  # Se houver um erro na requisição, pule para o próximo post
+                reposts = repost_data.get("repostedBy", [])
+                
+                for repost in reposts:
+                    repost_handle = repost['handle']
+                    # Adicione a aresta ao grafo
+                    G.add_edge(author_handle, repost_handle)
+                
+                # Atualize o total de vértices
+                total_vertices = len(G.nodes)
+                if total_vertices >= target_vertices:
+                    break
 
-    if total_vertices >= target_vertices:
-        break  # Se atingiu o número desejado de vértices, saia do loop principal
+            if not cursor:
+                break  # Se não houver mais páginas, saia do loop
+
+        if total_vertices >= target_vertices:
+            break  # Se atingiu o número desejado de vértices, saia do loop principal
 
 # Salvar o grafo para análise posterior
 nx.write_gexf(G, "rede_eleicoes.gexf")
