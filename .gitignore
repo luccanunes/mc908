@@ -1,3 +1,4 @@
 *.exe
 simulador/results.csv
 scraping/1613.gexf
+visualizer/gif/*
