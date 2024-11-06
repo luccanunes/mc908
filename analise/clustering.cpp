@@ -10,16 +10,16 @@ typedef long long ll;
 
 int n, m;
 vi vis;
-graph G;
+graph G, Gi;
 vector<ld> clust;
 
-// tem que pegar arestas bidirecionais?
 ld clustering(int a) {
     ll tot = 0;
 
     // remove duplicatas
     unordered_set<int> s;
     for(int v : G[a]) s.insert(v);
+    for(int v : Gi[a]) s.insert(v);
 
     for(int v : s){
         // remove duplicatas
@@ -40,17 +40,29 @@ ld clustering(int a) {
 void solve(){
     cin >> n >> m;
     G.resize(n);
+    Gi.resize(n);
     clust.resize(n);
+
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
         G[a].push_back(b);
+        Gi[b].push_back(a);
     }
-    for(int i = 0; i < n; i++) sort(G[i].begin(), G[i].end());
 
-    for(int i = 0; i < n; i++) clust[i] = clustering(i);
+    ld mean = 0;
+    for(int i = 0; i < n; i++) {
+        clust[i] = clustering(i);
+        mean += clust[i];
+    }
 
-    for(int i = 0; i < n; i++) cout << clust[i] << ' ';
-    cout << '\n';
+    mean /= n;
+
+    ofstream outfile("clustering");
+    for(int i = 0; i < n; i++) outfile << clust[i] << ' ';
+    outfile <<'\n';
+    outfile.close();
+
+    cout << mean << '\n';
 }
 
 int main() {
