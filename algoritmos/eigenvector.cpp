@@ -18,6 +18,7 @@ const ll linf = 1e18;
 graph G;
 vector<ld> eigenvector;
 
+// funciona somente se conexo
 vector<ld> norm(vector<ld> v)
 {
     ld sum = 0;
