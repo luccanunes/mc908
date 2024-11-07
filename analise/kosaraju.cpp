@@ -56,8 +56,9 @@ void solve(){
 
     int maxi = 0;
 
-    for(int i = 0; i < n; i++) maxi = max(maxi, comp[i]);
-    cout << maxi + 1 << '\n';
+    set<int> componentes;
+    for(int i = 0; i < n; i++) componentes.insert(comp[i]);
+    cout << componentes.size() << '\n';
 }
 
 int main() {
