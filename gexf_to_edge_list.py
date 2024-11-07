@@ -16,7 +16,7 @@ G = nx.read_gexf(args.input_file)
 id_mapping = {node: idx for idx, node in enumerate(G.nodes())}
 
 # Criar um novo grafo com IDs numéricos
-H = nx.Graph()
+H = nx.MultiDiGraph()
 for u, v in G.edges():
     H.add_edge(id_mapping[u], id_mapping[v])
 

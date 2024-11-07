@@ -2,7 +2,7 @@ import requests
 import networkx as nx
 
 # Inicialize o grafo
-G = nx.DiGraph()
+G = nx.MultiDiGraph()
 
 # Função para buscar posts contendo a string de interesse
 def search_posts(query, sort, cursor=None, limit=100):
