@@ -1,4 +1,11 @@
 #include <bits/stdc++.h>
+#include "../algoritmos_competicao/betweenness.cpp"
+#include "../algoritmos_competicao/closeness.cpp"
+// #include "../algoritmos_competicao/eigenvector.cpp"
+// #include "../algoritmos_competicao/maxdegree.cpp"
+// #include "../algoritmos_competicao/maxdegreenorep.cpp"
+// #include "../algoritmos_competicao/pageranking.cpp"
+// #include "../algoritmos_competicao/pagerankingrev.cpp"
 
 using namespace std;
 
@@ -72,6 +79,8 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
             }
         }
 
+        // cout << "Step " << step << " candidates1: " << candidates1.size() << " candidates2: " << candidates2.size() << endl;
+
         if (candidates1.empty() && candidates2.empty())
             break; // No more candidates to infect
 
@@ -137,7 +146,7 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
 void compete(const graph &g,
              function<vi(const graph &, int, const vi &)> algorithm1,
              function<vi(const graph &, int, const vi &)> algorithm2,
-             int X, int K, bool alternate = false)
+             int steps, int K, bool alternate = false)
 {
     if (!alternate)
     { // Simulação normal: escolha independente
@@ -148,6 +157,17 @@ void compete(const graph &g,
         sort(result1.begin(), result1.end());
         sort(result2.begin(), result2.end());
 
+        // cout << "K: " << K << ' ' << result1.size() << endl;
+        cout << "Initial choice\n";
+        cout << "1: ";
+        for (int x : result1)
+            cout << x << ' ';
+        cout << endl;
+        cout << "2: ";
+        for (int x : result2)
+            cout << x << ' ';
+        cout << endl;
+
         vi intersection;
         set_intersection(result1.begin(), result1.end(), result2.begin(), result2.end(), back_inserter(intersection));
 
@@ -157,13 +177,24 @@ void compete(const graph &g,
             result1.erase(remove(result1.begin(), result1.end(), v), result1.end());
             result2.erase(remove(result2.begin(), result2.end(), v), result2.end());
         }
+
+        cout << "After removal of intersection\n";
+        cout << "1, " << result1.size() << ": ";
+        for (int x : result1)
+            cout << x << ' ';
+        cout << endl;
+        cout << "2, " << result2.size() << ": ";
+        for (int x : result2)
+            cout << x << ' ';
+        cout << endl;
+
         for (int x : result1)
         {
             for (int y : result2)
                 if (x == y)
                     assert(false);
         }
-        auto [influenced1, influenced2] = simulate(g, result1, result2, X, true);
+        auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true);
 
         if (influenced1.size() > influenced2.size())
             cout << "O algoritmo 1 ganhou com " << influenced1.size() << " nós influenciados." << endl;
@@ -185,35 +216,54 @@ void compete(const graph &g,
             if (!result2.empty())
                 S1.push_back(result2[0]);
         }
-        auto [influenced1, influenced2] = simulate(g, S1, S2, X);
+        auto [influenced1, influenced2] = simulate(g, S1, S2, steps);
         cout << "O algoritmo 1 influenciou " << influenced1.size() << " nós." << endl;
         cout << "O algoritmo 2 influenciou " << influenced2.size() << " nós." << endl;
     }
 }
 
 // Função para ler o grafo de um arquivo de texto
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <sstream>
+
+using namespace std;
+
+typedef vector<vector<int>> graph;
+
 graph read_graph(const string &filename)
 {
     ifstream infile(filename);
     graph adj_list;
     string line;
-    int max_node = 0;
 
-    while (getline(infile, line))
+    // Ler a primeira linha para obter o número de vértices e arestas
+    if (getline(infile, line))
     {
         istringstream iss(line);
-        int u, v;
-        if (!(iss >> u >> v))
+        int num_vertices, num_edges;
+        if (!(iss >> num_vertices >> num_edges))
         {
-            break;
-        } // erro de formatação
-        if (u > max_node)
-            max_node = u;
-        if (v > max_node)
-            max_node = v;
-        if (adj_list.size() <= max_node)
-            adj_list.resize(max_node + 1);
-        adj_list[u].push_back(v);
+            cerr << "Erro ao ler o número de vértices e arestas" << endl;
+            return adj_list;
+        }
+
+        // Redimensionar a lista de adjacência para acomodar todos os vértices
+        adj_list.resize(num_vertices);
+
+        // Ler as arestas
+        while (getline(infile, line))
+        {
+            istringstream iss(line);
+            int u, v;
+            if (!(iss >> u >> v))
+            {
+                cerr << "Erro ao ler uma aresta" << endl;
+                break;
+            }
+            adj_list[u].push_back(v);
+        }
     }
 
     return adj_list;
@@ -241,39 +291,42 @@ int main()
     // g[3] = {1};
     // g[4] = {2};
 
-    graph g = read_graph("rede.txt");
+    graph g = read_graph("../redes/1613.txt");
+    show_graph(g);
+
+    compete(g, betweenness, closeness, 120, 300, false);
 
     // show_graph(g);
 
     // Example algorithms
-    auto algorithm1 = [](const graph &g, int K, const vi &S) -> vi
-    {
-        // Simple algorithm: Select the first K nodes not in S
-        vi result;
-        for (int i = 0; i < g.size() && result.size() < K; ++i)
-        {
-            if (find(S.begin(), S.end(), i) == S.end())
-            {
-                result.push_back(i);
-            }
-        }
-        return result;
-    };
-    auto algorithm2 = [](const graph &g, int K, const vi &S) -> vi
-    {
-        // Another simple algorithm: Select the last K nodes not in S
-        vi result;
+    // auto algorithm1 = [](const graph &g, int K, const vi &S) -> vi
+    // {
+    //     // Simple algorithm: Select the first K nodes not in S
+    //     vi result;
+    //     for (int i = 0; i < g.size() && result.size() < K; ++i)
+    //     {
+    //         if (find(S.begin(), S.end(), i) == S.end())
+    //         {
+    //             result.push_back(i);
+    //         }
+    //     }
+    //     return result;
+    // };
+    // auto algorithm2 = [](const graph &g, int K, const vi &S) -> vi
+    // {
+    //     // Another simple algorithm: Select the last K nodes not in S
+    //     vi result;
 
-        for (int i = g.size() - 1; i >= 0 && result.size() < K; --i)
-        {
-            if (find(S.begin(), S.end(), i) == S.end())
-            {
-                result.push_back(i);
-            }
-        }
-        return result;
-    };
-    compete(g, algorithm1, algorithm2, 300, 70, false);
+    //     for (int i = g.size() - 1; i >= 0 && result.size() < K; --i)
+    //     {
+    //         if (find(S.begin(), S.end(), i) == S.end())
+    //         {
+    //             result.push_back(i);
+    //         }
+    //     }
+    //     return result;
+    // };
+    // compete(g, algorithm1, algorithm2, 300, 70, false);
     // compete(g, algorithm1, algorithm2, 2, 2, true);
     return 0;
 }
