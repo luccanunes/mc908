@@ -5,6 +5,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Converter um arquivo .gexf para um arquivo de texto com uma lista de arestas usando IDs numéricos 0-indexados.')
 parser.add_argument('input_file', type=str, help='O arquivo .gexf de entrada')
 parser.add_argument('output_file', type=str, help='O arquivo de texto de saída')
+parser.add_argument('output_gexf_file', type=str, help='O novo arquivo .gexf de saída com os vértices renomeados')
 
 # Analisar os argumentos
 args = parser.parse_args()
@@ -31,3 +32,9 @@ with open(args.output_file, 'w') as f:
     # Escrever as arestas
     for u, v in H.edges():
         f.write(f"{u} {v}\n")
+
+# Criar um novo grafo com os vértices renomeados para salvar em .gexf
+H_renamed = nx.relabel_nodes(G, id_mapping)
+
+# Salvar o novo grafo em um arquivo .gexf
+nx.write_gexf(H_renamed, args.output_gexf_file)
