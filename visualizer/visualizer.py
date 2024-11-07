@@ -3,6 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import imageio
 import os
+import argparse
 
 # Função para ler os resultados da simulação
 def read_results(file_path):
@@ -29,7 +30,6 @@ def create_influence_gif(G, df, steps, output_file, node_size=300, edge_width=1,
         infected_by_alg1.update(set(df[(df['step'] == step) & (df['algorithm'] == 'alg1')]['node']))
         infected_by_alg2.update(set(df[(df['step'] == step) & (df['algorithm'] == 'alg2')]['node']))
 
-        # print(f"step: {step}, inf1: {infected_by_alg1}, inf2: {infected_by_alg2}")
         color_map = []
         for node in G:
             if int(node) in infected_by_alg1:
@@ -51,13 +51,24 @@ def create_influence_gif(G, df, steps, output_file, node_size=300, edge_width=1,
     gif_path = os.path.join('gif', output_file)
     imageio.mimsave(gif_path, frames, duration=frame_duration)
 
+# Configurar o analisador de argumentos
+parser = argparse.ArgumentParser(description='Simular a propagação da influência e criar um GIF.')
+parser.add_argument('gexf_file', type=str, help='O caminho para o arquivo .gexf')
+parser.add_argument('results_file', type=str, help='O caminho para o arquivo de resultados CSV')
+
+# Analisar os argumentos
+args = parser.parse_args()
+
 # Carregar o grafo do arquivo .gexf
-G = nx.read_gexf('126.gexf')
+G = nx.read_gexf(args.gexf_file)
 
 # Ler os resultados da simulação
-df = read_results('results.csv')
+df = read_results(args.results_file)
+
+# Nome fixo para o arquivo GIF de saída
+output_file = 'influence_simulation.gif'
 
 # Criar o GIF com tamanhos de vértices e arestas ajustados
-create_influence_gif(G, df, steps=10, output_file='influence_simulation.gif', node_size=700, edge_width=3, frame_duration=700)
+create_influence_gif(G, df, steps=1, output_file=output_file, node_size=700, edge_width=3, frame_duration=700)
 
-print("GIF salvo como 'gif/influence_simulation.gif'")
+print(f"GIF salvo como 'gif/{output_file}'")
