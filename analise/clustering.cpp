@@ -17,9 +17,16 @@ ld clustering(int a) {
     ll tot = 0;
 
     // remove duplicatas
-    unordered_set<int> s;
+    unordered_set<int> s, si, sd;
     for(int v : G[a]) s.insert(v);
-    for(int v : Gi[a]) s.insert(v);
+    for(int v : Gi[a]) si.insert(v);
+    for(int v : G[a]) {
+        if(si.find(v) != si.end() && s.find(v) != si.end()){
+            s.erase(v);
+            si.erase(v);
+            sd.insert(v);
+        }
+    }
 
     for(int v : s){
         // remove duplicatas
@@ -28,13 +35,38 @@ ld clustering(int a) {
 
         for(int u : sv){
             if(s.find(u) != s.end()) tot++;
+            if(si.find(u) != si.end()) tot++;
+            if(sd.find(u) != sd.end()) tot+=2;
+        }
+    }
+    for(int v : si){
+        // remove duplicatas
+        unordered_set<int> sv;
+        for(int u : G[v]) sv.insert(u);
+
+        for(int u : sv){
+            if(s.find(u) != s.end()) tot++;
+            if(si.find(u) != si.end()) tot++;
+            if(sd.find(u) != sd.end()) tot+=2;
+        }
+    }
+    for(int v : sd){
+        // remove duplicatas
+        unordered_set<int> sv;
+        for(int u : G[v]) sv.insert(u);
+
+        for(int u : sv){
+            if(s.find(u) != s.end()) tot+=2;
+            if(si.find(u) != si.end()) tot+=2;
+            if(sd.find(u) != sd.end()) tot+=4;
         }
     }
 
-    int k = s.size();
+    ll S = s.size() + si.size();
+    ll Sd = sd.size();
 
-    if(k <= 1) return 0;
-    return (ld)tot / ((ll)k * (k - 1));
+    if(S * (S - 1) + 4 * Sd * (Sd - 1) + 4 * Sd * S <= 0) return 0;
+    return (ld)tot / (S * (S - 1) + 4 * Sd * (Sd - 1) + 4 * Sd * S);
 }
  
 void solve(){
@@ -43,10 +75,15 @@ void solve(){
     Gi.resize(n);
     clust.resize(n);
 
+    set<pii> arestas;
+
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
-        G[a].push_back(b);
-        Gi[b].push_back(a);
+        if(a != b && arestas.find({a, b}) == arestas.end()){
+            arestas.insert({a, b});
+            G[a].push_back(b);
+            Gi[b].push_back(a);
+        }
     }
 
     ld mean = 0;
@@ -57,6 +94,7 @@ void solve(){
 
     mean /= n;
 
+    sort(clust.begin(), clust.end());
     ofstream outfile("clustering");
     for(int i = 0; i < n; i++) outfile << clust[i] << ' ';
     outfile <<'\n';
@@ -66,7 +104,7 @@ void solve(){
 }
 
 int main() {
-    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    // ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     solve();
     return 0;
 }
