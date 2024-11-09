@@ -15,6 +15,8 @@ typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
+const double P = 0.2;
+
 pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &initialInfected2, int steps, bool save = false)
 {
     vi influenced1 = initialInfected1;
@@ -25,6 +27,7 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
     if (save)
         outfile << "step,algorithm,node\n";
 
+    // Marcar vértices iniciais como visitados
     for (int node : initialInfected1)
     {
         visited[node] = true;
@@ -34,104 +37,64 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
     for (int node : initialInfected2)
     {
         visited[node] = true;
-        outfile << 0 << ",alg2," << node << "\n";
+        if (save)
+            outfile << 0 << ",alg2," << node << "\n";
     }
 
     random_device rd;
     mt19937 gen(rd());
+    uniform_real_distribution<> dis(0.0, 1.0);
 
     for (int step = 1; step <= steps; ++step)
     {
-        vector<int> candidates1, candidates2;
-        vector<double> probabilities1, probabilities2;
+        set<int> new_infected1, new_infected2;
 
-        // Collect candidates and their probabilities for algorithm 1
+        // Propagar infecção para o algoritmo 1
         for (int node : influenced1)
         {
             for (int neighbor : g[node])
             {
-                if (!visited[neighbor])
+                if (!visited[neighbor] && dis(gen) < P)
                 {
-                    candidates1.push_back(neighbor);
-                    int infected_neighbors = 0;
-                    for (int n : g[neighbor])
-                        if (visited[n])
-                            infected_neighbors++;
-                    probabilities1.push_back(static_cast<double>(infected_neighbors) / g[neighbor].size());
+                    new_infected1.insert(neighbor);
                 }
             }
         }
 
-        // Collect candidates and their probabilities for algorithm 2
+        // Propagar infecção para o algoritmo 2
         for (int node : influenced2)
         {
             for (int neighbor : g[node])
             {
-                if (!visited[neighbor])
+                if (!visited[neighbor] && dis(gen) < P)
                 {
-                    candidates2.push_back(neighbor);
-                    int infected_neighbors = 0;
-                    for (int n : g[neighbor])
-                        if (visited[n])
-                            infected_neighbors++;
-                    probabilities2.push_back(static_cast<double>(infected_neighbors) / g[neighbor].size());
+                    new_infected2.insert(neighbor);
                 }
             }
         }
 
-        // cout << "Step " << step << " candidates1: " << candidates1.size() << " candidates2: " << candidates2.size() << endl;
+        if (new_infected1.empty() && new_infected2.empty())
+            break; // Não há mais candidatos para infectar
 
-        if (candidates1.empty() && candidates2.empty())
-            break; // No more candidates to infect
-
-        // Normalize probabilities for algorithm 1
-        double sum_prob1 = accumulate(probabilities1.begin(), probabilities1.end(), 0.0);
-        for (double &prob : probabilities1)
-            prob /= sum_prob1;
-
-        // Normalize probabilities for algorithm 2
-        double sum_prob2 = accumulate(probabilities2.begin(), probabilities2.end(), 0.0);
-        for (double &prob : probabilities2)
-            prob /= sum_prob2;
-
-        // Infect candidates based on probabilities for algorithm 1
-        set<int> selected1, selected2;
-        for (size_t i = 0; i < candidates1.size(); ++i)
-        {
-            double infection_chance = probabilities1[i];
-            bernoulli_distribution d(infection_chance);
-            if (d(gen))
-                selected1.insert(candidates1[i]);
-        }
-
-        // Infect candidates based on probabilities for algorithm 2
-        for (size_t i = 0; i < candidates2.size(); ++i)
-        {
-            double infection_chance = probabilities2[i];
-            bernoulli_distribution d(infection_chance);
-            if (d(gen))
-                selected2.insert(candidates2[i]);
-        }
-
-        // Remove common candidates and mark them as visited
+        // Remover candidatos comuns e marcá-los como visitados
         vector<int> common_candidates;
-        set_intersection(selected1.begin(), selected1.end(), selected2.begin(), selected2.end(), back_inserter(common_candidates));
+        set_intersection(new_infected1.begin(), new_infected1.end(), new_infected2.begin(), new_infected2.end(), back_inserter(common_candidates));
         for (int v : common_candidates)
         {
-            selected1.erase(v);
-            selected2.erase(v);
-            visited[v] = true; // Mark as visited to block future infections
+            new_infected1.erase(v);
+            new_infected2.erase(v);
+            visited[v] = true; // Marcar como visitado para bloquear infecções futuras
         }
 
-        // Update influenced and visited nodes
-        for (int v : selected1)
+        // Atualizar vértices influenciados e visitados
+        for (int v : new_infected1)
         {
             influenced1.push_back(v);
             visited[v] = true;
             if (save)
                 outfile << step << ",alg1," << v << "\n";
         }
-        for (int v : selected2)
+        for (int v : new_infected2)
         {
             influenced2.push_back(v);
             visited[v] = true;
@@ -196,12 +159,14 @@ void compete(const graph &g,
         }
         auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true);
 
-        if (influenced1.size() > influenced2.size())
-            cout << "O algoritmo 1 ganhou com " << influenced1.size() << " nós influenciados." << endl;
-        else if (influenced1.size() < influenced2.size())
-            cout << "O algoritmo 2 ganhou com " << influenced2.size() << " nós influenciados." << endl;
-        else
-            cout << "Houve um empate, os algoritmos influenciaram " << influenced1.size() << " nós cada." << endl;
+        // if (influenced1.size() > influenced2.size())
+        //     cout << "O algoritmo 1 ganhou com " << influenced1.size() << " nós influenciados." << endl;
+        // else if (influenced1.size() < influenced2.size())
+        //     cout << "O algoritmo 2 ganhou com " << influenced2.size() << " nós influenciados." << endl;
+        // else
+        //     cout << "Houve um empate, os algoritmos influenciaram " << influenced1.size() << " nós cada." << endl;
+        cout << "O algoritmo 1 influenciou " << influenced1.size() << " nós." << endl;
+        cout << "O algoritmo 2 influenciou " << influenced2.size() << " nós." << endl;
     }
     else
     { // Tipo 2: escolha alternada
@@ -291,10 +256,10 @@ int main()
     // g[3] = {1};
     // g[4] = {2};
 
-    graph g = read_graph("../redes/1613.txt");
-    show_graph(g);
+    graph g = read_graph("../redes/533.txt");
+    // show_graph(g);
 
-    compete(g, betweenness, closeness, 120, 300, false);
+    compete(g, betweenness, closeness, 10, 20, false);
 
     // show_graph(g);
 
