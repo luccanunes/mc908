@@ -11,7 +11,7 @@ def read_results(file_path):
     return df
 
 # Função para simular a propagação da influência e criar o GIF
-def create_influence_gif(G, df, steps, output_file, node_size=300, edge_width=1, frame_duration=1):
+def create_influence_gif(G, df, steps, output_file, frame_duration=1):
     frames = []
 
     # Criar a subpasta 'gif' se não existir
@@ -20,6 +20,12 @@ def create_influence_gif(G, df, steps, output_file, node_size=300, edge_width=1,
 
     # Calcular a posição dos vértices uma vez usando o layout Kamada-Kawai
     pos = nx.kamada_kawai_layout(G)
+
+    # Ajustar automaticamente o tamanho dos nós e a largura das arestas
+    num_nodes = len(G.nodes)
+    node_size = max(10000 / num_nodes, 10)  # Valor mínimo para node_size
+    # edge_width = max(100 / num_nodes, 0.1)  # Valor mínimo para edge_width
+    edge_width = 0.1
 
     # Conjuntos para manter os nós infectados
     infected_by_alg1 = set()
@@ -40,7 +46,7 @@ def create_influence_gif(G, df, steps, output_file, node_size=300, edge_width=1,
                 color_map.append('gray')
 
         plt.figure(figsize=(10, 10))
-        nx.draw(G, pos, node_color=color_map, with_labels=True, node_size=node_size, width=edge_width, font_size=12)
+        nx.draw(G, pos, node_color=color_map, with_labels=False, node_size=node_size, width=edge_width)
         plt.title(f'Step {step + 1}')
         frame_path = f'gif/frame_{step}.png'
         plt.savefig(frame_path)
@@ -69,6 +75,6 @@ df = read_results(args.results_file)
 output_file = 'influence_simulation.gif'
 
 # Criar o GIF com tamanhos de vértices e arestas ajustados
-create_influence_gif(G, df, steps=1, output_file=output_file, node_size=700, edge_width=3, frame_duration=700)
+create_influence_gif(G, df, steps=10, output_file=output_file, frame_duration=700)
 
 print(f"GIF salvo como 'gif/{output_file}'")
