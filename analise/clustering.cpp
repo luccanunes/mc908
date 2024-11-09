@@ -62,11 +62,11 @@ ld clustering(int a) {
         }
     }
 
-    ll S = s.size() + si.size();
+    ll S = s.size() + si.size() + 2 * sd.size();
     ll Sd = sd.size();
 
     if(S * (S - 1) + 4 * Sd * (Sd - 1) + 4 * Sd * S <= 0) return 0;
-    return (ld)tot / (S * (S - 1) + 4 * Sd * (Sd - 1) + 4 * Sd * S);
+    return (ld)tot / (S * (S - 1) - 2 * Sd);
 }
  
 void solve(){
@@ -79,7 +79,7 @@ void solve(){
 
     for(int i = 0; i < m; i++){
         int a, b; cin >> a >> b;
-        if(a != b && arestas.find({a, b}) == arestas.end()){
+        if(arestas.find({a, b}) == arestas.end()){
             arestas.insert({a, b});
             G[a].push_back(b);
             Gi[b].push_back(a);
