@@ -15,7 +15,7 @@ typedef vector<vi> graph;
 
 vi closeness(graph G, int k, vi S)
 {
-    ifstream file("./../algoritmos/list-1613/closeness_list.txt");
+    ifstream file("./../algoritmos/list-533/closeness_list.txt");
     int a;
     vi ans;
     while (file >> a)
