@@ -157,12 +157,10 @@ void compete(const graph &g,
         // cout << endl;
 
         for (int x : result1)
-        {
             for (int y : result2)
                 if (x == y)
                     assert(false);
-        }
-        auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true, algorithm1.name + "#" + algorithm2.name);
+        auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true, algorithm1.name + "#" + algorithm2.name + ".csv");
 
         // if (influenced1.size() > influenced2.size())
         //     cout << "O algoritmo 1 ganhou com " << influenced1.size() << " nós influenciados." << endl;
@@ -246,7 +244,7 @@ int main()
 {
     // graph g(5);
 
-    graph g = read_graph("../redes/533.txt");
+    graph g = read_graph("../redes/15.txt");
     // show_graph(g);
 
     vector<alg> algorithms = {
@@ -258,9 +256,11 @@ int main()
         {pagerankingrev, "pagerankingrev"},
         {random_choice, "random_choice"}};
 
+    int steps = 5, initial_infected_count = 3;
+    // compete(g, algorithms[1], algorithms[6], steps, initial_infected_count, false);
+
     int num_algs = algorithms.size();
 
-    int steps = 10, initial_infected_count = 20;
     for (int i = 0; i < num_algs; ++i)
     {
         for (int j = i + 1; j < num_algs; ++j)
