@@ -57,7 +57,7 @@ void solve()
             mean += x;
         }
     }
-    cout << '\n';
+    // cout << '\n';
 
     // cout << mean / ((ll)n * n) << '\n';
 }
