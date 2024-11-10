@@ -44,8 +44,6 @@ void solve()
     }
 
     outfile2.close();
-    cout << saida << ' ' << entrada << '\n';
-    cout << (ld)saida / n << ' ' << (ld)entrada / n << '\n';
 }
 
 int main()
