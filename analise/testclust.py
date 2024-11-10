@@ -14,9 +14,10 @@ H = nx.DiGraph()
 for u, v in G.edges():
     H.add_edge(u, v)
 
-dc = nx.average_shortest_path_length(H)
+dc = nx.edge_betweenness_centrality(H)
 
-print(dc)
+for i in dc:
+    print(dc[i])
 
 # vec = []
 # tot = 0

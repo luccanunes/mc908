@@ -114,7 +114,7 @@ void solve()
     ofstream outfile("edge_betweenness");
 
     for (auto x : edge_betweenness){
-        outfile << x << ' ';
+        outfile << x / (((ll)n) * (n - 1))<< '\n';
     }
 
     outfile << '\n';
@@ -123,7 +123,7 @@ void solve()
     ofstream outfile2("node_betweenness");
 
     for (auto x : betweenness){
-        outfile2 << x << ' ';
+        outfile2 << x / (((ll)n - 1) * (n - 2))<< '\n';
     }
 
     outfile2 << '\n';
