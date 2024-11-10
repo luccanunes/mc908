@@ -12,7 +12,7 @@ def remove_self_loops(gexf_input, gexf_output):
     print(f"Auto-laços removidos e grafo salvo em {gexf_output}")
 
 # Exemplo de uso
-gexf_input = 'input.gexf'  # Substitua pelo caminho do seu arquivo GEXF de entrada
-gexf_output = 'output.gexf'  # Substitua pelo caminho do seu arquivo GEXF de saída
+gexf_input = 'rede_eleicoes_15000.gexf'  # Substitua pelo caminho do seu arquivo GEXF de entrada
+gexf_output = 'rede.gexf'  # Substitua pelo caminho do seu arquivo GEXF de saída
 
 remove_self_loops(gexf_input, gexf_output)
