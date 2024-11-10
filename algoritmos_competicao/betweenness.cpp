@@ -15,7 +15,7 @@ typedef vector<vi> graph;
 
 vi betweenness(graph G, int k, vi S)
 {
-    ifstream file("./../algoritmos/list-533/betweenness_list.txt");
+    ifstream file("./../algoritmos/main-list/betweenness_list.txt");
     int a;
     vi ans;
     while (file >> a)
