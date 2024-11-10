@@ -5,6 +5,7 @@
 #include "../algoritmos_competicao/maxdegree.cpp"
 #include "../algoritmos_competicao/pageranking.cpp"
 #include "../algoritmos_competicao/pagerankingrev.cpp"
+#include "../algoritmos_competicao/random_choice.cpp"
 
 using namespace std;
 
@@ -254,7 +255,8 @@ int main()
         {eigenvector, "eigenvector"},
         {maxdegree, "maxdegree"},
         {pageranking, "pageranking"},
-        {pagerankingrev, "pagerankingrev"}};
+        {pagerankingrev, "pagerankingrev"},
+        {random_choice, "random_choice"}};
 
     int num_algs = algorithms.size();
 
