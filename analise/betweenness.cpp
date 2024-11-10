@@ -94,6 +94,9 @@ void solve()
 
     graph G(n);
     dif_m = 0;
+
+    vector<pii> vetor;
+
     for (int i = 0; i < m; i++)
     {
         int a, b;
@@ -101,6 +104,7 @@ void solve()
         G[a].push_back(b);
         if(mapa.find({a, b}) == mapa.end()){
             mapa[{a, b}] = dif_m;
+            vetor.push_back({a, b});
             dif_m ++;
         }
     }
@@ -113,8 +117,9 @@ void solve()
 
     ofstream outfile("edge_betweenness");
 
-    for (auto x : edge_betweenness){
-        outfile << x / (((ll)n) * (n - 1))<< '\n';
+    for (int i = 0; i < edge_betweenness.size(); i++){
+        ld x = edge_betweenness[i];
+        outfile << x / (((ll)n) * (n - 1)) << '\n';
     }
 
     outfile << '\n';

@@ -17,7 +17,7 @@ for u, v in G.edges():
 dc = nx.edge_betweenness_centrality(H)
 
 for i in dc:
-    print(dc[i])
+    print(dc[i], i[0], i[1])
 
 # vec = []
 # tot = 0
