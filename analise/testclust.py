@@ -14,15 +14,17 @@ H = nx.DiGraph()
 for u, v in G.edges():
     H.add_edge(u, v)
 
-dc = nx.clustering(H)
+dc = nx.average_shortest_path_length(H)
 
-vec = []
-tot = 0
+print(dc)
 
-for a in dc:
-    vec.append(dc[a])
-    tot += dc[a]
+# vec = []
+# tot = 0
 
-vec = sorted(vec)
-print(vec)
-print(tot / len(vec))
+# for a in dc:
+#     vec.append(dc[a])
+#     tot += dc[a]
+
+# vec = sorted(vec)
+# print(vec)
+# print(tot / len(vec))

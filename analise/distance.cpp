@@ -8,9 +8,12 @@ typedef pair<int, int> pii;
 typedef long double ld;
 typedef long long ll;
 
-vi bfs(graph G, int a)
+graph G;
+vi dist;
+
+void bfs(int a)
 {
-    vi dist(G.size(), G.size() * 2);
+    dist.resize(G.size(), G.size() * 2);
     queue<int> fila;
 
     fila.push(a);
@@ -30,8 +33,6 @@ vi bfs(graph G, int a)
             }
         }
     }
-
-    return dist;
 }
 
 void solve()
@@ -39,7 +40,7 @@ void solve()
     int n, m;
     cin >> n >> m;
 
-    graph G(n);
+    G.resize(n);
     for (int i = 0; i < m; i++)
     {
         int a, b;
@@ -47,23 +48,18 @@ void solve()
         G[a].push_back(b);
     }
 
-    vi tot;
     ld mean = 0;
 
-    ofstream outfile("distance");
-
     for (int a = 0; a < n; a++){
-        vi dist = bfs(G, a);
+        bfs(a);
         for (auto x : dist){
-            outfile << x << ' ';
+            cout << x << '\n';
             mean += x;
         }
     }
+    cout << '\n';
 
-    outfile << '\n';
-    outfile.close();
-
-    cout << mean / ((ll)n * n) << '\n';
+    // cout << mean / ((ll)n * n) << '\n';
 }
 
 int main()
