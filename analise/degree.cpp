@@ -25,10 +25,13 @@ void solve()
         Gi[b].push_back(a);
     }
 
+    ll saida = 0, entrada = 0;
+
     ofstream outfile1("degree_out");
 
     for (int i = 0; i < n; i++){
         outfile1 << G[i].size() << '\n';
+        saida += G[i].size();
     }
 
     outfile1.close();
@@ -37,9 +40,12 @@ void solve()
 
     for (int i = 0; i < n; i++){
         outfile2 << Gi[i].size() << '\n';
+        entrada += Gi[i].size();
     }
 
     outfile2.close();
+    cout << saida << ' ' << entrada << '\n';
+    cout << (ld)saida / n << ' ' << (ld)entrada / n << '\n';
 }
 
 int main()
