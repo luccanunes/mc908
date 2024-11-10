@@ -11,7 +11,7 @@ def read_results(file_path):
     return df
 
 # Função para simular a propagação da influência e criar o GIF
-def create_influence_gif(G, df, steps, output_file, frame_duration=1):
+def create_influence_gif(G, df, steps, output_file, frame_duration=1, alg1_name="Algorithm 1", alg2_name="Algorithm 2"):
     frames = []
 
     # Criar a subpasta 'gif' se não existir
@@ -24,7 +24,6 @@ def create_influence_gif(G, df, steps, output_file, frame_duration=1):
     # Ajustar automaticamente o tamanho dos nós e a largura das arestas
     num_nodes = len(G.nodes)
     node_size = max(10000 / num_nodes, 10)  # Valor mínimo para node_size
-    # edge_width = max(100 / num_nodes, 0.1)  # Valor mínimo para edge_width
     edge_width = 0.1
 
     # Conjuntos para manter os nós infectados
@@ -48,8 +47,14 @@ def create_influence_gif(G, df, steps, output_file, frame_duration=1):
         plt.figure(figsize=(10, 10))
         nx.draw(G, pos, node_color=color_map, with_labels=False, node_size=node_size, width=edge_width)
         plt.title(f'Step {step + 1}')
+
+        # Adicionar a legenda
+        red_patch = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='red', markersize=10, label=alg1_name)
+        blue_patch = plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='blue', markersize=10, label=alg2_name)
+        plt.legend(handles=[red_patch, blue_patch], loc='upper right')
+
         frame_path = f'gif/frame_{step}.png'
-        plt.savefig(frame_path)
+        plt.savefig(frame_path, bbox_inches='tight')
         plt.close()
 
         frames.append(imageio.imread(frame_path))
@@ -61,6 +66,8 @@ def create_influence_gif(G, df, steps, output_file, frame_duration=1):
 parser = argparse.ArgumentParser(description='Simular a propagação da influência e criar um GIF.')
 parser.add_argument('gexf_file', type=str, help='O caminho para o arquivo .gexf')
 parser.add_argument('results_file', type=str, help='O caminho para o arquivo de resultados CSV')
+parser.add_argument('alg1_name', type=str, help='O nome do algoritmo 1 (vermelho)')
+parser.add_argument('alg2_name', type=str, help='O nome do algoritmo 2 (azul)')
 
 # Analisar os argumentos
 args = parser.parse_args()
@@ -75,6 +82,6 @@ df = read_results(args.results_file)
 output_file = 'influence_simulation.gif'
 
 # Criar o GIF com tamanhos de vértices e arestas ajustados
-create_influence_gif(G, df, steps=10, output_file=output_file, frame_duration=700)
+create_influence_gif(G, df, steps=5, output_file=output_file, frame_duration=700, alg1_name=args.alg1_name, alg2_name=args.alg2_name)
 
 print(f"GIF salvo como 'gif/{output_file}'")
