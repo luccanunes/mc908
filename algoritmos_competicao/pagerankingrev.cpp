@@ -15,7 +15,7 @@ typedef vector<vi> graph;
 
 vi pagerankingrev(graph G, int k, vi S)
 {
-    ifstream file("./../algoritmos/main-list/algoritmos/list-1613/pagerankingrev_list.txt");
+    ifstream file("./../algoritmos/main-list/pagerankingrev_list.txt");
     int a;
     vi ans;
     while (file >> a)

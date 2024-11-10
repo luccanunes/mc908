@@ -16,8 +16,7 @@ typedef vector<vi> graph;
 vi random_choice(const graph &G, int k, const vi &S)
 {
     vi ans;
-    set<int> available_nodes;
-    set<int> excluded_nodes(S.begin(), S.end());
+    set<int> available_nodes, excluded_nodes(S.begin(), S.end());
 
     // Adicionar todos os vértices que não estão em S ao conjunto de vértices disponíveis
     for (int i = 0; i < G.size(); ++i)
@@ -27,11 +26,11 @@ vi random_choice(const graph &G, int k, const vi &S)
     // Gerador de números aleatórios
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dis(0, available_nodes.size() - 1);
 
     // Selecionar aleatoriamente K vértices
     while (ans.size() < k && !available_nodes.empty())
     {
+        uniform_int_distribution<> dis(0, available_nodes.size() - 1);
         auto it = available_nodes.begin();
         advance(it, dis(gen));
         ans.push_back(*it);
