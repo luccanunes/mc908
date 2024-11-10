@@ -5,6 +5,7 @@
 #include "../algoritmos_competicao/maxdegree.cpp"
 #include "../algoritmos_competicao/pageranking.cpp"
 #include "../algoritmos_competicao/pagerankingrev.cpp"
+#include "../algoritmos_competicao/degree_discount.cpp"
 #include "../algoritmos_competicao/random_choice.cpp"
 
 using namespace std;
@@ -56,27 +57,15 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
 
         // Propagar infecção para o algoritmo 1
         for (int node : influenced1)
-        {
             for (int neighbor : g[node])
-            {
                 if (!visited[neighbor] && dis(gen) < P)
-                {
                     new_infected1.insert(neighbor);
-                }
-            }
-        }
 
         // Propagar infecção para o algoritmo 2
         for (int node : influenced2)
-        {
             for (int neighbor : g[node])
-            {
                 if (!visited[neighbor] && dis(gen) < P)
-                {
                     new_infected2.insert(neighbor);
-                }
-            }
-        }
 
         if (new_infected1.empty() && new_infected2.empty())
             break; // Não há mais candidatos para infectar
@@ -254,6 +243,7 @@ int main()
         {maxdegree, "maxdegree"},
         {pageranking, "pageranking"},
         {pagerankingrev, "pagerankingrev"},
+        {degree_discount, "degree_discount"},
         {random_choice, "random_choice"}};
 
     int steps = 5, initial_infected_count = 3;
