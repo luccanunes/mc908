@@ -6,3 +6,4 @@ visualizer/results.csv
 visualizer/*.gexf
 *.txt
 redes
+*.csv
