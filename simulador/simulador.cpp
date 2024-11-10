@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
 #include "../algoritmos_competicao/betweenness.cpp"
 #include "../algoritmos_competicao/closeness.cpp"
-// #include "../algoritmos_competicao/eigenvector.cpp"
-// #include "../algoritmos_competicao/maxdegree.cpp"
-// #include "../algoritmos_competicao/maxdegreenorep.cpp"
-// #include "../algoritmos_competicao/pageranking.cpp"
-// #include "../algoritmos_competicao/pagerankingrev.cpp"
+#include "../algoritmos_competicao/eigenvector.cpp"
+#include "../algoritmos_competicao/maxdegree.cpp"
+#include "../algoritmos_competicao/pageranking.cpp"
+#include "../algoritmos_competicao/pagerankingrev.cpp"
 
 using namespace std;
 
@@ -14,16 +13,21 @@ typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
+struct alg
+{
+    function<vi(const graph &, int, const vi &)> fun;
+    string name;
+};
 
 const double P = 0.2;
 
-pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &initialInfected2, int steps, bool save = false)
+pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &initialInfected2, int steps, bool save = false, string save_path = "results.csv")
 {
     vi influenced1 = initialInfected1;
     vi influenced2 = initialInfected2;
     vector<bool> visited(g.size(), false);
 
-    ofstream outfile("results.csv");
+    ofstream outfile(save_path);
     if (save)
         outfile << "step,algorithm,node\n";
 
@@ -107,29 +111,29 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
 }
 
 void compete(const graph &g,
-             function<vi(const graph &, int, const vi &)> algorithm1,
-             function<vi(const graph &, int, const vi &)> algorithm2,
+             alg algorithm1,
+             alg algorithm2,
              int steps, int K, bool alternate = false)
 {
     if (!alternate)
     { // Simulação normal: escolha independente
         vi S;
-        vi result1 = algorithm1(g, K, S);
-        vi result2 = algorithm2(g, K, S);
+        vi result1 = algorithm1.fun(g, K, S);
+        vi result2 = algorithm2.fun(g, K, S);
 
         sort(result1.begin(), result1.end());
         sort(result2.begin(), result2.end());
 
         // cout << "K: " << K << ' ' << result1.size() << endl;
-        cout << "Initial choice\n";
-        cout << "1: ";
-        for (int x : result1)
-            cout << x << ' ';
-        cout << endl;
-        cout << "2: ";
-        for (int x : result2)
-            cout << x << ' ';
-        cout << endl;
+        // cout << "Initial choice\n";
+        // cout << "1: ";
+        // for (int x : result1)
+        //     cout << x << ' ';
+        // cout << endl;
+        // cout << "2: ";
+        // for (int x : result2)
+        //     cout << x << ' ';
+        // cout << endl;
 
         vi intersection;
         set_intersection(result1.begin(), result1.end(), result2.begin(), result2.end(), back_inserter(intersection));
@@ -141,15 +145,15 @@ void compete(const graph &g,
             result2.erase(remove(result2.begin(), result2.end(), v), result2.end());
         }
 
-        cout << "After removal of intersection\n";
-        cout << "1, " << result1.size() << ": ";
-        for (int x : result1)
-            cout << x << ' ';
-        cout << endl;
-        cout << "2, " << result2.size() << ": ";
-        for (int x : result2)
-            cout << x << ' ';
-        cout << endl;
+        // cout << "After removal of intersection\n";
+        // cout << "1, " << result1.size() << ": ";
+        // for (int x : result1)
+        //     cout << x << ' ';
+        // cout << endl;
+        // cout << "2, " << result2.size() << ": ";
+        // for (int x : result2)
+        //     cout << x << ' ';
+        // cout << endl;
 
         for (int x : result1)
         {
@@ -157,7 +161,7 @@ void compete(const graph &g,
                 if (x == y)
                     assert(false);
         }
-        auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true);
+        auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true, algorithm1.name + "#" + algorithm2.name);
 
         // if (influenced1.size() > influenced2.size())
         //     cout << "O algoritmo 1 ganhou com " << influenced1.size() << " nós influenciados." << endl;
@@ -165,8 +169,8 @@ void compete(const graph &g,
         //     cout << "O algoritmo 2 ganhou com " << influenced2.size() << " nós influenciados." << endl;
         // else
         //     cout << "Houve um empate, os algoritmos influenciaram " << influenced1.size() << " nós cada." << endl;
-        cout << "O algoritmo 1 influenciou " << influenced1.size() << " nós." << endl;
-        cout << "O algoritmo 2 influenciou " << influenced2.size() << " nós." << endl;
+        cout << "O algoritmo " << algorithm1.name << " influenciou " << influenced1.size() << " nós." << endl;
+        cout << "O algoritmo " << algorithm2.name << " influenciou " << influenced2.size() << " nós." << endl;
     }
     else
     { // Tipo 2: escolha alternada
@@ -174,10 +178,10 @@ void compete(const graph &g,
         vi result1, result2;
         for (int i = 0; i < K; ++i)
         {
-            result1 = algorithm1(g, 1, S1);
+            result1 = algorithm1.fun(g, 1, S1);
             if (!result1.empty())
                 S2.push_back(result1[0]);
-            result2 = algorithm2(g, 1, S2);
+            result2 = algorithm2.fun(g, 1, S2);
             if (!result2.empty())
                 S1.push_back(result2[0]);
         }
@@ -186,16 +190,6 @@ void compete(const graph &g,
         cout << "O algoritmo 2 influenciou " << influenced2.size() << " nós." << endl;
     }
 }
-
-// Função para ler o grafo de um arquivo de texto
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <sstream>
-
-using namespace std;
-
-typedef vector<vector<int>> graph;
 
 graph read_graph(const string &filename)
 {
@@ -250,48 +244,29 @@ void show_graph(const graph &adj_list)
 int main()
 {
     // graph g(5);
-    // g[0] = {1, 2};
-    // g[1] = {0, 3};
-    // g[2] = {0, 4};
-    // g[3] = {1};
-    // g[4] = {2};
 
     graph g = read_graph("../redes/533.txt");
     // show_graph(g);
 
-    compete(g, betweenness, closeness, 10, 20, false);
+    vector<alg> algorithms = {
+        {betweenness, "betweenness"},
+        {closeness, "closeness"},
+        {eigenvector, "eigenvector"},
+        {maxdegree, "maxdegree"},
+        {pageranking, "pageranking"},
+        {pagerankingrev, "pagerankingrev"}};
 
-    // show_graph(g);
+    int num_algs = algorithms.size();
 
-    // Example algorithms
-    // auto algorithm1 = [](const graph &g, int K, const vi &S) -> vi
-    // {
-    //     // Simple algorithm: Select the first K nodes not in S
-    //     vi result;
-    //     for (int i = 0; i < g.size() && result.size() < K; ++i)
-    //     {
-    //         if (find(S.begin(), S.end(), i) == S.end())
-    //         {
-    //             result.push_back(i);
-    //         }
-    //     }
-    //     return result;
-    // };
-    // auto algorithm2 = [](const graph &g, int K, const vi &S) -> vi
-    // {
-    //     // Another simple algorithm: Select the last K nodes not in S
-    //     vi result;
-
-    //     for (int i = g.size() - 1; i >= 0 && result.size() < K; --i)
-    //     {
-    //         if (find(S.begin(), S.end(), i) == S.end())
-    //         {
-    //             result.push_back(i);
-    //         }
-    //     }
-    //     return result;
-    // };
-    // compete(g, algorithm1, algorithm2, 300, 70, false);
-    // compete(g, algorithm1, algorithm2, 2, 2, true);
+    int steps = 10, initial_infected_count = 20;
+    for (int i = 0; i < num_algs; ++i)
+    {
+        for (int j = i + 1; j < num_algs; ++j)
+        {
+            cout << algorithms[i].name << " vs. " << algorithms[j].name << endl;
+            compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false);
+            cout << "\n";
+        }
+    }
     return 0;
 }
