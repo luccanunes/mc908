@@ -6,6 +6,9 @@ def remove_self_loops(gexf_input, gexf_output):
     
     # Remover auto-laços
     G.remove_edges_from(nx.selfloop_edges(G))
+
+    isolates = list(nx.isolates(G))
+    G.remove_nodes_from(isolates)
     
     # Salvar o grafo modificado em um novo arquivo GEXF
     nx.write_gexf(G, gexf_output)
