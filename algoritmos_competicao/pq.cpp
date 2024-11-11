@@ -1,34 +1,28 @@
-#include <bits/stdc++.h>
+#include "pq.h"
 
-using namespace std;
-
-struct PriorityQueue
+void PriorityQueue::add_task(int node, double priority)
 {
-    priority_queue<pair<double, int>> pq;
-    unordered_map<int, double> priorities;
-    unordered_set<int> in_queue;
-    void add_task(int node, double priority)
+    pq.push({priority, node});
+    priorities[node] = priority;
+    in_queue.insert(node);
+}
+
+std::pair<int, double> PriorityQueue::pop_item()
+{
+    while (!pq.empty())
     {
-        pq.push({priority, node});
-        priorities[node] = priority;
-        in_queue.insert(node);
-    }
-    pair<int, double> pop_item()
-    {
-        while (!pq.empty())
+        auto [priority, node] = pq.top();
+        pq.pop();
+        if (in_queue.count(node) && priorities[node] == priority)
         {
-            auto [priority, node] = pq.top();
-            pq.pop();
-            if (in_queue.count(node) && priorities[node] == priority)
-            {
-                in_queue.erase(node);
-                return {node, priority};
-            }
+            in_queue.erase(node);
+            return {node, priority};
         }
-        return {-1, 0.0}; // Retorna um valor inválido se a fila estiver vazia
     }
-    double get_priority(int node)
-    {
-        return priorities[node];
-    }
-};
+    return {-1, 0.0}; // Retorna um valor inválido se a fila estiver vazia
+}
+
+double PriorityQueue::get_priority(int node)
+{
+    return priorities[node];
+}

@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "pq.cpp"
+#include "pq.h"
 
 using namespace std;
 
