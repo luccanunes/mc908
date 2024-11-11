@@ -8,6 +8,8 @@
 #include "../algoritmos_competicao/degree_discount.cpp"
 #include "../algoritmos_competicao/representative_nodes_min.cpp"
 #include "../algoritmos_competicao/representative_nodes_sum.cpp"
+#include "../algoritmos_competicao/miranda_porto.cpp"
+#include "../algoritmos_competicao/prado_nunes.cpp"
 #include "../algoritmos_competicao/random_choice.cpp"
 #include "../algoritmos_competicao/pq.cpp"
 
@@ -18,10 +20,12 @@ typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
+typedef vector<unordered_set<int>> graph_set;
 struct alg
 {
     function<vi(const graph &, int, const vi &)> fun;
     string name;
+    bool deterministic = true;
 };
 
 const double P = 0.2;
@@ -54,24 +58,35 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
     mt19937 gen(rd());
     uniform_real_distribution<> dis(0.0, 1.0);
 
+    // Converter o grafo para vector<unordered_set<int>>
+    graph_set g_set(g.size());
+    for (int u = 0; u < g.size(); ++u)
+        for (int v : g[u])
+            g_set[u].insert(v);
+
     for (int step = 1; step <= steps; ++step)
     {
         set<int> new_infected1, new_infected2;
 
+        vector<pii> taken_edges;
+
         // Propagar infecção para o algoritmo 1
         for (int node : influenced1)
-            for (int neighbor : g[node])
+            for (int neighbor : g_set[node])
                 if (!visited[neighbor] && dis(gen) < P)
+                {
+                    taken_edges.push_back({node, neighbor});
                     new_infected1.insert(neighbor);
+                }
 
         // Propagar infecção para o algoritmo 2
         for (int node : influenced2)
-            for (int neighbor : g[node])
+            for (int neighbor : g_set[node])
                 if (!visited[neighbor] && dis(gen) < P)
+                {
+                    taken_edges.push_back({node, neighbor});
                     new_infected2.insert(neighbor);
-
-        if (new_infected1.empty() && new_infected2.empty())
-            break; // Não há mais candidatos para infectar
+                }
 
         // Remover candidatos comuns e marcá-los como visitados
         vector<int> common_candidates;
@@ -83,6 +98,8 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
             visited[v] = true; // Marcar como visitado para bloquear infecções futuras
         }
 
+        for (auto [a, b] : taken_edges)
+            g_set[a].erase(b);
         // Atualizar vértices influenciados e visitados
         for (int v : new_infected1)
         {
@@ -152,7 +169,7 @@ void compete(const graph &g,
             for (int y : result2)
                 if (x == y)
                     assert(false);
-        auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true, algorithm1.name + "#" + algorithm2.name + ".csv");
+        auto [influenced1, influenced2] = simulate(g, result1, result2, steps);
 
         cout << "O algoritmo " << algorithm1.name << " influenciou " << influenced1.size() << " nós." << endl;
         cout << "O algoritmo " << algorithm2.name << " influenciou " << influenced2.size() << " nós." << endl;
@@ -176,22 +193,29 @@ void compete(const graph &g,
     }
 }
 
-void run_algorithm_isolated(const graph &g, alg algorithm, int Ko, int Kf, int steps, int num_runs, ofstream &outfile)
+void run_algorithm_isolated(const graph &g, alg algorithm, const vi &initial_infected_sizes, int steps, int num_runs, ofstream &outfile, bool save = false)
 {
-    for (int k = Ko; k <= Kf; ++k)
+    for (int k : initial_infected_sizes)
     {
         int total_infected = 0;
-        for (int i = 0; i < num_runs; ++i)
+        vi S; // Conjunto de vértices proibido
+        // cout << "Vou rodar " << algorithm.name << "!" << endl;
+        vi result = algorithm.fun(g, k, S);
+        // cout << "Rodei " << algorithm.name << "!" << endl;
+        auto [influenced_by_alg, _] = simulate(g, result, {}, steps, save);
+        total_infected += influenced_by_alg.size();
+        for (int i = 1; i < num_runs; ++i)
         {
-            vi S; // Conjunto inicial de vértices
-            vi result = algorithm.fun(g, k, S);
+            if (!algorithm.deterministic)
+                result = algorithm.fun(g, k, S);
             // Simular a propagação da influência
-            auto [influenced_by_alg, _] = simulate(g, result, {}, steps, true, algorithm.name + "_" + to_string(k) + "_" + to_string(i) + ".csv");
+            // auto [influenced_by_alg, _] = simulate(g, result, {}, steps, true, algorithm.name + "_" + to_string(k) + "_" + to_string(i) + ".csv");
+            auto [influenced_by_alg, _] = simulate(g, result, {}, steps, save);
             total_infected += influenced_by_alg.size();
         }
         double average_infected = static_cast<double>(total_infected) / num_runs;
         outfile << algorithm.name << "," << k << "," << average_infected << "\n";
-        cout << "Algoritmo " << algorithm.name << " infectou em média " << average_infected << " vértices." << endl;
+        // cout << "Algoritmo " << algorithm.name << " infectou em média " << average_infected << " vértices." << endl;
     }
 }
 
@@ -247,33 +271,40 @@ void show_graph(const graph &adj_list)
 
 int main()
 {
-    // graph g(5);
 
-    graph g = read_graph("../redes/15.txt");
+    graph g = read_graph("../redes/main.txt");
     // show_graph(g);
 
     vector<alg> algorithms = {
         // {betweenness, "betweenness"},
-        {closeness, "closeness"},
-        {eigenvector, "eigenvector"},
-        {maxdegree, "maxdegree"},
-        {pageranking, "pageranking"},
-        {pagerankingrev, "pagerankingrev"},
-        {degree_discount, "degree_discount"},
-        {representative_nodes_min, "representative_nodes_min"},
-        {representative_nodes_sum, "representative_nodes_sum"},
-        {random_choice, "random_choice"}};
+        // {closeness, "closeness"},
+        // {maxdegree, "maxdegree"},
+        // {pageranking, "pageranking"},
+        // {pagerankingrev, "pagerankingrev"},
+        // {degree_discount, "degree_discount"},
+        // {representative_nodes_min, "representative_nodes_min"},
+        // {representative_nodes_sum, "representative_nodes_sum"},
+        {miranda_porto, "miranda_porto"},
+        {prado_nunes, "prado_nunes"},
+        {random_choice, "random_choice", false}};
 
-    int steps = 5, initial_infected_count = 3;
+    int steps = 10, initial_infected_count = 100;
     // compete(g, algorithms[1], algorithms[6], steps, initial_infected_count, false);
 
     int num_algs = algorithms.size();
 
     ofstream outfile("algorithm_curves.csv");
     outfile << "Algorithm,InitialInfected,AverageInfected\n";
+
+    // run_algorithm_isolated(g, {pageranking, "pageranking"}, {10}, 10, 1, outfile, true);
+
+    vi initial_infected_sizes;
+    for (int i = 10; i <= 100; ++i)
+        initial_infected_sizes.push_back(i);
+
     for (alg f : algorithms)
     {
-        run_algorithm_isolated(g, f, initial_infected_count, steps, 1, 15, outfile);
+        run_algorithm_isolated(g, f, initial_infected_sizes, steps, 50, outfile);
     }
 
     // for (int i = 0; i < num_algs; ++i)
