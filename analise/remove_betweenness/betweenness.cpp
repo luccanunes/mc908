@@ -119,13 +119,11 @@ void solve()
         bfs(i, G, +1);
     }
 
-    sort(edge_betweenness.begin(), edge_betweenness.end());
-
-
     for(int i = 0; i < dif_m; i++){
         auto x = (*max_element(edge_betweenness.begin(), edge_betweenness.end())).second;
-        cout << x.first << ' ' << x.second << '\n';
-
+        cout << x.first << ' ' << x.second << endl;
+        
+        // for(int y = 0; y < G.size(); y++){
         for(auto y : marcados[x]){
             bfs(y, G, -1);
         }
@@ -137,6 +135,13 @@ void solve()
             }
         }
 
+        // for(int i = 0; i < n; i ++){
+        //     cout << i << ": "; 
+        //     for(auto k : G[i]) cout << k << ' ';
+        //     cout << '\n';
+        // }
+        // cout << '\n';
+        // for(int y = 0; y < n; y++){
         for(auto y : marcados[x]){
             bfs(y, G, +1);
         }
@@ -145,7 +150,7 @@ void solve()
 
 int main()
 {
-    // ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     solve();
     return 0;
 }
