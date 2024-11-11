@@ -6,7 +6,10 @@
 #include "../algoritmos_competicao/pageranking.cpp"
 #include "../algoritmos_competicao/pagerankingrev.cpp"
 #include "../algoritmos_competicao/degree_discount.cpp"
+#include "../algoritmos_competicao/representative_nodes_min.cpp"
+#include "../algoritmos_competicao/representative_nodes_sum.cpp"
 #include "../algoritmos_competicao/random_choice.cpp"
+#include "../algoritmos_competicao/pq.cpp"
 
 using namespace std;
 
@@ -151,12 +154,6 @@ void compete(const graph &g,
                     assert(false);
         auto [influenced1, influenced2] = simulate(g, result1, result2, steps, true, algorithm1.name + "#" + algorithm2.name + ".csv");
 
-        // if (influenced1.size() > influenced2.size())
-        //     cout << "O algoritmo 1 ganhou com " << influenced1.size() << " nós influenciados." << endl;
-        // else if (influenced1.size() < influenced2.size())
-        //     cout << "O algoritmo 2 ganhou com " << influenced2.size() << " nós influenciados." << endl;
-        // else
-        //     cout << "Houve um empate, os algoritmos influenciaram " << influenced1.size() << " nós cada." << endl;
         cout << "O algoritmo " << algorithm1.name << " influenciou " << influenced1.size() << " nós." << endl;
         cout << "O algoritmo " << algorithm2.name << " influenciou " << influenced2.size() << " nós." << endl;
     }
@@ -176,6 +173,25 @@ void compete(const graph &g,
         auto [influenced1, influenced2] = simulate(g, S1, S2, steps);
         cout << "O algoritmo 1 influenciou " << influenced1.size() << " nós." << endl;
         cout << "O algoritmo 2 influenciou " << influenced2.size() << " nós." << endl;
+    }
+}
+
+void run_algorithm_isolated(const graph &g, alg algorithm, int Ko, int Kf, int steps, int num_runs, ofstream &outfile)
+{
+    for (int k = Ko; k <= Kf; ++k)
+    {
+        int total_infected = 0;
+        for (int i = 0; i < num_runs; ++i)
+        {
+            vi S; // Conjunto inicial de vértices
+            vi result = algorithm.fun(g, k, S);
+            // Simular a propagação da influência
+            auto [influenced_by_alg, _] = simulate(g, result, {}, steps, true, algorithm.name + "_" + to_string(k) + "_" + to_string(i) + ".csv");
+            total_infected += influenced_by_alg.size();
+        }
+        double average_infected = static_cast<double>(total_infected) / num_runs;
+        outfile << algorithm.name << "," << k << "," << average_infected << "\n";
+        cout << "Algoritmo " << algorithm.name << " infectou em média " << average_infected << " vértices." << endl;
     }
 }
 
@@ -237,13 +253,15 @@ int main()
     // show_graph(g);
 
     vector<alg> algorithms = {
-        {betweenness, "betweenness"},
+        // {betweenness, "betweenness"},
         {closeness, "closeness"},
         {eigenvector, "eigenvector"},
         {maxdegree, "maxdegree"},
         {pageranking, "pageranking"},
         {pagerankingrev, "pagerankingrev"},
         {degree_discount, "degree_discount"},
+        {representative_nodes_min, "representative_nodes_min"},
+        {representative_nodes_sum, "representative_nodes_sum"},
         {random_choice, "random_choice"}};
 
     int steps = 5, initial_infected_count = 3;
@@ -251,14 +269,22 @@ int main()
 
     int num_algs = algorithms.size();
 
-    for (int i = 0; i < num_algs; ++i)
+    ofstream outfile("algorithm_curves.csv");
+    outfile << "Algorithm,InitialInfected,AverageInfected\n";
+    for (alg f : algorithms)
     {
-        for (int j = i + 1; j < num_algs; ++j)
-        {
-            cout << algorithms[i].name << " vs. " << algorithms[j].name << endl;
-            compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false);
-            cout << "\n";
-        }
+        run_algorithm_isolated(g, f, initial_infected_count, steps, 1, 15, outfile);
     }
+
+    // for (int i = 0; i < num_algs; ++i)
+    // {
+    //     for (int j = i + 1; j < num_algs; ++j)
+    //     {
+    //         cout << algorithms[i].name << " vs. " << algorithms[j].name << endl;
+    //         compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false);
+    //         cout << "\n";
+    //     }
+    // }
+
     return 0;
 }
