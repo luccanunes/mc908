@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include "pq.h"
-
 using namespace std;
 
 typedef long long int ll;
@@ -11,42 +10,53 @@ typedef vector<vi> graph;
 
 vi degree_discount(const graph &G, int k, const vi &S)
 {
-    double p = 0.2;
-    vi result;
-    PriorityQueue dd;          // degree discount
-    unordered_map<int, int> t; // number of adjacent vertices that are in S
+    const double p = 0.2;
     unordered_map<int, int> d; // degree of each vertex
+    map<int, double> dd;       // degree discount
+    unordered_map<int, int> t; // number of selected neighbors
+    vi result;                 // selected set of nodes
     unordered_set<int> excluded_nodes(S.begin(), S.end());
-    vector<bool> selected(G.size(), false); // vetor booleano para rastrear vértices selecionados
+    set<int> selected; // rastrear vértices selecionados
 
     // initialize degree discount
     for (int u = 0; u < G.size(); ++u)
     {
-        if (excluded_nodes.find(u) == excluded_nodes.end())
-        {
-            d[u] = G[u].size();    // each neighbor adds degree 1
-            dd.add_task(u, -d[u]); // add degree of each node
-            t[u] = 0;
-        }
+        d[u] = G[u].size(); // each neighbor adds degree 1
+        dd[u] = d[u];
+        t[u] = 0;
     }
 
     // add vertices to result greedily
-    for (int i = 0; i < k; ++i)
+    while (result.size() != k)
     {
-        auto [u, priority] = dd.pop_item(); // extract node with maximal degree discount
-        if (u == -1)
-            break; // No more nodes to select
+        // find the node with the maximum degree discount
+        int u = -1;
+        double max_dd = -1;
+        for (const auto &entry : dd)
+        {
+            if (entry.second > max_dd)
+            {
+                max_dd = entry.second;
+                u = entry.first;
+            }
+        }
+
+        if (excluded_nodes.count(u))
+            continue;
+
+        dd.erase(u);
         result.push_back(u);
-        selected[u] = true; // Marcar o vértice como selecionado
+        selected.insert(u); // Marcar o vértice como selecionado
+
         for (int v : G[u])
         {
-            if (excluded_nodes.find(v) == excluded_nodes.end() && !selected[v])
+            if (!selected.count(v))
             {
-                t[v]++;                                                           // increase number of selected neighbors
-                double new_priority = d[v] - 2 * t[v] - (d[v] - t[v]) * t[v] * p; // discount of degree
-                dd.add_task(v, -new_priority);
+                t[v]++;                                             // increase number of selected neighbors
+                dd[v] = d[v] - 2 * t[v] - (d[v] - t[v]) * t[v] * p; // discount of degree
             }
         }
     }
+
     return result;
 }
