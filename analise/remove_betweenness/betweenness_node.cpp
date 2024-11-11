@@ -112,7 +112,6 @@ void solve()
         auto x = max_element(betweenness.begin(), betweenness.end()) - betweenness.begin();
         cout << x << endl;
         
-        // for(int y = 0; y < G.size(); y++){
         for(auto y : marcados[x]){
             bfs(y, -1);
         }

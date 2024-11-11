@@ -16,7 +16,6 @@ typedef vector<vi> graph;
 const int maxn = 1e3 + 5, inf = 2e9, M = 1e9 + 7;
 const ll linf = 1e18;
 graph G;
-vector<ld> betweenness;
 vector<pair<ld, pii>> edge_betweenness;
 map<pii, int> mapa;
 map<int, pii> unmp;
@@ -79,10 +78,6 @@ void bfs(int a, graph G, int aux)
             delta_edge[mapa[{y, x}]] += ((ld)qtdd[y] / qtdd[x]) * (1 + delta[x]);
             marcados[{y, x}].insert(a);
         }
-        if (x != a)
-        {
-            betweenness[x] += aux * delta[x];
-        }
     }
     for(int i = 0; i < dif_m; i++){
         edge_betweenness[i].first += aux * delta_edge[i];
@@ -92,8 +87,6 @@ void bfs(int a, graph G, int aux)
 void solve()
 {
     cin >> n >> m;
-
-    betweenness.resize(n);
 
     graph G(n);
     dif_m = 0;
@@ -109,6 +102,7 @@ void solve()
             dif_m ++;
         }
     }
+
     edge_betweenness.resize(dif_m);
     for(int i = 0; i < dif_m; i++){
         edge_betweenness[i].second = unmp[i];
@@ -123,7 +117,6 @@ void solve()
         auto x = (*max_element(edge_betweenness.begin(), edge_betweenness.end())).second;
         cout << x.first << ' ' << x.second << endl;
         
-        // for(int y = 0; y < G.size(); y++){
         for(auto y : marcados[x]){
             bfs(y, G, -1);
         }
@@ -135,13 +128,6 @@ void solve()
             }
         }
 
-        // for(int i = 0; i < n; i ++){
-        //     cout << i << ": "; 
-        //     for(auto k : G[i]) cout << k << ' ';
-        //     cout << '\n';
-        // }
-        // cout << '\n';
-        // for(int y = 0; y < n; y++){
         for(auto y : marcados[x]){
             bfs(y, G, +1);
         }
