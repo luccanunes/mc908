@@ -101,5 +101,5 @@ df = read_results(args.results_file)
 # Nome fixo para o arquivo GIF de saída
 output_file = 'influence_simulation.gif'
 # Criar o GIF com tamanhos de vértices e arestas ajustados
-create_influence_gif(G, df, steps=5, output_file=output_file, frame_duration=700, alg1_name=args.alg1_name, alg2_name=args.alg2_name)
+create_influence_gif(G, df, steps=20, output_file=output_file, frame_duration=700, alg1_name=args.alg1_name, alg2_name=args.alg2_name)
 print(f"GIF salvo como 'gif/{output_file}'")

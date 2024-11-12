@@ -120,59 +120,45 @@ pair<vi, vi> simulate(const graph &g, const vi &initialInfected1, const vi &init
     return {influenced1, influenced2};
 }
 
-void compete(const graph &g,
-             alg algorithm1,
-             alg algorithm2,
-             int steps, int K, bool alternate = false)
+void compete(const graph &g, alg algorithm1, alg algorithm2, int steps, int K, bool alternate, unordered_map<string, int> &wins, unordered_map<string, vector<int>> &infected_counts, unordered_map<string, unordered_map<string, int>> &pair_wins, unordered_map<string, unordered_map<string, pair<vector<int>, vector<int>>>> &pair_infected)
 {
     if (!alternate)
     { // Simulação normal: escolha independente
         vi S;
         vi result1 = algorithm1.fun(g, K, S);
         vi result2 = algorithm2.fun(g, K, S);
-
         sort(result1.begin(), result1.end());
         sort(result2.begin(), result2.end());
-
-        // cout << "K: " << K << ' ' << result1.size() << endl;
-        // cout << "Initial choice\n";
-        // cout << "1: ";
-        // for (int x : result1)
-        //     cout << x << ' ';
-        // cout << endl;
-        // cout << "2: ";
-        // for (int x : result2)
-        //     cout << x << ' ';
-        // cout << endl;
-
         vi intersection;
         set_intersection(result1.begin(), result1.end(), result2.begin(), result2.end(), back_inserter(intersection));
-
         // Remover elementos da interseção de result1 e result2
         for (int v : intersection)
         {
             result1.erase(remove(result1.begin(), result1.end(), v), result1.end());
+
             result2.erase(remove(result2.begin(), result2.end(), v), result2.end());
         }
-
-        // cout << "After removal of intersection\n";
-        // cout << "1, " << result1.size() << ": ";
-        // for (int x : result1)
-        //     cout << x << ' ';
-        // cout << endl;
-        // cout << "2, " << result2.size() << ": ";
-        // for (int x : result2)
-        //     cout << x << ' ';
-        // cout << endl;
-
         for (int x : result1)
             for (int y : result2)
                 if (x == y)
                     assert(false);
         auto [influenced1, influenced2] = simulate(g, result1, result2, steps);
-
-        cout << "O algoritmo " << algorithm1.name << " influenciou " << influenced1.size() << " nós." << endl;
-        cout << "O algoritmo " << algorithm2.name << " influenciou " << influenced2.size() << " nós." << endl;
+        int infected1 = influenced1.size();
+        int infected2 = influenced2.size();
+        infected_counts[algorithm1.name].push_back(infected1);
+        infected_counts[algorithm2.name].push_back(infected2);
+        pair_infected[algorithm1.name][algorithm2.name].first.push_back(infected1);
+        pair_infected[algorithm1.name][algorithm2.name].second.push_back(infected2);
+        if (infected1 > infected2)
+        {
+            wins[algorithm1.name]++;
+            pair_wins[algorithm1.name][algorithm2.name]++;
+        }
+        else if (infected2 > infected1)
+        {
+            wins[algorithm2.name]++;
+            pair_wins[algorithm2.name][algorithm1.name]++;
+        }
     }
     else
     { // Tipo 2: escolha alternada
@@ -191,6 +177,28 @@ void compete(const graph &g,
         cout << "O algoritmo 1 influenciou " << influenced1.size() << " nós." << endl;
         cout << "O algoritmo 2 influenciou " << influenced2.size() << " nós." << endl;
     }
+}
+
+void compete_for_gif(const graph &g, alg algorithm1, alg algorithm2, int steps, int K, const string &filename)
+{
+    vi S;
+    vi result1 = algorithm1.fun(g, K, S);
+    vi result2 = algorithm2.fun(g, K, S);
+    sort(result1.begin(), result1.end());
+    sort(result2.begin(), result2.end());
+    vi intersection;
+    set_intersection(result1.begin(), result1.end(), result2.begin(), result2.end(), back_inserter(intersection));
+    // Remover elementos da interseção de result1 e result2
+    for (int v : intersection)
+    {
+        result1.erase(remove(result1.begin(), result1.end(), v), result1.end());
+        result2.erase(remove(result2.begin(), result2.end(), v), result2.end());
+    }
+    for (int x : result1)
+        for (int y : result2)
+            if (x == y)
+                assert(false);
+    simulate(g, result1, result2, steps, true, filename);
 }
 
 void run_algorithm_isolated(const graph &g, alg algorithm, const vi &initial_infected_sizes, int steps, int num_runs, ofstream &outfile, bool save = false)
@@ -269,49 +277,90 @@ void show_graph(const graph &adj_list)
     }
 }
 
+void prepare_gifs(alg alg1, alg alg2)
+{
+    graph g = read_graph("../redes/126.txt");
+    compete_for_gif(g, alg1, alg2, 20, 10, alg1.name + "#" + alg2.name + ".csv");
+}
+
 int main()
 {
+    prepare_gifs(
+        {degree_discount, "degree_discount"},
+        {miranda_porto, "miranda_porto"});
 
-    graph g = read_graph("../redes/main.txt");
-    // show_graph(g);
+    // graph g = read_graph("../redes/main.txt");
+    // // show_graph(g);
 
-    vector<alg> algorithms = {
-        // {betweenness, "betweenness"},
-        {closeness, "closeness"},
-        {maxdegree, "maxdegree"},
-        // {pageranking, "pageranking"},
-        {pagerankingrev, "pagerankingrev"},
-        // {degree_discount, "degree_discount"},
-        // {representative_nodes_min, "representative_nodes_min"},
-        // {representative_nodes_sum, "representative_nodes_sum"},
-        {miranda_porto, "miranda_porto"},
-        {prado_nunes, "prado_nunes"},
-        // {random_choice, "random_choice", false}
-    };
+    // vector<alg> algorithms = {
+    //     // {betweenness, "betweenness"},
+    //     {closeness, "closeness"},
+    //     {maxdegree, "maxdegree"},
+    //     // {pageranking, "pageranking"},
+    //     {pagerankingrev, "pagerankingrev"},
+    //     // {degree_discount, "degree_discount"},
+    //     // {representative_nodes_min, "representative_nodes_min"},
+    //     // {representative_nodes_sum, "representative_nodes_sum"},
+    //     {miranda_porto, "miranda_porto"},
+    //     {prado_nunes, "prado_nunes"},
+    //     // {random_choice, "random_choice", false}
+    // };
 
-    // compete(g, algorithms[1], algorithms[6], steps, initial_infected_count, false);
+    // // compete(g, algorithms[1], algorithms[6], steps, initial_infected_count, false);
 
-    int num_algs = algorithms.size();
-    int steps = 30;
-    int num_runs = 10;
+    // int num_algs = algorithms.size();
+    // int steps = 20;
+    // int num_runs = 3;
 
-    vi initial_infected_sizes;
-    for (int i = 10; i <= 100; ++i)
-        initial_infected_sizes.push_back(i);
+    // vi initial_infected_sizes;
+    // for (int i = 10; i <= 90; ++i)
+    //     initial_infected_sizes.push_back(i);
 
-    for (int i = 0; i < num_algs; ++i)
-    {
-        for (int j = i + 1; j < num_algs; ++j)
-        {
-            for (int initial_infected_count : initial_infected_sizes)
-            {
-                for (int rep = 0; rep < num_runs; ++rep)
-                {
-                    compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false);
-                }
-            }
-        }
-    }
+    // unordered_map<string, int> wins;
+    // unordered_map<string, vector<int>> infected_counts;
+    // unordered_map<string, unordered_map<string, int>> pair_wins;
+    // unordered_map<string, unordered_map<string, pair<vector<int>, vector<int>>>> pair_infected;
+    // for (int i = 0; i < num_algs; ++i)
+    // {
+    //     for (int j = i + 1; j < num_algs; ++j)
+    //     {
+    //         for (int initial_infected_count : initial_infected_sizes)
+    //         {
+    //             for (int rep = 0; rep < num_runs; ++rep)
+    //             {
+    //                 compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false, wins, infected_counts, pair_wins, pair_infected);
+    //             }
+    //         }
+    //     }
+    // }
+    // // Salvar resultados gerais em um arquivo CSV
+    // ofstream outfile_general("competition_results_general.csv");
+    // outfile_general << "Algorithm,Wins,AverageInfected\n";
+    // for (const auto &[alg_name, win_count] : wins)
+    // {
+    //     double average_infected = accumulate(infected_counts[alg_name].begin(), infected_counts[alg_name].end(), 0.0) / infected_counts[alg_name].size();
+    //     outfile_general << alg_name << "," << win_count << "," << average_infected << "\n";
+    // }
+    // outfile_general.close();
+    // // Salvar resultados por par de algoritmos em um arquivo CSV
+    // ofstream outfile_pairwise("competition_results_pairwise.csv");
+    // outfile_pairwise << "Algorithm1,Algorithm2,Wins1,Wins2,AverageInfected1,AverageInfected2\n";
+    // for (const auto &[alg1, opponents] : pair_wins)
+    // {
+    //     for (const auto &[alg2, win_count] : opponents)
+    //     {
+    //         if (alg1 < alg2)
+    //         { // Garantir que cada par seja mostrado apenas uma vez
+    //             int wins1 = win_count;
+    //             int wins2 = pair_wins[alg2][alg1];
+    //             auto [infected1, infected2] = pair_infected[alg1][alg2];
+    //             double average_infected1 = accumulate(infected1.begin(), infected1.end(), 0.0) / infected1.size();
+    //             double average_infected2 = accumulate(infected2.begin(), infected2.end(), 0.0) / infected2.size();
+    //             outfile_pairwise << alg1 << "," << alg2 << "," << wins1 << "," << wins2 << "," << average_infected1 << "," << average_infected2 << "\n";
+    //         }
+    //     }
+    // }
+    // outfile_pairwise.close();
 
     // ofstream outfile("algorithm_curves.csv");
     // outfile << "Algorithm,InitialInfected,AverageInfected\n";
