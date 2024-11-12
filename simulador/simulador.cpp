@@ -207,9 +207,7 @@ void run_algorithm_isolated(const graph &g, alg algorithm, const vi &initial_inf
     {
         int total_infected = 0;
         vi S; // Conjunto de vértices proibido
-        // cout << "Vou rodar " << algorithm.name << "!" << endl;
         vi result = algorithm.fun(g, k, S);
-        // cout << "Rodei " << algorithm.name << "!" << endl;
         auto [influenced_by_alg, _] = simulate(g, result, {}, steps, save);
         total_infected += influenced_by_alg.size();
         for (int i = 1; i < num_runs; ++i)
@@ -217,13 +215,11 @@ void run_algorithm_isolated(const graph &g, alg algorithm, const vi &initial_inf
             if (!algorithm.deterministic)
                 result = algorithm.fun(g, k, S);
             // Simular a propagação da influência
-            // auto [influenced_by_alg, _] = simulate(g, result, {}, steps, true, algorithm.name + "_" + to_string(k) + "_" + to_string(i) + ".csv");
             auto [influenced_by_alg, _] = simulate(g, result, {}, steps, save);
             total_infected += influenced_by_alg.size();
         }
         double average_infected = static_cast<double>(total_infected) / num_runs;
         outfile << algorithm.name << "," << k << "," << average_infected << "\n";
-        // cout << "Algoritmo " << algorithm.name << " infectou em média " << average_infected << " vértices." << endl;
     }
 }
 
@@ -283,92 +279,112 @@ void prepare_gifs(alg alg1, alg alg2)
     compete_for_gif(g, alg1, alg2, 20, 10, alg1.name + "#" + alg2.name + ".csv");
 }
 
+void isolated_analysis()
+{
+    graph g = read_graph("../redes/main.txt");
+
+    vector<alg> algorithms = {
+        {betweenness, "betweenness"},
+        {closeness, "closeness"},
+        {maxdegree, "maxdegree"},
+        {pageranking, "pageranking"},
+        {pagerankingrev, "pagerankingrev"},
+        {degree_discount, "degree_discount"},
+        {representative_nodes_min, "representative_nodes_min"},
+        {representative_nodes_sum, "representative_nodes_sum"},
+        {miranda_porto, "miranda_porto"},
+        {random_choice, "random_choice", false}};
+
+    int num_algs = algorithms.size();
+    int steps = 30;
+    int num_runs = 50;
+
+    vi initial_infected_sizes;
+    for (int i = 10; i <= 100; ++i)
+        initial_infected_sizes.push_back(i);
+
+    ofstream outfile("algorithm_curves.csv");
+    outfile << "Algorithm,InitialInfected,AverageInfected\n";
+
+    for (alg f : algorithms)
+        run_algorithm_isolated(g, f, initial_infected_sizes, steps, num_runs, outfile);
+
+    outfile.close();
+}
+
+void competition_analysis()
+{
+    graph g = read_graph("../redes/main.txt");
+
+    vector<alg> algorithms = {
+        {betweenness, "betweenness"},
+        {closeness, "closeness"},
+        {maxdegree, "maxdegree"},
+        {pageranking, "pageranking"},
+        {pagerankingrev, "pagerankingrev"},
+        {degree_discount, "degree_discount"},
+        {representative_nodes_min, "representative_nodes_min"},
+        {representative_nodes_sum, "representative_nodes_sum"},
+        {miranda_porto, "miranda_porto"},
+        {random_choice, "random_choice", false}};
+
+    int num_algs = algorithms.size();
+    int steps = 20;
+    int num_runs = 50;
+
+    vi initial_infected_sizes;
+    for (int i = 10; i <= 100; ++i)
+        initial_infected_sizes.push_back(i);
+
+    unordered_map<string, int> wins;
+    unordered_map<string, vector<int>> infected_counts;
+    unordered_map<string, unordered_map<string, int>> pair_wins;
+    unordered_map<string, unordered_map<string, pair<vector<int>, vector<int>>>> pair_infected;
+    for (int i = 0; i < num_algs; ++i)
+        for (int j = i + 1; j < num_algs; ++j)
+            for (int initial_infected_count : initial_infected_sizes)
+                for (int rep = 0; rep < num_runs; ++rep)
+                    compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false, wins, infected_counts, pair_wins, pair_infected);
+
+    // Salvar resultados gerais em um arquivo CSV
+    ofstream outfile_general("competition_results_general.csv");
+    outfile_general << "Algorithm,Wins,AverageInfected\n";
+    for (const auto &[alg_name, win_count] : wins)
+    {
+        double average_infected = accumulate(infected_counts[alg_name].begin(), infected_counts[alg_name].end(), 0.0) / infected_counts[alg_name].size();
+        outfile_general << alg_name << "," << win_count << "," << average_infected << "\n";
+    }
+    outfile_general.close();
+    // Salvar resultados por par de algoritmos em um arquivo CSV
+    ofstream outfile_pairwise("competition_results_pairwise.csv");
+    outfile_pairwise << "Algorithm1,Algorithm2,Wins1,Wins2,AverageInfected1,AverageInfected2\n";
+    for (const auto &[alg1, opponents] : pair_wins)
+    {
+        for (const auto &[alg2, win_count] : opponents)
+        {
+            if (alg1 < alg2)
+            { // Garantir que cada par seja mostrado apenas uma vez
+                int wins1 = win_count;
+                int wins2 = pair_wins[alg2][alg1];
+                auto [infected1, infected2] = pair_infected[alg1][alg2];
+                double average_infected1 = accumulate(infected1.begin(), infected1.end(), 0.0) / infected1.size();
+                double average_infected2 = accumulate(infected2.begin(), infected2.end(), 0.0) / infected2.size();
+                outfile_pairwise << alg1 << "," << alg2 << "," << wins1 << "," << wins2 << "," << average_infected1 << "," << average_infected2 << "\n";
+            }
+        }
+    }
+    outfile_pairwise.close();
+}
+
 int main()
 {
     prepare_gifs(
         {degree_discount, "degree_discount"},
         {miranda_porto, "miranda_porto"});
 
-    // graph g = read_graph("../redes/main.txt");
-    // // show_graph(g);
+    isolated_analysis();
 
-    // vector<alg> algorithms = {
-    //     // {betweenness, "betweenness"},
-    //     {closeness, "closeness"},
-    //     {maxdegree, "maxdegree"},
-    //     // {pageranking, "pageranking"},
-    //     {pagerankingrev, "pagerankingrev"},
-    //     // {degree_discount, "degree_discount"},
-    //     // {representative_nodes_min, "representative_nodes_min"},
-    //     // {representative_nodes_sum, "representative_nodes_sum"},
-    //     {miranda_porto, "miranda_porto"},
-    //     {prado_nunes, "prado_nunes"},
-    //     // {random_choice, "random_choice", false}
-    // };
+    competition_analysis();
 
-    // // compete(g, algorithms[1], algorithms[6], steps, initial_infected_count, false);
-
-    // int num_algs = algorithms.size();
-    // int steps = 20;
-    // int num_runs = 3;
-
-    // vi initial_infected_sizes;
-    // for (int i = 10; i <= 90; ++i)
-    //     initial_infected_sizes.push_back(i);
-
-    // unordered_map<string, int> wins;
-    // unordered_map<string, vector<int>> infected_counts;
-    // unordered_map<string, unordered_map<string, int>> pair_wins;
-    // unordered_map<string, unordered_map<string, pair<vector<int>, vector<int>>>> pair_infected;
-    // for (int i = 0; i < num_algs; ++i)
-    // {
-    //     for (int j = i + 1; j < num_algs; ++j)
-    //     {
-    //         for (int initial_infected_count : initial_infected_sizes)
-    //         {
-    //             for (int rep = 0; rep < num_runs; ++rep)
-    //             {
-    //                 compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false, wins, infected_counts, pair_wins, pair_infected);
-    //             }
-    //         }
-    //     }
-    // }
-    // // Salvar resultados gerais em um arquivo CSV
-    // ofstream outfile_general("competition_results_general.csv");
-    // outfile_general << "Algorithm,Wins,AverageInfected\n";
-    // for (const auto &[alg_name, win_count] : wins)
-    // {
-    //     double average_infected = accumulate(infected_counts[alg_name].begin(), infected_counts[alg_name].end(), 0.0) / infected_counts[alg_name].size();
-    //     outfile_general << alg_name << "," << win_count << "," << average_infected << "\n";
-    // }
-    // outfile_general.close();
-    // // Salvar resultados por par de algoritmos em um arquivo CSV
-    // ofstream outfile_pairwise("competition_results_pairwise.csv");
-    // outfile_pairwise << "Algorithm1,Algorithm2,Wins1,Wins2,AverageInfected1,AverageInfected2\n";
-    // for (const auto &[alg1, opponents] : pair_wins)
-    // {
-    //     for (const auto &[alg2, win_count] : opponents)
-    //     {
-    //         if (alg1 < alg2)
-    //         { // Garantir que cada par seja mostrado apenas uma vez
-    //             int wins1 = win_count;
-    //             int wins2 = pair_wins[alg2][alg1];
-    //             auto [infected1, infected2] = pair_infected[alg1][alg2];
-    //             double average_infected1 = accumulate(infected1.begin(), infected1.end(), 0.0) / infected1.size();
-    //             double average_infected2 = accumulate(infected2.begin(), infected2.end(), 0.0) / infected2.size();
-    //             outfile_pairwise << alg1 << "," << alg2 << "," << wins1 << "," << wins2 << "," << average_infected1 << "," << average_infected2 << "\n";
-    //         }
-    //     }
-    // }
-    // outfile_pairwise.close();
-
-    // ofstream outfile("algorithm_curves.csv");
-    // outfile << "Algorithm,InitialInfected,AverageInfected\n";
-
-    // run_algorithm_isolated(g, {pageranking, "pageranking"}, {10}, 10, 1, outfile, true);
-    // for (alg f : algorithms)
-    // {
-    //     run_algorithm_isolated(g, f, initial_infected_sizes, steps, 30, outfile);
-    // }
     return 0;
 }
