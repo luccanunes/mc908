@@ -61,13 +61,15 @@ void solve()
         faltam.insert(cmp[i]);
     }
 
+    int aux = tot + 5;
+
     for(auto it = faltam.begin(); next(it) != faltam.end(); it++){
         tot++;
         if(it == faltam.begin()){
-            ans.push_back({{*it, *next(it)}, {n, tot}});
+            ans.push_back({{*it, *next(it)}, {aux, tot}});
         }
         else{
-            ans.push_back({{tot - 1, *next(it)}, {n, tot}});
+            ans.push_back({{tot - 1, *next(it)}, {aux, tot}});
         }
     }
 

@@ -23,8 +23,9 @@ Z = np.array(Z)
 # unimos os clusters anteriores.
 
 # Plotando o dendrograma
-plt.figure(figsize=(10, 6))
-dendrogram(Z)
+plt.figure(figsize=(20, 5))
+dendrogram(Z, p = 50, truncate_mode = 'level')
+
 plt.title("Dendrograma com Componentes Separados")
 plt.xlabel("Grupos")
 plt.ylabel("Quantidade de Vértices")
