@@ -277,45 +277,49 @@ int main()
 
     vector<alg> algorithms = {
         // {betweenness, "betweenness"},
-        // {closeness, "closeness"},
-        // {maxdegree, "maxdegree"},
+        {closeness, "closeness"},
+        {maxdegree, "maxdegree"},
         // {pageranking, "pageranking"},
-        // {pagerankingrev, "pagerankingrev"},
+        {pagerankingrev, "pagerankingrev"},
         // {degree_discount, "degree_discount"},
         // {representative_nodes_min, "representative_nodes_min"},
         // {representative_nodes_sum, "representative_nodes_sum"},
         {miranda_porto, "miranda_porto"},
         {prado_nunes, "prado_nunes"},
-        {random_choice, "random_choice", false}};
+        // {random_choice, "random_choice", false}
+    };
 
-    int steps = 10, initial_infected_count = 100;
     // compete(g, algorithms[1], algorithms[6], steps, initial_infected_count, false);
 
     int num_algs = algorithms.size();
-
-    ofstream outfile("algorithm_curves.csv");
-    outfile << "Algorithm,InitialInfected,AverageInfected\n";
-
-    // run_algorithm_isolated(g, {pageranking, "pageranking"}, {10}, 10, 1, outfile, true);
+    int steps = 30;
+    int num_runs = 10;
 
     vi initial_infected_sizes;
     for (int i = 10; i <= 100; ++i)
         initial_infected_sizes.push_back(i);
 
-    for (alg f : algorithms)
+    for (int i = 0; i < num_algs; ++i)
     {
-        run_algorithm_isolated(g, f, initial_infected_sizes, steps, 50, outfile);
+        for (int j = i + 1; j < num_algs; ++j)
+        {
+            for (int initial_infected_count : initial_infected_sizes)
+            {
+                for (int rep = 0; rep < num_runs; ++rep)
+                {
+                    compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false);
+                }
+            }
+        }
     }
 
-    // for (int i = 0; i < num_algs; ++i)
-    // {
-    //     for (int j = i + 1; j < num_algs; ++j)
-    //     {
-    //         cout << algorithms[i].name << " vs. " << algorithms[j].name << endl;
-    //         compete(g, algorithms[i], algorithms[j], steps, initial_infected_count, false);
-    //         cout << "\n";
-    //     }
-    // }
+    // ofstream outfile("algorithm_curves.csv");
+    // outfile << "Algorithm,InitialInfected,AverageInfected\n";
 
+    // run_algorithm_isolated(g, {pageranking, "pageranking"}, {10}, 10, 1, outfile, true);
+    // for (alg f : algorithms)
+    // {
+    //     run_algorithm_isolated(g, f, initial_infected_sizes, steps, 30, outfile);
+    // }
     return 0;
 }
