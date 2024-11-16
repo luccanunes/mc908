@@ -1,40 +1,35 @@
 #include <bits/stdc++.h>
-#define pb push_back
-#define all(x) x.begin(), x.end()
-#define pc __builtin_popcount
-#define F first
-#define S second
-
 using namespace std;
 
-typedef long long int ll;
 typedef long double ld;
-typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
-const int maxn = 1e3 + 5, inf = 2e9, M = 1e9 + 7;
-const ll linf = 1e18;
 graph G;
 vector<pair<ld, int>> betweenness;
 
-// Brandes
+// Algoritmo de Brandes
 void bfs(int a, graph G)
 {
+    // Ordem de cálculo do betweenness
     stack<int> ordem;
 
+    // Fila da BFS
     queue<int> fila;
     fila.push(a);
 
+    // Vetor de distâncias
     vi dist(G.size(), -1);
     dist[a] = 0;
 
+    // Quantidade de caminhos mínimos partindo de a que passam por cada vértice
     vi qtdd(G.size());
     qtdd[a] = 1;
 
+    // Todos os pais de um vértice seguindo a ordem da BFS
     vector<vi> pai(G.size());
 
-    // O(m)
+    // BFS em O(m)
     while (!fila.empty())
     {
         int x = fila.front();
@@ -57,9 +52,10 @@ void bfs(int a, graph G)
         }
     }
 
+    // Parte do cálculo do betweenness
     vector<ld> delta(G.size());
 
-    // O(m)
+    // Cálculo de cada parte em O(m)
     while (!ordem.empty())
     {
         int x = ordem.top();
@@ -80,12 +76,14 @@ void solve()
     int n, m;
     cin >> n >> m;
 
+    // Define o vetor de betweenness 
     betweenness.resize(n);
     for (int i = 0; i < n; i++)
     {
         betweenness[i].second = i;
     }
 
+    // Lê o grafo
     graph G(n);
     for (int i = 0; i < m; i++)
     {
@@ -94,16 +92,20 @@ void solve()
         G[a].push_back(b);
     }
 
+    // Faz a BFS de betweenness para cada vértice
     for (int i = 0; i < G.size(); i++)
     {
         bfs(i, G);
     }
 
+    // Imprime os vértices por ordem de betweenness
     sort(betweenness.begin(), betweenness.end());
     reverse(betweenness.begin(), betweenness.end());
 
     for (auto x : betweenness)
+    {
         cout << x.second << '\n';
+    }
 }
 
 int main()
