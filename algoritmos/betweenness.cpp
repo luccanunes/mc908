@@ -5,7 +5,6 @@ typedef long double ld;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
-graph G;
 vector<pair<ld, int>> betweenness;
 
 // Algoritmo de Brandes

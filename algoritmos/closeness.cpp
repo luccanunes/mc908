@@ -1,20 +1,22 @@
 #include <bits/stdc++.h>
-#define pb push_back
-#define INF 2000000000
 using namespace std;
+
+typedef long double ld;
 typedef vector<int> vi;
 typedef vector<vi> graph;
-typedef pair<int, int> pii;
-typedef long double ld;
 
+// BFS para calcular todas as distâncias a partir de a
 vi bfs(graph G, int a)
 {
+    // Distâncias (INF = m * 2)
     vi dist(G.size(), G.size() * 2);
-    queue<int> fila;
-
-    fila.push(a);
     dist[a] = 0;
 
+    // Fila da BFS
+    queue<int> fila;
+    fila.push(a);
+
+    // BFS em O(m)
     while (!fila.empty())
     {
         int x = fila.front();
@@ -33,10 +35,13 @@ vi bfs(graph G, int a)
     return dist;
 }
 
+// Constrói vetor de closeness
 vector<pair<ld, int>> closeness(graph G)
 {
+    // Define vetor
     vector<pair<ld, int>> closeness(G.size());
 
+    // Para cada vértice, calcula o closeness
     for (int i = 0; i < G.size(); i++)
     {
         vi v = bfs(G, i);
@@ -48,6 +53,7 @@ vector<pair<ld, int>> closeness(graph G)
         closeness[i].first = (G.size() - 1) / closeness[i].first;
     }
 
+    // Ordena
     sort(closeness.begin(), closeness.end());
     reverse(closeness.begin(), closeness.end());
 
@@ -59,6 +65,7 @@ void solve()
     int n, m;
     cin >> n >> m;
 
+    // Lê o grafo
     graph G(n);
     for (int i = 0; i < m; i++)
     {
@@ -67,6 +74,7 @@ void solve()
         G[a].push_back(b);
     }
 
+    // Imprime os vértices por ordem de closeness
     vector<pair<ld, int>> close = closeness(G);
 
     for (auto x : close)
