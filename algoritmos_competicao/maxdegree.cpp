@@ -1,18 +1,11 @@
 #include <bits/stdc++.h>
-#define pb push_back
 #define all(x) x.begin(), x.end()
-#define pc __builtin_popcount
-#define F first
-#define S second
-
 using namespace std;
 
-typedef long long int ll;
-typedef long double ld;
-typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
+// Recebe grafo, lê lista de graus e retorna os vértices escolhidos
 vi maxdegree(graph G, int k, vi S)
 {
     ifstream file("./../algoritmos/main-list/maxdegree_list.txt");
@@ -22,7 +15,7 @@ vi maxdegree(graph G, int k, vi S)
     {
         auto it = find(all(S), a);
         if (it == S.end())
-            ans.pb(a);
+            ans.push_back(a);
         if (ans.size() == k)
             break;
     }

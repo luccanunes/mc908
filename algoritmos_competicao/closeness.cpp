@@ -1,28 +1,21 @@
 #include <bits/stdc++.h>
-#define pb push_back
 #define all(x) x.begin(), x.end()
-#define pc __builtin_popcount
-#define F first
-#define S second
-
 using namespace std;
 
-typedef long long int ll;
-typedef long double ld;
-typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
+// Recebe grafo, lê lista de closeness e retorna os vértices escolhidos
 vi closeness(graph G, int k, vi S)
 {
-    ifstream file("./../algoritmos/close126.txt");
+    ifstream file("./../algoritmos/closeness.txt");
     int a;
     vi ans;
     while (file >> a)
     {
         auto it = find(all(S), a);
         if (it == S.end())
-            ans.pb(a);
+            ans.push_back(a);
         if (ans.size() == k)
             break;
     }
