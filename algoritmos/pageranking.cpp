@@ -1,25 +1,15 @@
 #include <bits/stdc++.h>
-#define pb push_back
-#define all(x) x.begin(), x.end()
-#define pc __builtin_popcount
-#define F first
-#define S second
-
 using namespace std;
 
-typedef long long int ll;
 typedef long double ld;
-typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vi> graph;
 
-const int maxn = 1e3 + 5, inf = 2e9, M = 1e9 + 7;
-const ll linf = 1e18;
 const ld ap = 0.85;
-graph G;
 vector<ld> page;
 vector<int> degout;
 
+// Iteração do PageRanking
 void update(graph G)
 {
     vector<ld> aux(G.size());
@@ -41,10 +31,10 @@ void solve()
 {
     int n, m;
     cin >> n >> m;
-    page.resize(n, 1 / (ld)n);
-    degout.resize(n);
 
+    // Lê o grafo
     graph G(n);
+    degout.resize(n);
     for (int i = 0; i < m; i++)
     {
         int a, b;
@@ -53,10 +43,15 @@ void solve()
         degout[a]++;
     }
 
+    // 100 iterações para atualizar a centralidade
+    page.resize(n, 1 / (ld)n);
     int times = 100;
     for (int i = 0; i < times; i++)
+    {
         update(G);
+    }
 
+    // Imprime os vértices em ordem de PageRanking
     vector<pair<ld, int>> aux(G.size());
 
     for (int i = 0; i < G.size(); i++)
@@ -69,7 +64,9 @@ void solve()
     reverse(aux.begin(), aux.end());
 
     for (auto x : aux)
+    {
         cout << x.second << '\n';
+    }
 }
 
 int main()
