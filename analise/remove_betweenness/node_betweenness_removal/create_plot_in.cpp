@@ -11,54 +11,61 @@ typedef long long int ll;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
-typedef vector<vi> graph;
+typedef vector<set<int>> graph;
 
 const int maxn = 1e3 + 5, inf = 2e9, M = 1e9 + 7;
 const ll linf = 1e18;
+vi vis;
+graph G;
+
+void dfs(int k) {
+	vis[k] = 1;
+	for (auto x : G[k])
+		if (!vis[x]) dfs(x);
+}
 
 void solve()
 {
     int n, m;
     cin >> n >> m;
-    vector<pii> arestas(m);
 
-    // define componentes
-    vi cmp(n);
-    for(int i = 0; i < n; i++) cmp[i] = i;
-    int tot = n;
-
-    // lê arestas em ordem de remoção
-    for(int i = 0; i < m; i++){
+    // Lê o grafo
+    G.resize(n);
+    for (int i = 0; i < m; i++)
+    {
         int a, b;
         cin >> a >> b;
-        arestas[i] = {a, b};
+        G[a].insert(b);
+        G[b].insert(a);
     }
 
-    reverse(arestas.begin(), arestas.end());
-    vector<int> ans;
+    // Lê vértices em ordem de remoção
+    vi vert(n);
+    for (int i = 0; i < n; i++){
+        cin >> vert[i];
+    }
+    
+    cout << n << '\n';
 
-    ans.push_back(tot);
-    for(int i = 0; i < m; i++){
-        pii edge = arestas[i];
-        int a = edge.first;
-        int b = edge.second;
-        int c1 = cmp[a], c2 = cmp[b];
-        if(c1 != c2){
-            for(int i = 0; i < n; i++){
-                if(cmp[i] == c2){
-                    cmp[i] = c1;
-                }
+    for(int i = -1; i < n; i++){
+        if(i >= 0){
+            int x = vert[i];
+            for(auto y : G[x]){
+                G[y].erase(x);
             }
-            tot--;
+            G[x].clear();
         }
-        ans.push_back(tot);
-    }
 
-    reverse(ans.begin(), ans.end());
-
-    cout << m + 1 << '\n';
-    for(int i = 0; i <= m; i++){
-        cout << i << ' ' << ans[i] << '\n';
+        int tot = 0;
+        vis.clear();
+        vis.resize(n);
+        for(int i = 0; i < n; i++){
+            if(vis[i] == 0){
+                tot++;
+                dfs(i);
+            }
+        }
+        cout << i + 1 << ' ' << tot << '\n';
     }
 
 }

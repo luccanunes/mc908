@@ -10,15 +10,12 @@ typedef long double ld;
 int n, m;
 vi vis;
 graph G, Gi;
-stack<int> S;
 vi comp;
 
 void dfs(int k) {
 	vis[k] = 1;
 	for (int i = 0; i < (int) G[k].size(); i++)
 		if (!vis[G[k][i]]) dfs(G[k][i]);
-
-	S.push(k);
 }
  
 void solve(){

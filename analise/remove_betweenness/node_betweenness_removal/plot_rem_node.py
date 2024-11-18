@@ -13,11 +13,11 @@ def plot_line_graph(points):
     plt.plot(x_values, y_values, marker='', linestyle='-', color='b')
     
     # Configurações do gráfico
-    plt.xlabel('Arcos removidos')
+    plt.xlabel('Nós removidos')
     plt.ylabel('Número de Componentes')
     plt.grid(True)
     
-    plt.savefig('./edge_betweenness_plot.png', format='png', dpi=300)
+    plt.savefig('./node_betweenness_plot.png', format='png', dpi=300)
     plt.close()
 
 n = int(input())
@@ -27,11 +27,3 @@ for _ in range(n):
     pontos.append((int(a), int(b)))
 
 plot_line_graph(pontos)
-
-
-# path = 'clustering'
-# data = np.loadtxt(path)
-
-# plt.hist(data, bins=20, edgecolor='black')
-# # plt.title('Distribuição dos Coeficientes de Clusterização')
-# # plt.yscale('log')
